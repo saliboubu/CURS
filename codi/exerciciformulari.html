@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Formulari de compra</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <form>
+        <table size="1000" border="1">
+            <tr>
+                <th align="left"><label for="nom">NOM:</label></th>
+                <td colspan="2"> <input type="text" size="62" name="NOM" id="nom"></td>
+            </tr>
+            <tr>
+                <th align="left"><label for="empresa">EMPRESA:</label></th>
+                <td colspan="2"><input type="text" size="62" name="EMPRESA" id="empresa"></td>
+            </tr>
+            <tr>
+                <th align="left"><label for="telefon">TELEFON:</label></th>
+                <td colspan="2"><input type="tel" size="62" name="TEL" id="telefon"></td>
+            </tr>
+            <tr>
+                <th align="left"><label for="email">EMAIL:</label></th>
+                <td colspan="2"><input type="email" size="62" name="EMAIL" id="email"></td>
+            </tr>
+            <br><br>
+            <tr>
+                <th align="center" width="160">QUANTITAT</th>
+                <th align="center" width="150">PRODUCTE</th>
+                <th align="center" width="150">IMPORT</th>
+            </tr>
+            <tr>
+                <td> <input type="number" min="0" size="2"> </td>
+                <td>
+                    <select name="productes" id="producte" size="">
+                        <option></option>
+                        <option value="Sabo" name="sabo" id="psabo"> Sabo </option>
+                        <option value="Gel" name="gel" id="pgel"> Gel </option>
+                        <option value="Condicionador" name="condi" id="pcond"> Condicionador </option>
+                        <option value="Mascareta" name="masc" id="pmasc"> Mascareta </option>
+                        <option value="Tint" name="negre" id="ptint"> Tint negre </option>
+                    </select>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                    <td> <input type="number" min="0" size="2"> </td>
+                    <td>
+                        <select name="productes" id="producte" size="">
+                            <option></option>
+                            <option value="Sabo" id="psabo"> Sabo </option>
+                            <option value="Gel" id="pgel"> Gel </option>
+                            <option value="Condicionador" id="pcond"> Condicionador </option>
+                            <option value="Mascareta" id="pmasc"> Mascareta </option>
+                            <option value="Tint" id="ptint"> Tint negre </option>
+                        </select>
+                    </td>
+                    <td>&nbsp;</td>
+            </tr>
+            <tr>
+                    <td> <input type="number" min="0" size="2"> </td>
+                    <td>
+                        <select name="productes" id="producte" size="">
+                            <option></option>
+                            <option value="Sabo" id="psabo"> Sabo </option>
+                            <option value="Gel" id="pgel"> Gel </option>
+                            <option value="Condicionador" id="pcond"> Condicionador </option>
+                            <option value="Mascareta" id="pmasc"> Mascareta </option>
+                            <option value="Tint" id="ptint"> Tint negre </option>
+                        </select>
+                    </td>
+                    <td>&nbsp;</td>
+            </tr>
+            <tr>
+                    <td> <input type="number" min="0" size="2"> </td>
+                    <td>
+                        <select name="productes" id="producte" size="">
+                            <option></option>
+                            <option value="Sabo" id="psabo"> Sabo </option>
+                            <option value="Gel" id="pgel"> Gel </option>
+                            <option value="Condicionador" id="pcond"> Condicionador </option>
+                            <option value="Mascareta" id="pmasc"> Mascareta </option>
+                            <option value="Tint" id="ptint"> Tint negre </option>
+                        </select>
+                    </td>
+                    <td>&nbsp;</td>
+            </tr>
+            <tr>
+                    <td> <input type="number" min="0" size="2"> </td>
+                    <td>
+                        <select name="productes" id="producte" size="">
+                            <option></option>
+                            <option value="Sabo" id="psabo"> Sabo </option>
+                            <option value="Gel" id="pgel"> Gel </option>
+                            <option value="Condicionador" id="pcond"> Condicionador </option>
+                            <option value="Mascareta" id="pmasc"> Mascareta </option>
+                            <option value="Tint" id="ptint"> Tint negre </option>
+                        </select>
+                    </td>
+                    <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <th colspan="2">TOTAL</th>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <br><br>
+        <label>PAGAMENT:</label>
+        <br>
+        <input type="radio" name="pagament" value="Compte Bancari"> Compte bancari <br>
+        <input type="radio" name="pagament" value="Visa"> Visa <br>
+        <input type="radio" name="pagament" value="Paypal"> PayPal
+        <br><br>
+        CONDICIONS DE SEGURETAT:<br>
+        <input type="checkbox" id="condicions"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut enim vel nunc pretium dignissim<br> at eget ipsum.Ut efficitur quam sit amet pellentesque consequat. Sed interdum elementum condimentum
+        <br><br>
+        <input type="submit" value="ENVIAR">
+    </form>
+</body>
+</html>
