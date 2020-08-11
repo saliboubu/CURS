@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <form>
+        <label for="nom">NOM:</label>
+        <input type="text" id="nom" size="35">
+        <br><br>
+        <label>COGNOMS:</label>
+        <input type="text" size="70">
+        <br><br>
+        <label>EDAT:</label>
+        <input type="number" size="2" min="0">
+        <br><br>
+        <label>CONTRASENYA:</label>
+        <input type="password">
+        <br><br>
+        <label>DATA DE NAIXEMENT:</label>
+        <input type="date" min="1950-12-31" max="2020-08-10">
+        <br><br>
+        <label>DATA:</label>
+        <input type="datetime-local" min="1950-12-31" max="2020-08-10">
+        <br><br>
+        <label>COLOR:</label>
+        <input type="color">
+        <br><br>
+        <label>URL:</label>
+        <input type="url">
+        <br><br>
+        <label>CORREU:</label>
+        <input type="email">
+        <br><br>
+        <label>COMENTARIS:</label>
+        <textarea cols="100" rows="10"> </textarea>
+        <br><br>
+        <label for="privat">PRIVACITAT:</label>
+        <input type="checkbox" id="privat"> 
+        <br><br>
+        <label>HORARI:</label>
+        <input type="radio" name="horaris" value="matins"> Matins
+        <input type="radio" name="horaris" value="tarda"> Tarda
+        <input type="radio" name="horaris" value="vespres"> Vespre
+        <br><br>
+        <label>DIA-SETMANA:</label>
+        <select name="horario" id="dies" size="5" multiple>
+            <option value="Dilluns">Dilluns</option>
+            <option value="Dimarts">Dimarts</option>
+            <option value="Dimecres">Dimecres</option>
+            <option value="Dijous">Dijous</option>
+            <option value="Divendres">Divendres</option>
+        </select>
+        <br><br>
+        <input type="submit" value="ENVIAR">
+        <input type="button" value="VALIDAR">
+        
+    </form>
+</body>
+</html>
