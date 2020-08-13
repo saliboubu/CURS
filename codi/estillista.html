@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Estil Llista</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style type="text/css">
+        ol li{
+            color: rgb(77, 179, 19);
+        }
+        ol li:first-child{
+            color: red;
+        }
+        ol li:last-child{
+            color: blue;
+        }
+        ol li:nth-child(even){ /*EVEN=parell i ODD=imparell*/
+            color: purple;
+        }
+        ol li:nth-last-child(3){
+            color: brown; /*compta des del final de la llista*/
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Dilluns</li>
+        <li>Dimarts</li>
+        <li>Dimecres</li>
+        <li>Dijous</li>
+        <li>Divendres</li>
+        <li>Dissabte</li>
+        <li>Diumenge</li>
+    </ol>
+    <ul>
+        <li>Dilluns</li>
+        <li>Dimarts</li>
+        <li>Dimecres</li>
+        <li>Dijous</li>
+        <li>Divendres</li>
+        <li>Dissabte</li>
+        <li>Diumenge</li> 
+    </ul>
+</body>
+</html>

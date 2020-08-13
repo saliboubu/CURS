@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Estils</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style type="text/css">
+        p{
+            color: blue;
+            font-size: 12pt;
+            font-style: italic;
+        } 
+        .destacar{
+            color: blueviolet;
+            font-style: normal;
+        }
+        /*Totes les etiquetes p s'aplicara el color blau*/
+        /*En cas de voler aplicar un estil diferent a algun dels paràgrafs es crea un ID, només serà vàlid per 1 paràgraf*/
+        /*Per aplicar en més d'un paràgraf cal utilitzar l'identificatiu de CLASS*/
+        h1{
+            color: red;
+        }
+        body{
+            color: yellow;
+            font-size: 24pt;
+        }
+        /*L'herencia s'aplica en aquells elements que no tenen un valor prioritari, és a dir
+        , els elements que no tenen estil aplicat es plasmarà l'estil indicat en body*/
+    </style>
+    <!-- COMENTARIS EN HEAD -->
+</head>
+<body>
+    <h1>ESTILS</h1>
+    <h2>holis</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula turpis id dapibus fringilla. Integer velit eros, varius sed felis sed, lacinia egestas lacus. Maecenas posuere nisl at elit porta lobortis. Nullam id eros eget velit scelerisque convallis. Ut nec finibus nibh. Nam quis finibus risus. Vivamus in augue eget velit finibus vehicula posuere non dui. Mauris placerat, ligula vel interdum dignissim, eros neque tempus purus, sed dapibus turpis justo aliquet libero. Cras sit amet ex mauris. Sed dapibus lorem sed leo consectetur vestibulum. Ut tristique et velit sit amet rutrum. </p>
+    <p class="destacar">Maecenas convallis risus sed massa iaculis, at malesuada diam suscipit. Donec tempor, nisl eget condimentum pharetra, ipsum lorem laoreet diam, id lacinia leo felis at mauris. Maecenas cursus efficitur lacus sit amet eleifend. Suspendisse tellus quam, viverra in lectus sed, fringilla convallis neque. Nam eget nunc in purus mollis vestibulum eu ut ante. Nullam quis arcu vel mi semper semper. Etiam et dapibus arcu. Morbi gravida justo sit amet dui porta malesuada. In id pulvinar augue. Duis luctus velit orci, sed congue diam consequat id. Nulla convallis eleifend nisi in tincidunt. Aliquam rhoncus congue dapibus. Pellentesque eu massa lobortis purus volutpat bibendum. Nulla facilisi. Fusce laoreet posuere lorem, quis tristique leo ullamcorper a. Aliquam placerat porta justo, nec vulputate ex hendrerit a. </p>
+    <p class="destacar">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In finibus porta ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam dictum consequat velit ac vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec risus velit, vestibulum nec leo sed, auctor bibendum orci. Aenean ornare molestie egestas. Pellentesque et orci suscipit, vehicula risus eu, euismod felis. Cras venenatis congue enim, quis tempor magna tempor quis. Praesent tristique elit risus, tincidunt elementum est ornare a. Praesent porta urna in ornare rhoncus. Nam facilisis non urna in fermentum. Nulla aliquam nulla ac purus iaculis, vel pretium leo pellentesque. Nullam facilisis, dolor vel porttitor porta, mauris metus interdum orci, eget porta erat ex vitae purus. </p>    
+</body>
+</html>

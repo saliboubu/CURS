@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Estils2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <!--<style type="text/css">
+        u{
+            color: red;
+        }
+        h1 u{
+            color: blue;
+        } /*El subratllat dintre del títol és únic, per tant no cal crear cap id o class, per distingir-hi un estil diferent al subratllat*/
+        table p u{
+            color: green;
+        }
+        p u{
+            color: rgb(100, 18, 155);
+        }
+        /*Dintre de la taula hi ha subratllats dintre de paràgrafs, si l'últim estil definit es taula u s'aplicarà el color definit, en cas de 
+        que l'últim estil definit sigui p u es prioritzarà el seu estil. PROVAR CANVIAR ORDRE ENTRE TABLE U i P U*/
+        /*Si es vol assegurar que s'aplicarà l'estil verd, cal identificar com a triple etiqueta TABLE+P+U, dintre de la taula en els paragrafs
+        subratlla les paraules amb identificatiu u*/
+        .tempor{
+            font-size: 16pt;
+        }
+        p .tempor{
+            font-size: 6pt;
+        }
+    </style>-->
+    <style>
+    body>p{ /*TOTS ELS PARÀGRAFS QUE ESTIGUIN EN EL BODY, NO en ALTRES ELEMENTS-DESCENDENTS DIRECTES DEL BODY*/
+        color: red;
+    }
+    td>p{
+        color: blue;
+    }
+    u{
+        color: green;
+    }
+    table+p{ /*Paràgraf que ve just després de la taula, única i exclusivament aquell paràgraf*/
+        color: aqua;
+    }
+    table~p{ /*Per tots els paràgrafs que venen després de la taula*/
+        color: yellow;
+    }
+    a{ /*Propietats dels enllaços*/
+        text-decoration: none;
+    }
+    a:link{} /*Propietats dels enllaços no visitats*/
+    a:visited{}/*Propietats dels enllaços visitats*/
+    a:active{}/*Color amb el que es queda marcat l'enllça quan hi cliques*/
+    a:hover{ 
+        color: rgb(231, 87, 111);
+        text-decoration: underline;
+    }/*Estil quan passes el ratolí per sobre de l'enllaç*/
+    </style>
+</head>
+<body>
+    <h1>Vestibulum ante ipsum primis in faucibus orci luctus et <u>ultrices</u> 
+        posuere cubilia curae; In finibus porta ultricies.
+    </h1>
+    <p>Quisque vehicula orci placerat, accumsan erat eu, venenatis sem. Proin 
+        condimentum, lectus imperdiet facilisis condimentum, justo mauris iaculis 
+        felis, eget ullamcorper dui augue at lacus. Aliquam efficitur fermentum nunc, 
+        eu consequat nulla ornare a. Nam pharetra, tellus quis imperdiet cursus, nisl 
+        enim semper felis, et semper dui est ut urna. Nulla sit amet ipsum at nisl 
+        pretium dictum quis sed leo. Donec mattis sit amet sapien a sodales. Etiam 
+        ligula ligula, tincidunt eget sem a, molestie aliquet quam. Etiam tortor est, 
+        eleifend non imperdiet sed, rutrum et turpis. Cras a nibh lacus. Proin viverra 
+        sed neque eget scelerisque. Donec non aliquet nisi, et iaculis enim. Nunc 
+        hendrerit interdum tempor. Pellentesque aliquam urna sit amet rutrum viverra.
+        Proin commodo ipsum eu est vulputate, in efficitur sem <u>aliquet</u>.
+        Vestibulum euismod vitae sapien sit amet vestibulum. 
+    </p>
+    <table border="1" width="400">
+        <tr>
+            <td>
+                <p>Quisque vehicula orci placerat, accumsan erat eu, venenatis sem. Proin 
+                    condimentum, lectus imperdiet facilisis condimentum, justo mauris iaculis 
+                    felis, eget ullamcorper dui augue at lacus. Aliquam efficitur fermentum nunc, 
+                    eu consequat nulla ornare a. Nam pharetra, tellus quis imperdiet cursus, nisl 
+                    enim semper felis, et semper dui est ut urna. Nulla sit amet ipsum at nisl 
+                    pretium dictum quis sed leo. Donec mattis sit amet sapien a sodales. Etiam 
+                    ligula ligula, tincidunt eget sem a, molestie aliquet quam. Etiam tortor est, 
+                    eleifend non imperdiet sed, rutrum et turpis. Cras a nibh lacus. Proin viverra 
+                    sed neque eget scelerisque. Donec non aliquet nisi, et iaculis enim. Nunc 
+                    hendrerit interdum tempor. Pellentesque aliquam urna sit amet rutrum viverra.
+                    Proin commodo ipsum eu est vulputate, in efficitur sem <u class="tempor">aliquet</u>.
+                    Vestibulum euismod vitae sapien sit amet vestibulum. 
+                </p>
+                <p>Quisque vehicula orci placerat, accumsan erat eu, venenatis sem. Proin 
+                    condimentum, lectus imperdiet facilisis condimentum, justo mauris iaculis 
+                    felis, eget ullamcorper dui augue at lacus. Aliquam efficitur fermentum nunc, 
+                    eu consequat nulla ornare a. Nam pharetra, tellus quis imperdiet cursus, nisl 
+                    enim semper felis, et semper dui est ut urna. Nulla sit amet ipsum at nisl 
+                    pretium dictum quis sed leo. Donec mattis sit amet sapien a sodales. Etiam 
+                    ligula ligula, tincidunt eget sem a, molestie aliquet quam. Etiam tortor est, 
+                    eleifend non imperdiet sed, rutrum et turpis. Cras a nibh lacus. Proin viverra 
+                    sed neque eget scelerisque. Donec non aliquet nisi, et iaculis enim. Nunc 
+                    hendrerit interdum tempor. Pellentesque aliquam urna sit amet rutrum viverra.
+                    Proin commodo ipsum eu est vulputate, in efficitur sem <u>aliquet</u>.
+                    Vestibulum euismod vitae sapien sit amet vestibulum. 
+                </p>
+            </td>
+        </tr>    
+    </table>
+    <p class="tempor">Quisque vehicula orci placerat, accumsan erat eu, venenatis sem. Proin 
+        condimentum, lectus imperdiet facilisis condimentum, justo mauris iaculis 
+        felis, eget ullamcorper dui augue at lacus. Aliquam efficitur fermentum nunc, 
+        eu consequat nulla ornare a. Nam pharetra, tellus quis imperdiet cursus, nisl 
+        enim semper felis, et semper dui est ut urna. Nulla sit amet ipsum at nisl 
+        pretium dictum quis sed leo. Donec mattis sit amet sapien a sodales. Etiam 
+        ligula ligula, tincidunt eget sem a, molestie aliquet quam. Etiam tortor est, 
+        eleifend non imperdiet sed, rutrum et turpis. Cras a nibh lacus. Proin viverra 
+        sed neque eget scelerisque. Donec non aliquet nisi, et iaculis enim. Nunc 
+        hendrerit interdum tempor. Pellentesque aliquam urna sit amet rutrum viverra.
+        Proin commodo ipsum eu est vulputate, in efficitur sem <u>aliquet</u>.
+        Vestibulum euismod vitae sapien sit amet vestibulum. 
+    </p>
+    <p>Quisque vehicula orci placerat, accumsan erat eu, venenatis sem. Proin 
+        condimentum, lectus imperdiet facilisis condimentum, justo mauris iaculis 
+        felis, eget ullamcorper dui augue at lacus. Aliquam efficitur fermentum nunc, 
+        eu consequat nulla ornare a. Nam pharetra, tellus quis imperdiet cursus, nisl 
+        enim semper felis, et semper dui est ut urna. Nulla sit amet ipsum at nisl 
+        pretium dictum quis sed leo. Donec mattis sit amet sapien a sodales. Etiam 
+        ligula ligula, tincidunt eget sem a, molestie aliquet quam. Etiam tortor est, 
+        eleifend non imperdiet sed, rutrum et turpis. Cras a nibh lacus. Proin viverra 
+        sed neque eget scelerisque. Donec non aliquet nisi, et iaculis enim. Nunc 
+        hendrerit interdum tempor. Pellentesque aliquam urna sit amet rutrum viverra.
+        Proin commodo ipsum eu est vulputate, in efficitur sem <u class="tempor">aliquet</u>.
+        Vestibulum euismod vitae sapien sit amet vestibulum. 
+    </p>
+    <p><a href="https://www.udg.edu/ca/">UdG</a></p>
+    
+</body>
+</html>
