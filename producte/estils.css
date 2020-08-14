@@ -1,0 +1,8 @@
+/*S'escriu l'estilisme de la pàgina sense necessitat de les etiquetes head i body*/
+/*Es linka el full d'estils (.css) mijançant l'etiqueta única <link> dintre de l'etiqueta <head></head> del full .html*/
+/*<link rel="stylesheet" type="text/css" href="estils.css"> --> El rel és el tipus de full que s'associa, href document que es linka,
+si el document està en la mateixa carpeta estil.css, si està en una altre carpeta ../estils.css*/
+
+h1{
+    color: red;
+}

@@ -1,0 +1,48 @@
+table{
+    font-family: Arial;
+}
+thead{
+    font-size: 20pt;
+    text-align: center;
+    background-color:  rgb(216, 246, 247);
+    font-weight: bold;
+}
+tbody{
+    text-align: center;
+}
+tbody tr:first-child td{
+    font-weight: bold;
+    border: 5px solid black;
+    border-right: none;
+    border-left: none;
+    margin: 10px;
+
+}
+tbody tr:first-child td:first-child{
+    border-left: 5px solid black;
+}
+tbody tr:first-child td:last-child{
+    border-right: 5px solid black;
+}
+tbody tr:nth-child(2){
+    background-color: rgb(216, 246, 247);
+    
+}
+tbody tr:nth-child(3), tr:nth-child(4), tr:nth-child(5){
+    background-color: rgb(68, 235, 151);
+}
+tbody tr:nth-child(6), tr:nth-child(7), tr:nth-child(8){
+    background-color: rgb(76, 211, 245);
+}
+tbody tr:nth-child(9), tr:nth-child(10), tr:nth-child(11){
+    background-color: rgb(25, 173, 117);
+}
+tbody tr:nth-child(12), tr:nth-child(13), tr:nth-child(14){
+    background-color: rgb(96, 172, 223);
+}
+tbody tr:nth-child(2) td:first-child{
+    background-color: rgb(255,255,255)
+}
+tfoot td:first-child{
+    font-weight: bold;
+}

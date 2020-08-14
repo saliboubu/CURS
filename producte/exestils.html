@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Backgrounds</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style type="text/css">
+        /*body{
+            background: rgb(238,174,202); /*Els gradients de colors s'obtenen de https://cssgradient.io/*/
+            /*background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+            background-image: url('petals.jpg'); /*Si la imatge és molt petita es repetirà com a mosaic*/
+            /*background-repeat: no-repeat; /*si no vols que es repetexi la imatge definir no-repeat*/
+            /*background-position: center bottom;
+            background-attachment: fixed; /*Que la imatge de fons no es mogui quan facis scroll a la pàgina, però el text si que es mou*/
+        /*}*/
+        /*MODEL DE CAIXA*/
+        p.primer{/*Etiqueta que té la classe primer*/
+            /*opacity: 1; fa transparent el fons i contingut, tant el color de fons com el del text*/
+            background-color: rgb(255, 0, 0); /*Mentres es treballa amb model caixa és millor treballar amb color de fons*/
+            width: 600px; /*És millor no afegir height ja que el text s'autoajusta i ens estalviem solapaments: s'ha provat height: 500px, 300px, 100px i 50px */
+            height: 200px;
+            /*overflow: scroll; podràs tenir una barra per desplaçar i veure tot el que hi ha en la capa*/
+            /*tot el que no quep en la mida que s'ha estipulat s'amaga, en text no es recomana ja que ratalles el text -> OVERFLOW: HIDDEN;*/
+            border: 5px solid #000000;/*millor no posar tot en una línia i treballar cada característica per separat, perquè pot ser que el client vulgui cacda marge d'un estil diferent*/
+            border-radius: 5px 10px 20px 30px; /*chanflan*/
+            border-top-left-radius: 5px;/*fer cada marge individualment, no és pràctic*/
+            /*margin-left:50px; /*margin és la distancia entre la capa i la caixa*/
+            margin: 0px auto; /*centra l'element, no el paràgraf, si no tot el contingut que hi ha a la caixa*/
+            padding:50px;/*afegeix amplada als marges interiors de la caixa*/
+        }
+    </style>
+</head>
+<body>
+    <p class="primer">Donec fermentum sodales odio, vitae elementum erat semper tempus. Suspendisse at nisi vel velit eleifend aliquet a non lacus. Phasellus
+    in tortor a elit molestie bibendum non nec tortor. <u>Donec consectetur id orci ac venenatis</u>. Cras sed nunc ut tortor efficitur sagittis non 
+    porttitor nisl. Fusce imperdiet magna orci, et rhoncus nibh tincidunt volutpat. Sed eu blandit orci, eu consectetur turpis. Phasellus 
+    pharetra faucibus nunc, sed ullamcorper nibh tempor faucibus. Donec venenatis magna in est laoreet, eu placerat turpis rhoncus. Etiam at
+    felis mauris. Nulla elementum nulla lectus, vitae dapibus lectus mattis at. Proin placerat dolor ut justo gravida feugiat. Mauris id felis 
+    turpis. Duis aliquam, purus ut mollis scelerisque, nulla ex pulvinar magna, a malesuada dolor enim non lectus. Maecenas molestie volutpat 
+    orci vitae porttitor. Maecenas blandit libero enim, at commodo elit imperdiet ac.
+    </p>
+    <p class="segon">Donec fermentum sodales odio, vitae elementum erat semper tempus. Suspendisse at nisi vel velit eleifend aliquet a non lacus. Phasellus
+    in tortor a elit molestie bibendum non nec tortor. <u>Donec consectetur id orci ac venenatis</u>. Cras sed nunc ut tortor efficitur sagittis non 
+    porttitor nisl. Fusce imperdiet magna orci, et rhoncus nibh tincidunt volutpat. Sed eu blandit orci, eu consectetur turpis. Phasellus 
+    pharetra faucibus nunc, sed ullamcorper nibh tempor faucibus. Donec venenatis magna in est laoreet, eu placerat turpis rhoncus. Etiam at
+    felis mauris. Nulla elementum nulla lectus, vitae dapibus lectus mattis at. Proin placerat dolor ut justo gravida feugiat. Mauris id felis 
+    turpis. Duis aliquam, purus ut mollis scelerisque, nulla ex pulvinar magna, a malesuada dolor enim non lectus. Maecenas molestie volutpat 
+    orci vitae porttitor. Maecenas blandit libero enim, at commodo elit imperdiet ac.
+    </p>
+    <p class="tercer">Donec fermentum sodales odio, vitae elementum erat semper tempus. Suspendisse at nisi vel velit eleifend aliquet a non lacus. Phasellus
+    in tortor a elit molestie bibendum non nec tortor. <u>Donec consectetur id orci ac venenatis</u>. Cras sed nunc ut tortor efficitur sagittis non 
+    porttitor nisl. Fusce imperdiet magna orci, et rhoncus nibh tincidunt volutpat. Sed eu blandit orci, eu consectetur turpis. Phasellus 
+    pharetra faucibus nunc, sed ullamcorper nibh tempor faucibus. Donec venenatis magna in est laoreet, eu placerat turpis rhoncus. Etiam at
+    felis mauris. Nulla elementum nulla lectus, vitae dapibus lectus mattis at. Proin placerat dolor ut justo gravida feugiat. Mauris id felis 
+    turpis. Duis aliquam, purus ut mollis scelerisque, nulla ex pulvinar magna, a malesuada dolor enim non lectus. Maecenas molestie volutpat 
+    orci vitae porttitor. Maecenas blandit libero enim, at commodo elit imperdiet ac.
+    </p>
+    <p class="tercer">Donec fermentum sodales odio, vitae elementum erat semper tempus. Suspendisse at nisi vel velit eleifend aliquet a non lacus. Phasellus
+    in tortor a elit molestie bibendum non nec tortor. <u>Donec consectetur id orci ac venenatis</u>. Cras sed nunc ut tortor efficitur sagittis non 
+    porttitor nisl. Fusce imperdiet magna orci, et rhoncus nibh tincidunt volutpat. Sed eu blandit orci, eu consectetur turpis. Phasellus 
+    pharetra faucibus nunc, sed ullamcorper nibh tempor faucibus. Donec venenatis magna in est laoreet, eu placerat turpis rhoncus. Etiam at
+    felis mauris. Nulla elementum nulla lectus, vitae dapibus lectus mattis at. Proin placerat dolor ut justo gravida feugiat. Mauris id felis 
+    turpis. Duis aliquam, purus ut mollis scelerisque, nulla ex pulvinar magna, a malesuada dolor enim non lectus. Maecenas molestie volutpat 
+    orci vitae porttitor. Maecenas blandit libero enim, at commodo elit imperdiet ac.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat nunc at nulla vulputate, sit amet varius dolor lacinia. Curabitur convallis consequat mauris, id viverra leo interdum vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla facilisi. Donec at risus nec velit finibus dictum feugiat non ex. Curabitur pretium purus augue, a elementum justo sollicitudin vel. Curabitur porta vehicula suscipit.
+    Nullam sodales porttitor risus id commodo. Cras ac diam volutpat, finibus lectus tempor, semper ligula. In rhoncus ligula eu turpis varius, sed laoreet ipsum finibus. Ut nec ante at nisi rutrum scelerisque tempor in nisi. Sed hendrerit vehicula fermentum. Duis id nisl in nunc tincidunt hendrerit. Nullam in quam viverra, tempor lectus tincidunt, laoreet turpis. Nunc viverra eros nec ex dapibus bibendum. Quisque a urna nibh. Nullam ornare, eros ac efficitur pulvinar, arcu quam auctor sem, ut condimentum ex nulla vel urna. Nulla purus quam, lobortis ut leo sed, egestas elementum mauris. Nulla cursus ex nec nibh ornare fermentum. Phasellus efficitur ipsum tortor, non tincidunt turpis iaculis vitae. Mauris consectetur rutrum elit ut pretium. Maecenas consectetur id dolor non egestas. Suspendisse molestie ut eros vel fringilla.
+    Pellentesque sed lectus sit amet eros egestas feugiat. Vivamus justo lorem, malesuada vitae placerat ac, fringilla congue neque. Proin id sollicitudin magna. Pellentesque bibendum orci scelerisque leo molestie, eu ullamcorper eros eleifend. Mauris ac urna pharetra, aliquam diam vel, dapibus dui. Vestibulum velit neque, tincidunt sed neque ut, sodales bibendum ipsum. Cras eget dapibus diam. Cras at augue in metus pretium feugiat in vitae augue. In magna felis, gravida ut augue pretium, vulputate maximus mauris. Etiam condimentum nibh ex, id ultrices nisl tincidunt at. Integer vitae est tincidunt, commodo nisl a, elementum diam.
+    Aliquam faucibus tristique lorem nec tempus. Integer arcu eros, sodales eget laoreet at, viverra sed nibh. Phasellus ultricies suscipit libero id iaculis. Phasellus laoreet tempus eros vitae ornare. Nulla eget purus sed dolor bibendum posuere. Aenean eros odio, posuere ac turpis et, ornare maximus ligula. Donec faucibus ac diam sed pharetra. Nulla nunc justo, aliquam in dui auctor, varius finibus odio.
+    Aenean ut purus sed magna mattis venenatis ac sed ligula. Donec est neque, facilisis eget felis tempus, suscipit volutpat sem. Aenean blandit vel turpis quis consequat. Ut faucibus purus non urna hendrerit luctus. Cras aliquet massa sem, at congue dolor commodo pulvinar. Fusce felis purus, sollicitudin quis pharetra eu, porttitor sed nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent laoreet mollis libero ac faucibus. Maecenas dignissim dignissim bibendum. Nunc non arcu quis erat bibendum vehicula vitae et tellus. Nullam vel dignissim nisl. In eleifend ligula erat, vitae lacinia eros eleifend eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    Cras sed nunc ut tortor efficitur sagittis non 
+    porttitor nisl. Fusce imperdiet magna orci, et rhoncus nibh tincidunt volutpat. Sed eu blandit orci, eu consectetur turpis. Phasellus 
+    pharetra faucibus nunc, sed ullamcorper nibh tempor faucibus. Donec venenatis magna in est laoreet, eu placerat turpis rhoncus. Etiam at
+    felis mauris. Nulla elementum nulla lectus, vitae dapibus lectus mattis at. Proin placerat dolor ut justo gravida feugiat. Mauris id felis 
+    turpis. Duis aliquam, purus ut mollis scelerisque, nulla ex pulvinar magna, a malesuada dolor enim non lectus. Maecenas molestie volutpat 
+    orci vitae porttitor. Maecenas blandit libero enim, at commodo elit imperdiet ac.
+    </p>
+</body>
+</html>

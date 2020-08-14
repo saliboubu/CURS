@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Estils avançats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> <!--Des de google fonts "https://fonts.google.com/specimen/Indie+Flower?sidebar.open=true&selection.family=Indie+Flower#standard-styles", aplicar el link que trobes en la font, a la part embedded-->
+    <style type="text/css"> /*PER A LES PROVES RÀPIDES NO UTILIZAREM FULL D'ESTILS, HO FEM DIRECTAMENT EN HEAD*/
+        h1{
+            color: red; /*Amb color:transparent treu el color que tingui l'element*/
+            text-decoration: none; /*Amb text-decoration.line-through es tatxa el text*/
+            font-family: Verdana, Arial, Tahoma, sans-serif; /*Font-family s'associa al tipus de lletra, si el format de lletra està composat per més d'un nom ha d'anar entre cometes 'Times New Roman'*/
+            /*En cas de que vulguis utilitzar una font atípica, cal assegurar que l'usuari pugui veure text, per tant s'utilitza una llista de fonts separades per ','. És a dir s'utilitzen families: Serif, Sans-serif, Monospace, Cursive, Fantasy*/
+        }
+        body{
+            background-image: url('paisatge.jpg');
+            background-position: center;
+        }
+        @font-face{
+            font-family: kitahara;
+            src: url('kitahara.ttf'); /*Aceedir a la pàgina https://www.1001freefonts.com/, descarregar la font que vulguis.Per afegir cal utilitzar la seguent estructura*/
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic; /*unicament serveix per fer cursiva o treure la cursiva a algun text*/
+            font-weight: bold; /*unicacment serveix per fer negreta o treure negreta*/
+            font-size: 14pt; /*VW per a pàgines responsives, el tamany de lletra s'adadpta segons el navegador i pantalla des del que es vegi la web*/
+            line-height: 120%;/*Distancia entre línies, INTERLINEADO. Es recomanda en % respecte la mida de la lletra, perquè així s'adapti i no es trapitjen les línies; 120% -> INTERLINEAT NORMAL*/
+            text-align: justify; /*Alinear el text*/
+            text-indent: 50px; /*Afegeix tab a la linia*/
+            word-spacing: 10px; /*Espai entre paraules, no es sol utilitzar*/
+            letter-spacing:1px; /*espai entre lletres, no s'utilitza*/
+        }
+       .imatge{ /*afegir classe a totes les imatges que es vulguin centrar. Es pot fer amb l'etiqueta normal DIV?*/
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+       }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum</h1>
+    <img src="champu.jpg" alt="champu liquid" title="champu" width="700" class="imatge">
+    <p>Donec fermentum sodales odio, vitae elementum erat semper tempus. Suspendisse at nisi vel velit eleifend aliquet a non lacus. Phasellus
+     in tortor a elit molestie bibendum non nec tortor. <u>Donec consectetur id orci ac venenatis</u>. Cras sed nunc ut tortor efficitur sagittis non 
+     porttitor nisl. Fusce imperdiet magna orci, et rhoncus nibh tincidunt volutpat. Sed eu blandit orci, eu consectetur turpis. Phasellus 
+     pharetra faucibus nunc, sed ullamcorper nibh tempor faucibus. Donec venenatis magna in est laoreet, eu placerat turpis rhoncus. Etiam at
+     felis mauris. Nulla elementum nulla lectus, vitae dapibus lectus mattis at. Proin placerat dolor ut justo gravida feugiat. Mauris id felis 
+     turpis. Duis aliquam, purus ut mollis scelerisque, nulla ex pulvinar magna, a malesuada dolor enim non lectus. Maecenas molestie volutpat 
+     orci vitae porttitor. Maecenas blandit libero enim, at commodo elit imperdiet ac.</p>
+    <a href="file:///C:/Users/Mat%C3%AD/Documents/GitHub/CURS/producte/producte2.html">SEGUENT</a>
+</body>
+</html>
