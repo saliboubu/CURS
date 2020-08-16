@@ -1,0 +1,40 @@
+/*titols*/
+h1, h2, h3{
+    font-family: Arial;
+    font-weight: bold;
+}
+h3{
+    font-size: 12pt;
+}
+/*Taula de dades*/
+#datos, #estudios, #otros{
+    font-family: arial;
+    border-collapse: collapse;
+    border: 0.5px solid rgba(128, 128, 128, 0.527);
+}
+#declarar{
+    font-family: arial;
+    font-size: 12pt;
+    border: none;
+}
+#datos tr:first-child{
+    border-bottom: 3px solid rgba(245, 104, 104, 0.521);
+}
+input{
+    border: none;
+    font-family: Arial;
+}
+
+#estudios tr:nth-child(2), #otros tr:nth-child(3){
+    border-top: 3px solid rgba(245, 104, 104, 0.521);
+}
+#enviar{
+    padding: 15px;
+    font-size: 12pt;
+    font-weight: bold;
+}
+form{
+    background-image: url(../imatges/cualificacion.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}

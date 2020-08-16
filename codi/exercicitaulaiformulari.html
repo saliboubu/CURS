@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="estilformulari.css"/>
 </head>
 <body>
  <table width="1000" align="center">
@@ -21,7 +22,7 @@
  <h1 align="center">FORMULARIO DE INSCRIPCION PICE</h1> 
  <h3 align="center">PLAN DE CAPACITACION 2020 | PICE</h3>  
  <form>
-    <table border="1" width="1000" align="center">
+    <table border="1" width="1000" align="center" id="datos">
         <tr>
             <th colspan="4">
                 DATOS BASICOS
@@ -110,7 +111,7 @@
     </table>
  
     <br>
-    <table border="1" width="1000" align="center">
+    <table border="1" width="1000" align="center" id="estudios">
         <tr>
             <th width="125" rowspan="12">NIVEL MÀXIMO DE ESTUDIOS ALCANZADO: (marcar una opcion)</th>
             <td colspan="2">Sin enseñanza primaria</td>
@@ -163,7 +164,7 @@
         </tr>
     </table>
     <br>
-    <table border="1" width="1000" align="center">
+    <table border="1" width="1000" align="center" id="otros">
         <tr>
             <th rowspan="4" width="200">
                 OTROS DATOS DEL JOVEN (CUMPLIMENTACION VOLUNTARIA) <br><br>Marcar las opciones que correspondan
@@ -184,7 +185,7 @@
         </tr>
     </table>
     <br>
-    <table width="1000" align="center">
+    <table width="1000" align="center" id="declara">
         <tr> 
             <td height="50"> <h3>DECLARO QUE: <br><br> A) Jovenes que se encuentran en sus cuatro primeros meses de inscripción en el SNGJ:</h3> </td> 
         </tr>
@@ -192,7 +193,7 @@
             <td align="left"><input type="checkbox" id="declarar"> Me encuentro inscrito como beneficiario del Sistema Nacional de Garantia Juvenil desde el dia <input type="date" min="" max="">, sin que hayan transcurrido cuatro meses desde dicha fecha</td>
         </tr>
         <tr>
-            <td colspan="2" align="center"><input type="submit" title="ENVIAR"></td>
+            <td colspan="2" align="center"><input type="submit" title="ENVIAR" id="enviar"></td>
         </tr>
     </table>
 </form>

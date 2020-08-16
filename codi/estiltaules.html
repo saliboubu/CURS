@@ -10,9 +10,10 @@
     <link rel="stylesheet" type="text/css" href="estiltaules.css">
 </head>
 <body>
-    <table border="1" width="1000">
+  <div style="overflow-x:auto;"> 
+     <table border="1" width="1000">
         <colgroup> 
-            <col></col>
+            <col></col> 
             <col></col>
             <col></col>
         </colgroup>
@@ -38,9 +39,9 @@
                 <td width="30">T</td>
                 <td width="30">H</td>
             </tr>
-            <tr>
-                <td rowspan="3">B</td>
-                <td>BCN</td>
+            <tr class="columna">
+                <td rowspan="3" id="bcn">B</td>
+                <td width="30">BCN</td>
                 <td>100</td>
                 <td>100</td>
                 <td>100</td>
@@ -50,7 +51,7 @@
                 <td>100</td>
                 <td>100</td>
             </tr>
-            <tr>
+            <tr class="columna">
                 <td width="30">BDL</td>
                 <td>100</td>
                 <td>100</td>
@@ -61,7 +62,7 @@
                 <td>100</td>
                 <td>100</td>
             </tr>
-            <tr>
+            <tr class="columna">
                 <td width="30">HCL</td>
                 <td>100</td>
                 <td>100</td>
@@ -72,8 +73,8 @@
                 <td>100</td>
                 <td>100</td>  
             </tr>
-            <tr>
-                <td width="30" rowspan="3">G</td>
+            <tr class="columna">
+                <td width="30" rowspan="3" id="gir">G</td>
                 <td width="30">GIR</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -84,7 +85,7 @@
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
-            <tr>
+            <tr class="columna">
                 <td width="30">FIG</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -107,7 +108,7 @@
                 <td>&nbsp;</td>  
             </tr>
             <tr>
-                <td width="30" rowspan="3">T</td>
+                <td width="30" rowspan="3" id="tar">T</td>
                 <td width="30">TRG</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -141,7 +142,7 @@
                 <td>&nbsp;</td>  
             </tr>
             <tr>
-                <td width="30" rowspan="3">L</td>
+                <td width="30" rowspan="3" id="llei">L</td>
                 <td width="30">LLE</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -189,10 +190,11 @@
             </tr>
             <tr>
                 <td colspan="2">TOTAL ANUAL</td>
-                <td colspan="4">&nbsp;</td>
-                <td colspan="4">&nbsp;</td>
+                <td colspan="4">10000</td>
+                <td colspan="4">20000</td>
             </tr>
         </tfoot>
-    </table>
+     </table>
+    </div>
 </body>
 </html>

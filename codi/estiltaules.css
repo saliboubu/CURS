@@ -1,48 +1,157 @@
+/*ESTIL TAULES*/
 table{
     font-family: Arial;
+    border-collapse: collapse; /*Merges the borders*/
 }
 thead{
     font-size: 20pt;
     text-align: center;
     background-color:  rgb(216, 246, 247);
     font-weight: bold;
+    border: none;
 }
 tbody{
     text-align: center;
 }
-tbody tr:first-child td{
+tbody tr:nth-child(1n+1):hover{
+    background-color: gray;
     font-weight: bold;
-    border: 5px solid black;
-    border-right: none;
-    border-left: none;
+}
+/*#bcn:hover{
+    background-color: rgb(68, 235, 151);
+}
+#gir:hover{
+    background-color: rgb(76, 211, 245);
+}
+#tar:hover{
+    background-color: rgb(25, 173, 117);
+}
+#llei:hover{
+    background-color: rgb(96, 172, 223);
+}
+/*Anys 2019 i 2020*/
+tbody tr:first-child td:nth-child(2), tr:first-child td:last-child{ 
+    font-weight: bold;
+    border: 4px solid black;
     margin: 10px;
-
 }
-tbody tr:first-child td:first-child{
-    border-left: 5px solid black;
+/*Caselles en blanc*/
+tbody tr:nth-child(2) td:first-child{
+    background-color: rgb(255,255,255)
 }
-tbody tr:first-child td:last-child{
-    border-right: 5px solid black;
+tbody tr:first-child td:first-child{ 
+    border-left: 4px solid black;
+}
+tbody tr:nth-child(2) td{ 
+    border: 4px solid black;
+    border-top: none;
+    padding-top: 3px;
+}
+/*Caselles PETH*/
+tbody tr:nth-child(2) td:first-child{ 
+    border-right:4px solid black;
+}
+tbody tr:nth-child(2) td:nth-child(4n+3), tr:nth-child(2) td:nth-child(4n+4){
+    border-right: none;
+    border-left: none; 
+}
+tbody tr:nth-child(2) td:nth-child(4n+2){
+    border-right:none;
+}
+tbody tr:nth-child(2) td:nth-child(4n+5){
+    border-left:none;
 }
 tbody tr:nth-child(2){
-    background-color: rgb(216, 246, 247);
-    
+    background-color: rgb(216, 246, 247);   
+}
+/*Caselles Barcelona*/
+tbody tr:nth-child(3) td:first-child{
+    border: 4px solid black;
+}
+tbody tr:nth-child(5) td{
+    border-bottom: 4px solid black;
+}
+tbody tr:nth-child(3) td:nth-child(4n+2){
+    border-right: 4px solid black;
+}
+tbody tr:nth-child(4) td:nth-child(4n+1){
+    border-right: 4px solid black;
+}
+tbody tr:nth-child(5) td:nth-child(4n+1){
+    border-right: 4px solid black;
 }
 tbody tr:nth-child(3), tr:nth-child(4), tr:nth-child(5){
     background-color: rgb(68, 235, 151);
 }
+/*Caselles Girona*/
+tbody tr:nth-child(6) td:first-child{
+    border: 4px solid black;
+}
+tbody tr:nth-child(8) td{
+    border-bottom: 4px solid black;
+}
+tbody tr:nth-child(6) td:nth-child(4n+2){
+    border-right: 4px solid black;
+}
+tbody tr:nth-child(7) td:nth-child(4n+1), tr:nth-child(8) td:nth-child(4n+1){
+    border-right: 4px solid black;
+}
 tbody tr:nth-child(6), tr:nth-child(7), tr:nth-child(8){
     background-color: rgb(76, 211, 245);
+}
+/*Caselles Tarragona*/
+tbody tr:nth-child(9) td:first-child{
+    border: 4px solid black;
+}
+tbody tr:nth-child(11) td{
+    border-bottom: 4px solid black;
+}
+tbody tr:nth-child(9) td:nth-child(4n+2){
+    border-right: 4px solid black;
+}
+tbody tr:nth-child(10) td:nth-child(4n+1), tr:nth-child(11) td:nth-child(4n+1){
+    border-right: 4px solid black;
 }
 tbody tr:nth-child(9), tr:nth-child(10), tr:nth-child(11){
     background-color: rgb(25, 173, 117);
 }
+/*Caselles Lleida*/
+tbody tr:nth-child(12) td:first-child{
+    border: 4px solid black;
+}
+tbody tr:nth-child(14) td{
+    border-bottom: 4px solid black;
+}
+tbody tr:nth-child(12) td:nth-child(4n+2){
+    border-right: 4px solid black;
+}
+tbody tr:nth-child(13) td:nth-child(4n+1), tr:nth-child(14) td:nth-child(4n+1){
+    border-right: 4px solid black;
+}
 tbody tr:nth-child(12), tr:nth-child(13), tr:nth-child(14){
     background-color: rgb(96, 172, 223);
 }
-tbody tr:nth-child(2) td:first-child{
-    background-color: rgb(255,255,255)
-}
+/*Peu de taula*/
 tfoot td:first-child{
+    font-weight: bold;
+}
+tfoot tr{
+    border: 4px solid black;
+}
+tfoot tr td:first-child, tr:first-child td:nth-child(5), tr:nth-child(2) td:nth-child(2){
+    border-right: 4px solid black;
+}
+tfoot tr:first-child td:nth-child(9){
+    border-left: none;
+}
+tfoot td:nth-child(1n+2){
+    text-align: center;
+}
+tfoot tr:first-child td:nth-child(1n+2):hover{
+    background-color: rgba(128, 0, 43, 0.589);
+    font-weight: bold;
+}
+tfoot tr:nth-child(2) td:nth-child(2):hover, tfoot tr:nth-child(2) td:nth-child(3):hover{
+    background-color: rgba(255, 0, 0, 0.5);
     font-weight: bold;
 }
