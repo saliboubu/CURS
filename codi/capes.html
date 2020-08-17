@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CAPES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style type="text/css">
+        #capa1{
+            background-color: blue; /*Sempre treballar amb color de fons per saber sobre quin objecte estem treballant*/
+            width: 400px;
+            height: 400px;
+            position: absolute; /*Dóna mobilitat a la capa*/
+            top:200px; /*top: 200px; En comptes d'utilitzar el top, utilitzem bottom a 0px, serveix per fer el peu de plana, sempre queda fixe a la part inferior de la capa*/
+            left: 200px;
+            z-index: 1; /*Fa que la capa quedi per sobre de qualsevol altre capa amb la que es superposi, amb z-index: -1 coloca la capa per sota del cocntingut*/
+            /*Scrolls pitjor enemic dels programadors. El contingut s'ha d'adaptar als canvis de pantalla sense scrolls = RESPONSIVE WEBSITE. NOMÉS UNA DIRECCIÓ DE MOVIMENT, SCROLL VERTICAL, PROHIBIT SCROLL HORITZONTAL*/
+        }
+        #capa2{
+            background-color: red;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 250px;
+            left: 500px;/*left: 600px; En comptes d'utilitzar left, utilitzem right per a que l'element quedi enganxat a la dreta de la capa. QUAN L'ELEMENT QUEDA A LA DRETA, SE LI ARRODONEIXEN LES CANTONADES*/
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        #pestanya{
+            background-color: blueviolet;
+            width: 30px;
+            height: 120px;
+            position: absolute;
+            right: 0px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border: 3px solid violet;
+            border-right: none;
+        }
+        p{
+            text-align: center;
+            font-family: Arial;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="capa1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu molestie lorem. Pellentesque lorem arcu, 
+        blandit sit amet dolor et, euismod varius odio. In fringilla id lectus ut vehicula. Ut mollis sapien pharetra, 
+        hendrerit risus dapibus, mattis nibh. Nulla pulvinar, metus vitae ultrices tincidunt, erat ipsum maximus diam, 
+        quis feugiat nibh enim at diam. Maecenas sem est, pellentesque id placerat ac, gravida vel leo. Vestibulum feugiat
+        ornare nisi, eget scelerisque ante bibendum non. Maecenas sit amet quam egestas, malesuada est id, ullamcorper 
+        neque. Mauris at venenatis ipsum. Cras a commodo odio. Fusce eu tempus eros. Nunc finibus bibendum velit, ac 
+        lacinia dui euismod non. Pellentesque ac porta ipsum. Nam auctor elit ligula, faucibus tincidunt dolor ornare ut. 
+        Paesent non massa sed sem scelerisque semper. Praesent nisl neque, auctor lobortis metus eu, lacinia facilisis risus.
+    </div>
+    <div id="capa2">
+        Ut pulvinar tincidunt metus non hendrerit. Sed lacinia ipsum id erat pharetra placerat. Integer varius porta felis.
+        Sed quis nulla efficitur, tempor neque eget, gravida eros. Donec aliquam, ligula ac tempor viverra, lorem elit 
+        scelerisque ex, quis volutpat magna lorem nec ipsum. Sed ligula risus, sodales bibendum cursus sit amet, vehicula in 
+        tellus. Aenean congue posuere finibus.
+    </div>
+    <div id="pestanya">
+        <p>A<br>J<br>U<br>D<br>A</p>
+    </div>
+</body>
+</html>

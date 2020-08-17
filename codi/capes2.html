@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CAPES 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style type="text/css">
+        #container{
+            background-color: gold;
+            width: 800px; /*la capa s'adapta a la mida de la pantalla en cas d'utilotzar 80%*/
+            height: 600px;
+            margin: 0 auto; /*no es volen marges ni a dalt ni a baix, l'auto distribueix la distancia als marges de la web, això fa que la capa s'adapti en certa manera a la web --> WEB NO RESPONSIVA*/
+        }
+        img{
+            width: 75%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .prod{
+            background-color: red;
+            width: 350px;
+            height: 500px;
+            margin: 20px;
+            position: relative;
+            float: left;
+        }
+        h3{
+            text-align: center;
+            font-family: Cambria;
+        }
+        p{
+            text-align: justify;
+            font-family: Cambria;
+        }
+    </style>
+</head>
+<body>
+    <h1>CAPES 3ª PART</h1>
+    <div id="container"> <!-- L'avantatge de treballar sobre la capa és que dóna més flexibilitat que no pas treballant en el body-->
+        <div class="prod">
+            <h3>COUSCOUS</h3>
+            <img src="../imatges/couscous.jpg" alt="couscous">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi elit, pellentesque in sem id, porttitor venenatis ante. 
+            Cras auctor iaculis congue. Fusce cursus nibh ut ex malesuada molestie. Nullam eu cursus ante. Fusce varius sed enim congue mollis.
+            Etiam tincidunt felis quis nibh aliquet maximus. Donec non ligula mauris. Praesent neque urna, ultrices ac arcu quis, dignissim blandit
+            purus.</p>
+        </div>
+        <div class="prod">
+            <h3>BAKLAWA</h3>
+            <img src="../imatges/sweets.jpg" alt="sweets">
+            <p>Sed venenatis ante id tincidunt eleifend. Nulla convallis sagittis risus, quis interdum augue tristique vitae. Donec in porta leo,
+            at rutrum diam. Duis enim quam, pellentesque eu diam quis, bibendum tempus magna. Integer sed nulla erat. Suspendisse potenti. Proin 
+            vulputate, augue a aliquet condimentum, augue orci tristique est, ut rutrum diam elit sed nisi. Sed pellentesque elementum lectus vitae
+            luctus. Nulla non mi ut urna interdum rhoncus vitae in risus. In hac habitasse platea dictumst. Sed nec mauris enim. Duis feugiat mi 
+            sollicitudin, vulputate ante nec, molestie ex.</p>
+        </div>
+        <div class="prod">
+            <h3>LEMBREUA</h3>
+            <img src="../imatges/morocco.jpg" alt="mbreua">
+            <p>Sed venenatis ante id tincidunt eleifend. Nulla convallis sagittis risus, quis interdum augue tristique vitae. Donec in porta leo,
+            at rutrum diam. Duis enim quam, pellentesque eu diam quis, bibendum tempus magna. Integer sed nulla erat. Suspendisse potenti. Proin 
+            vulputate, augue a aliquet condimentum, augue orci tristique est, ut rutrum diam elit sed nisi. Sed pellentesque elementum lectus vitae
+            luctus. Nulla non mi ut urna interdum rhoncus vitae in risus. In hac habitasse platea dictumst. Sed nec mauris enim. Duis feugiat mi 
+            sollicitudin, vulputate ante nec, molestie ex.</p>
+        </div>
+    </div>
+</body>
+</html>
