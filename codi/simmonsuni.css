@@ -1,0 +1,41 @@
+.llistal{
+    position: relative;
+    float: left;
+}
+.res-mo{
+    position: relative;
+    float: left;
+}
+.ullista{
+    margin-top: 0px;
+}
+.nomarge{
+    padding-left:0px;
+}
+#more{
+    padding-left: 50px;
+}
+#copyright{
+    position: absolute;
+    bottom: 0px;
+}
+.linkcopy{
+    position: relative;
+    float: left;
+}
+li{
+    list-style: none;
+}
+p.linkcopy{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*div{
+    background-color: red;
+    transition: background-color 2s;
+}
+div:hover{
+    background-color: aqua;
+
+}*/

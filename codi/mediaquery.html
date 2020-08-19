@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MEDIA QUERYS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style type="text/css">
+        .prod{
+            position: relative;
+            float: left;
+            width: 22%;
+            background-color: violet;
+            margin: 10px;
+        } /*Quan la llargada dels texts no és igual, les capes seràn desigual. Solució: FLEX GRID -> Per aplicar-ho cal crear una capa contenidora global, de tots els continguts*/
+        .contenidor{
+            display: flex;
+            flex-wrap: wrap; /*FLEX: ajusta tot a la mateixa ALÇADA, mateix HEIGHT!*/
+        }   
+        @media screen and (max-width: 600px){/*Si això es veu en pantalla, i la mida màxima de la pantalla és de 600px fer que les capes ocupin 45%*/
+            .prod{
+                width: 45%;
+            }
+        }
+        @media screen and (max-width:400px){
+            .prod{
+                width:90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenidor">
+        <div class="prod">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id bibendum enim. Donec nec urna porttitor neque commodo mattis ut eget lacus.Donec nec urna porttitor neque commodo mattis ut eget lacus. Sed dapibus lorem vel urna ultricies dictum. Donec consectetur viverra dolor. Donec in imperdiet justo, vel scelerisque urna. Aenean ligula erat, laoreet et ligula quis, suscipit porttitor ligula. Aenean eget eros vestibulum, consequat sapien sit amet, finibus tellus. In viverra dolor at dolor tincidunt tempus. Quisque lacinia maximus ipsum ut sodales. Pellentesque rutrum mattis risus vitae viverra.</div>
+        <div class="prod">A.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus lorem vel urna ultricies dictum. Donec consectetur viverra dolor. Donec in imperdiet justo, vel scelerisque urna. Aenean ligula erat, laoreet et ligula quis, suscipit porttitor ligula. Aenean eget eros vestibulum, consequat sapien sit amet, finibus tellus. In viverra dolor at dolor tincidunt tempus. Quisque lacinia maximus ipsum ut sodales. Pellentesque rutrum mattis risus vitae viverra.</div>
+        <div class="prod">B.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="prod">C.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id bibendum enim. Donec nec urna porttitor neque commodo mattis ut eget lacus.Donec nec urna porttitor neque commodo mattis ut eget lacus. Sed dapibus lorem vel urna ultricies dictum. Donec consectetur viverra dolor. Donec in imperdiet justo, vel scelerisque urna. Aenean ligula erat, laoreet et ligula quis, suscipit porttitor ligula. Aenean eget eros vestibulum, consequat sapien sit amet, finibus tellus. In viverra dolor at dolor tincidunt tempus. Quisque lacinia maximus ipsum ut sodales. Pellentesque rutrum mattis risus vitae viverra.</div>
+        <div class="prod">D.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id bibendum enim. Donec nec urna porttitor neque commodo mattis ut eget lacus.Donec nec urna porttitor neque commodo mattis ut eget lacus. Sed dapibus lorem vel urna ultricies dictum. Donec consectetur viverra dolor. Donec in imperdiet justo, vel scelerisque urna. Aenean ligula erat, laoreet et ligula quis, suscipit porttitor ligula. Aenean eget eros vestibulum, consequat sapien sit amet, finibus tellus. In viverra dolor at dolor tincidunt tempus. Quisque lacinia maximus ipsum ut sodales. Pellentesque rutrum mattis risus vitae viverra.</div>
+        <div class="prod">E.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id bibendum enim. Donec nec urna porttitor neque commodo mattis ut eget lacus.Donec nec urna porttitor neque commodo mattis ut eget lacus. Sed dapibus lorem vel urna ultricies dictum. Donec consectetur viverra dolor. Donec in imperdiet justo, vel scelerisque urna. Aenean ligula erat, laoreet et ligula quis, suscipit porttitor ligula. Aenean eget eros vestibulum, consequat sapien sit amet, finibus tellus. In viverra dolor at dolor tincidunt tempus. Quisque lacinia maximus ipsum ut sodales. Pellentesque rutrum mattis risus vitae viverra.</div>
+        <div class="prod">F.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id bibendum enim. Donec nec urna porttitor neque commodo mattis ut eget lacus.Donec nec urna porttitor neque commodo mattis ut eget lacus. Sed dapibus lorem vel urna ultricies dictum. Donec consectetur viverra dolor. Donec in imperdiet justo, vel scelerisque urna. Aenean ligula erat, laoreet et ligula quis, suscipit porttitor ligula. Aenean eget eros vestibulum, consequat sapien sit amet, finibus tellus. In viverra dolor at dolor tincidunt tempus. Quisque lacinia maximus ipsum ut sodales. Pellentesque rutrum mattis risus vitae viverra.</div>
+        <div class="prod">G.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id bibendum enim. Donec nec urna porttitor neque commodo mattis ut eget lacus.Donec nec urna porttitor neque commodo mattis ut eget lacus. Sed dapibus lorem vel urna ultricies dictum. Donec consectetur viverra dolor. Donec in imperdiet justo, vel scelerisque urna. Aenean ligula erat, laoreet et ligula quis, suscipit porttitor ligula. Aenean eget eros vestibulum, consequat sapien sit amet, finibus tellus. In viverra dolor at dolor tincidunt tempus. Quisque lacinia maximus ipsum ut sodales. Pellentesque rutrum mattis risus vitae viverra.</div>
+    </div>
+</body>
+</html>
