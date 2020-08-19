@@ -1,3 +1,19 @@
+#foot{ /*Contenidor principal en flex amb els 2 contenidors fills*/
+    display: flex;
+    flex-wrap: wrap;
+}
+#sites{
+    font-size: 20px;
+    font-family: Helvetica;
+    font-weight: 700;
+    color: #0A60B0;
+}
+.asites{
+    text-decoration:none;
+}
+.llistasites{
+    padding-left:0px;
+}
 .llistal{
     position: relative;
     float: left;
@@ -9,19 +25,41 @@
 .ullista{
     margin-top: 0px;
 }
-.nomarge{
-    padding-left:0px;
-}
+
 #more{
     padding-left: 50px;
 }
 #copyright{
     position: absolute;
     bottom: 0px;
+    padding-left: 0px;
+    margin-bottom: 400px;
 }
 .linkcopy{
     position: relative;
     float: left;
+}
+.copylist{
+    padding-left:0px;
+}
+#ubicacio{
+    margin-left: 0px;
+}
+
+#imgubi{
+    margin-right: 10px;
+}
+.imglocation{
+    width: 2%;
+    display: block;
+    float: left;
+}
+.plocation{
+    margin-top: 0px;
+    margin-left: 10px;
+}
+.imgphone{
+    width: 1.5%;
 }
 li{
     list-style: none;
@@ -30,7 +68,13 @@ p.linkcopy{
     margin-top: 0px;
     margin-bottom: 0px;
 }
-
+#contactxarxes{
+    width: 300px;
+    padding: 30px;
+}
+.rrss{
+    float: left;
+}
 /*div{
     background-color: red;
     transition: background-color 2s;
