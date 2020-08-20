@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>COLUMNES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style type="text/css">
+        .paragraf{
+            background-color: violet;
+            column-count: 3; /*Tot l'element es divideix proporcionalment en 3 columnes*/
+            column-gap:50px; /*Espai entre columnes*/
+            column-rule: 1px solid blueviolet; /*és com el border i utilitza els següents paràmetres: Amplada Tipus Color*/
+            height: 120px;
+            column-fill:auto;/*AUTO no és el valor per defecte, en aquest cas és BALANCE, que aquest fa que es reparteixi proporcionalment el text en les 3 columnes, amb AUTO t'emplena de tet tota l'alçada de la primera columna i el text que no cap passa a la següent*/
+            /*CANVIEM ETIQUETA P PER UN DIV AMB UN H1*/
+        }
+        h1{
+            column-span: all; /*EL títol no quedarà en una columna, sino que quedarà fora i agafarà tota l'extensió*/
+        }
+    </style>
+</head>
+<body>
+    <div class="paragraf"> 
+        <h1>Morbi aliquam molestie risus, quis volutpat nibh interdum</h1>
+        Morbi aliquam molestie risus, quis volutpat nibh interdum eu. In laoreet pulvinar lorem, quis aliquet nunc finibus ut. Nulla venenatis venenatis nisi nec ultrices. Nunc augue lorem, sagittis in urna eu, hendrerit ullamcorper neque. Mauris iaculis massa in ante rutrum eleifend. Sed ac magna et arcu sollicitudin maximus vel id elit. Integer dignissim laoreet nisl a cursus. Etiam ligula lectus, egestas id venenatis auctor, pellentesque ut erat. Duis vitae facilisis lorem. Curabitur sed augue dapibus, tempor diam vitae, aliquam mi. Proin volutpat molestie aliquet. Nunc efficitur, metus non dapibus rhoncus, sem justo varius magna, id semper elit odio in magna. 
+    </div>
+</body>
+</html>

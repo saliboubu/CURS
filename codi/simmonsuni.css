@@ -1,15 +1,69 @@
-#foot{ /*Contenidor principal en flex amb els 2 contenidors fills*/
-    display: flex;
-    flex-wrap: wrap;
+@font-face{
+    font-family: museo;
+    src: url(MuseoCyrillic-700.otf)
 }
+@font-face{
+    font-family: museolight;
+    src: url(MuseoSans-300.otf)
+}
+:root{
+    --colorcorp: #0A60B0;
+    --colorbasic: black;
+}
+body{
+    font-family: museo;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/*APLICAR COLOR DE LLETRA CORPORATIU*/
+#foot{
+    color: var(--colorcorp);
+}
+/*APLICAR COLOR DE LLETRA BASICA*/
+.colorbasic{
+    color: var(--colorbasic);
+}
+/*APLICAR COLOR TITOL EN RESOURCES I MORE*/
+.titolresourcesimore{
+    color: #007377;
+    font-family: museolight;
+    font-size: 11.25pt;
+    letter-spacing: 1px;
+}   
+/*APLICAR LLETRA EN COPYRIGHT*/
+.lletrabasicacopy{
+    font-family: museolight;
+}
+.canvipos{
+    position: relative;
+    float: right;
+}
+.contefooter{
+   max-width: 1167px;
+    margin: auto;
+}
+/*CAPA AMB LINKS I COPYRIGHT*/
 #sites{
     font-size: 20px;
     font-family: Helvetica;
     font-weight: 700;
     color: #0A60B0;
 }
+#linksfooter{
+    width: 767px;
+}
+#links{
+    margin-bottom: 200px;
+}
 .asites{
     text-decoration:none;
+}
+.margesites{
+    margin-bottom: 25px;
 }
 .llistasites{
     padding-left:0px;
@@ -25,15 +79,16 @@
 .ullista{
     margin-top: 0px;
 }
-
+.nomarge{
+    padding-left: 0px;
+}
 #more{
-    padding-left: 50px;
+    margin-left: 100px;
 }
 #copyright{
-    position: absolute;
     bottom: 0px;
     padding-left: 0px;
-    margin-bottom: 400px;
+    margin-bottom: 380px;
 }
 .linkcopy{
     position: relative;
@@ -42,44 +97,60 @@
 .copylist{
     padding-left:0px;
 }
-#ubicacio{
-    margin-left: 0px;
-}
-
-#imgubi{
-    margin-right: 10px;
-}
-.imglocation{
-    width: 2%;
-    display: block;
-    float: left;
-}
-.plocation{
-    margin-top: 0px;
-    margin-left: 10px;
-}
-.imgphone{
-    width: 1.5%;
-}
-li{
-    list-style: none;
-}
 p.linkcopy{
     margin-top: 0px;
     margin-bottom: 0px;
 }
+.asites:hover{
+    color: var(--colorbasic);
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+/*CAPA AMB CONTACTE*/
+#logo{
+    margin-bottom: 50px;
+}
+.contactebloc{
+    display: block;
+    position: relative;
+    float: left;
+}
+.icones{
+    width: 10%;
+}
+#phone{
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 #contactxarxes{
     width: 300px;
-    padding: 30px;
+    margin-left: 100px;
 }
 .rrss{
     float: left;
+    color: white;
+    font-size: 20px;
+    background-color: #00A881;
+    border-radius: 50%;
+    width: 42px;
+    height: 41px;
+    text-align: center;
+    line-height: 41px;
+    margin-right:10px;
+    transition: all 0.5s;
 }
-/*div{
-    background-color: red;
-    transition: background-color 2s;
+.rrss:hover{
+    background-color: var(--colorcorp);
 }
-div:hover{
-    background-color: aqua;
+@media screen and (max-width: 875px){
+    #contactxarxes{
+        float: left;
+    }
+    .llistal{
+        float: none;
+    }
 
-}*/
+}
