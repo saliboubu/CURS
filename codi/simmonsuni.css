@@ -1,3 +1,4 @@
+/*Importar font MUSEO*/
 @font-face{
     font-family: museo;
     src: url(MuseoCyrillic-700.otf)
@@ -6,10 +7,16 @@
     font-family: museolight;
     src: url(MuseoSans-300.otf)
 }
+/*Colors Corporatiu*/
 :root{
     --colorcorp: #0A60B0;
+    --colorcorp2: #00A881;
+    --colorcorp3: #007377;
     --colorbasic: black;
+    --colorbasic2: white;
+    --colorborder: #C7D6E5;
 }
+/*Aplicacions generals*/
 body{
     font-family: museo;
 }
@@ -19,117 +26,258 @@ li{
 a{
     text-decoration: none;
 }
-/*APLICAR COLOR DE LLETRA CORPORATIU*/
-#foot{
-    color: var(--colorcorp);
+/*OTHERS*/
+#others{
+    background-color: var(--colorcorp3);
+    width: 100%;
 }
-/*APLICAR COLOR DE LLETRA BASICA*/
-.colorbasic{
+#otherinfo{
+    max-width: 1200px;
+    background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+}
+.altreinfo{
+    border: 1px solid black;
+    width: 220px;
+    padding: 10px 10px; 
+    column-count: 8;
+}
+.imgotherinfo{
+    width: 170px;
+}
+#botomoes{
+    display:none;
+}
+/*PREFOOTER*/
+#prefoot{/*Color de fons corporatiu2 per la capa anterior al footer*/
+    background-color: var(--colorcorp2);
+    max-width: 100%;
+    overflow: hidden;
+    padding: 100px 0px;
+}
+#conteprefoot{/*Ajustar tamany de la capa que conté titol i llista, per centrar contingut*/
+    max-width: 1167px;
+    margin-right: auto;
+    margin-left:auto;
+    font-size: 20px;
+    padding: 0px 20px;
+    line-height: 1.5;
+}
+.titolprefoot{/*Canvi color títol prefoot*/
+    color: var(--colorbasic2);    
+}
+.llistaprefoot{/*Crear botons llista*/
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: 700;
+    border: 4px solid var(--colorborder);
+    background-color: white; 
+    padding: 21px 131px;
+    margin-right: 20px;
+    max-width: 275px;
+    transition: all 0.5s;
+}
+.ulprefoot{/*Alinear llista a l'esquerra*/
+    padding-left: 0px;
+}
+.llistaprefoot:hover{/*Canvi de color de fons en els botons i treure link*/
+    background-color: #C7D6E5;
+}
+.linkprefoot:hover{
+    text-decoration:none;
+}
+@media screen and (max-width:1180px){
+    .llistaprefoot{
+        padding-right: 11.6%;
+        padding-left: 11.6%;
+    }
+}
+@media screen and (max-width:1170px){
+    .llistaprefoot{
+        padding-right: 11.5%;
+        padding-left: 11.5%;
+    }
+}
+@media screen and (max-width:1148px){
+    .llistaprefoot{
+        padding-right: 11%;
+        padding-left: 11%;
+    }
+}
+@media screen and (max-width:1052px){
+    .llistaprefoot{
+        padding-right: 10.9%;
+        padding-left: 10.9%;
+    }
+}
+@media screen and (max-width:1034px){
+    .llistaprefoot{
+        padding-right: 10.8%;
+        padding-left: 10.8%;
+    }
+}
+@media screen and (max-width:1018px){
+    .llistaprefoot{
+        padding-right: 10.7%;
+        padding-left: 10.7%;
+    }
+}
+@media screen and (max-width:1002px){
+    .llistaprefoot{
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+}
+@media screen and (max-width:902px){
+    .llistaprefoot{
+        padding-right: 9.8%;
+        padding-left: 9.8%;
+    }
+}
+@media screen and (max-width:878px){
+    .llistaprefoot{
+        padding-right: 9.7%;
+        padding-left: 9.7%;
+    }
+}
+@media screen and (max-width:866px){
+    .llistaprefoot{
+        padding-right: 9.5%;
+        padding-left: 9.5%;
+    }
+}
+@media screen and (max-width:843px){
+    .llistaprefoot{
+        padding-right: 9.3%;
+        padding-left: 9.3%;
+    }
+}
+@media screen and (max-width:822px){
+    .llistaprefoot{
+        padding-right: 9%;
+        padding-left: 9%;
+    }
+}
+@media screen and (max-width:792px){
+    .llistaprefoot{
+        max-width: 100%;
+        float: none;
+        margin-bottom: 15px;
+    }
+    #prefoot{
+        padding: 50px 0px;
+        max-width: 100%;
+    }
+}
+/*FOOTER*/
+#foot{ /*Aplicar color Corporatiu a tot el footer*/
+    color: var(--colorcorp);
+    border-top: 8px solid var(--colorborder);
+}
+
+.colorbasic{/*Aplicar color bàsic a número de telefon i ubicacio*/
     color: var(--colorbasic);
 }
-/*APLICAR COLOR TITOL EN RESOURCES I MORE*/
-.titolresourcesimore{
+#sites{/*Aplicar tamany de lletra a links Undergraduate/Graduate*/
+    font-size: 20px;
+}
+.titolresourcesimore{/*Aplicar color a RESOURCES I MORE*/
     color: #007377;
     font-family: museolight;
     font-size: 11.25pt;
     letter-spacing: 1px;
 }   
-/*APLICAR LLETRA EN COPYRIGHT*/
-.lletrabasicacopy{
+.lletrabasicacopy{/*Aplicar lletra museo sense negreta al COPYRIGHT*/
     font-family: museolight;
 }
-.canvipos{
+.canvipos{/*Ordenar les capes de linksfooter i contactxarxes*/
     position: relative;
     float: right;
+    margin-top:60px;
 }
-.contefooter{
+.contefooter{/*Ajustar mida i centrar la capa que conté les capes de linksfooter i contactxarxes*/
    max-width: 1167px;
     margin: auto;
 }
-/*CAPA AMB LINKS I COPYRIGHT*/
-#sites{
-    font-size: 20px;
-    font-family: Helvetica;
-    font-weight: 700;
-    color: #0A60B0;
+
+/*CAPA AMB LINKS, SITES I COPYRIGHT*/
+#linksfooter{/*Ajustar tamany capa que conté Links,Sites i Copyright*/
+    max-width: 767px;
 }
-#linksfooter{
-    width: 767px;
-}
-#links{
+#links{/*Augmentar margin Resources i More, perquè Copyright no quedi enganxat*/
     margin-bottom: 200px;
 }
-.asites{
-    text-decoration:none;
-}
-.margesites{
+.margesites{/*Afegir marges a cada text Undergraduate i Graduate, per crear espais*/
     margin-bottom: 25px;
 }
-.llistasites{
+.llistasites{/*Treure espai a llista Undergraduate i Graduate pq quedi a l'esquerra*/
     padding-left:0px;
 }
-.llistal{
+.llistal{/*Llistes de resources perquè estiguin col·locades una al costa de l'altre*/
     position: relative;
     float: left;
 }
-.res-mo{
+.res-mo{/*Capa de Resources i More una col·locada al costat de l'altre*/
     position: relative;
     float: left;
 }
-.ullista{
+.ullista{/*Treure marge superior a les llistes de Resources (atacar objecte ul)*/
     margin-top: 0px;
 }
-.nomarge{
+.nomarge{/*Treure padding esquerra al primer element de les llistes MORE i RESOURCES */
     padding-left: 0px;
 }
-#more{
+#more{/*Marge esquerra de la capa MORE*/
     margin-left: 100px;
 }
-#copyright{
+#copyright{/*Posicionar capa COPYRIGHT al fons de la capa, treure padding esquerra i afegir marge inferior*/
     bottom: 0px;
     padding-left: 0px;
     margin-bottom: 380px;
 }
-.linkcopy{
+.linkcopy{/*Col·locar cada element de la llista en la capa COPYRIGHT un al costat de l'altre*/
     position: relative;
     float: left;
 }
-.copylist{
+.copylist{/*Treure padding esquerra de la llista de la capa COPYRIGHT*/
     padding-left:0px;
 }
-p.linkcopy{
+p.linkcopy{/*Treure marges paràgraf del Copyright*/
     margin-top: 0px;
     margin-bottom: 0px;
 }
-.asites:hover{
+.asites:hover{/*Hover dels links Undergraduate i Graduate*/
     color: var(--colorbasic);
     text-decoration: none;
 }
-a:hover{
+a:hover{/*Hover de la resta de links*/
     text-decoration: underline;
 }
-/*CAPA AMB CONTACTE*/
-#logo{
+
+/*CAPA DE CONTACTE*/
+#logo{/*Col·locar el logo de la universitat*/
     margin-bottom: 50px;
 }
-.contactebloc{
+.contactebloc{/*Colocar a l'esquerra de les icones de móbil i ubicació, el text corresponent*/
     display: block;
     position: relative;
     float: left;
 }
-.icones{
+.icones{/*Ajustar mida de les icones de móbil i ubicació*/
     width: 10%;
 }
-#phone{
+#phone{/*Ajustar capa PHONE*/
     float: left;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-#contactxarxes{
+#contactxarxes{/*Ajustar mida de la capa del LOGO, CONTACTE i XARXES*/
     width: 300px;
     margin-left: 100px;
 }
-.rrss{
+.rrss{/*Editar les icones de les xarxes socials*/
     float: left;
     color: white;
     font-size: 20px;
@@ -142,15 +290,25 @@ a:hover{
     margin-right:10px;
     transition: all 0.5s;
 }
-.rrss:hover{
+.rrss:hover{/*Hover xarxes socials, canvi de color amb una transicio de temps*/
     background-color: var(--colorcorp);
 }
+/*Footer responsiu*/
 @media screen and (max-width: 875px){
     #contactxarxes{
         float: left;
+        margin-left:0px;
     }
     .llistal{
         float: none;
     }
-
+    .ullista{
+        padding-left:0px;
+    }
+    #more.res-mo{
+        margin-left: 0px;
+    }
+    .linkcopy li{
+        float:none;
+    }    
 }
