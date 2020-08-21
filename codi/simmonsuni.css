@@ -30,18 +30,23 @@ a{
 #others{
     background-color: var(--colorcorp3);
     width: 100%;
-}
-#otherinfo{
-    max-width: 1200px;
-    background-color: red;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .altreinfo{
-    border: 1px solid black;
     width: 220px;
-    padding: 10px 10px; 
-    column-count: 8;
+    padding: 20px; 
+    margin: 20px;
+    height: auto;
+    background-color: white;
+}
+.altreinfo h3{
+    color: #0A60B0;
+    font-size:14pt;
+}
+.altreinfo p{
+    font-weight: 0;
 }
 .imgotherinfo{
     width: 170px;

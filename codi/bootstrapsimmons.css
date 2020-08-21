@@ -1,0 +1,58 @@
+/*GENERAL*/
+
+@font-face{/*Importar font MUSEO*/
+    font-family: museo;
+    src: url(MuseoCyrillic-700.otf)
+}
+@font-face{
+    font-family: museolight;
+    src: url(MuseoSans-300.otf)
+}
+:root{/*Colors Corporatiu*/
+    --colorcorp: #0A60B0;
+    --colorcorp2: #00A881;
+    --colorcorp3: #007377;
+    --colorbasic: black;
+    --colorbasic2: white;
+    --colorborder: #C7D6E5;
+}
+li{
+    list-style: none;
+}
+/*LOGO UNI, CONTACTE i RRSS*/
+
+.logouni{/*Afegir marges al logo de la universitat*/
+    margin:50px 0px;
+}
+.imgcontacte{/*Modifiquem mida icones d'ubi i mobil*/
+    width: 5%;
+}
+.localitzacio{/*Alineem el text a l'esquerra de les icones*/
+    float: left;
+}
+.mobil{/*Afegim marge inferior al contenidor del mobil per crear espai amb les icones de les xarxes*/
+    margin-bottom:60px;
+}
+.rrss{/*Editem les icones*/
+    float: left;
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+    width: 42px;
+    height: 41px;
+    background-color: var(--colorcorp2);
+    line-height: 41px;
+}
+
+/*LINKS UNDERGRADUATE, RESOURCES, MORE i COPYRIGHT*/
+#conjuntllistares{
+    column-count: 3;
+}
+#conjuntllistacopy{
+    column-count: 3;
+    column-rule: 3px solid var(--colorcorp2);
+}
+#conjuntllistalinks, #conjuntllistares, #resources, #conjuntllistamore{
+    padding-left: 0px;
+}
+
