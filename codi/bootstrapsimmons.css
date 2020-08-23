@@ -19,16 +19,227 @@
 li{
     list-style: none;
 }
+
+/*NOI EN BIBLIOTECA*/
+
+.biblioteca{
+    padding-top: 120px;
+}
+.contenidorbiblio{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.imgbiblio {
+    position: relative;
+    margin-bottom: 240px;
+    min-height: 380px;
+}
+.imgbiblio img {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 100%;
+    height: auto;
+}
+.textbiblio {
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+    width: calc(100% - 610px);
+    position: relative;
+    top: 70px;
+    z-index: 2;
+    background-color: white;
+    padding: 55px;
+    display: block;
+}
+.textbiblio h2 {
+    color: black;
+    font-family: museo;
+    font-size: 26pt;
+    margin-bottom: 20px;
+}
+.textbiblio p {
+    color: black;
+    font-family: museolight;
+    font-size: 14pt;
+    margin-bottom: 30px;
+}
+.textbiblio a {
+    padding: 14px 36px;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+    color: white;
+    text-align: center;
+    background: #7c2855;
+    border: 2px solid #7c2855;
+    display: inline-block;
+    font-family: museolight;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+}
+.textbiblio a:hover {
+    background: white;
+    color: black;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 750px) {
+    .textbiblio{
+        width: auto;
+        top: 0px;
+    }
+    .imgbiblio img{
+        position: relative;
+    }
+    .imgbiblio{
+        margin-bottom: 50px;
+    }
+}
+
+/*OTHERS TARGETES INFO*/
+
+#others{
+    width: 100%;
+    background-color: var(--colorcorp3);
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+#contenidorothers{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card{
+    border: none;
+    border-radius: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 100px;
+    height: 100%;
+}
+.contecard{
+    margin-bottom: 40px;
+    padding: 0px;
+}
+.card a{
+    font-family: museo;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--colorcorp);
+}
+.card p{
+    margin-top: 16px;
+    font-family: museolight;
+    font-size: 17px;
+}
+.card-img-top{
+    padding: 20px;
+}
+.showmore{
+    background-color: #327ABD;
+    border-color: 2px solid #327ABD;
+    padding: 14px 36px;
+    color: #fff;
+    font-family: museolight;    
+    display: none;
+    font-weight: 500;
+    margin-bottom: 0px;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+}
+
+@include media-breakpoint-up(md){
+    column-count: 3;
+}
+@media screen and (max-width:576px){
+    .opcions,.suport,.tutoria,.serveis,.cataleg{
+        display: none;
+    }
+}
+
+/*TAKE THE NEXT STEP*/
+
+#contenidortakestep{
+    font-family: museo;
+}
+#contenidortakestep h2{
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: white;
+}
+#takestep{
+    width: 100%;
+    padding: 60px 0px;
+    background-color: var(--colorcorp2)
+}
+#contenidortakestep{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.botonsinfo{
+    border: 4px solid var(--colorborder);
+    padding: 21px 36px;
+    margin: 0px 15px;
+    background-color: white;    
+}
+.llistabotons{
+    font-weight: 700;
+    font-size: 18px;
+    color: #003A70;
+    transition: background-color 0,4s ease-out;
+}
+.botonsinfo:hover{
+    background-color: #C7D6E5;  
+}
+.llistabotons:hover{
+    text-decoration: none;
+    color: #003A70;
+}
+@media screen and (max-width:576px)
+{
+    .botons{
+        margin-bottom: 20px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    #contenidortakestep{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    #takestep{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+/*FORMAT I COLOR LLLETRA EN FOOTER*/
+
+#links{
+    font-family: museo;
+}
+#contacte, .titolcopy{
+    font-family: museolight;
+}
+#conjuntllistalinks{
+    font-size: 20px;
+}
+.titolslinks{
+    font-family: museolight;
+    font-weight: bolder;
+}
 /*LOGO UNI, CONTACTE i RRSS*/
 
 .logouni{/*Afegir marges al logo de la universitat*/
-    margin:50px 0px;
+    margin-bottom:50px;
 }
 .imgcontacte{/*Modifiquem mida icones d'ubi i mobil*/
-    width: 5%;
-}
-.localitzacio{/*Alineem el text a l'esquerra de les icones*/
+    width: 35px;
     float: left;
+    padding-right: 15px;
 }
 .mobil{/*Afegim marge inferior al contenidor del mobil per crear espai amb les icones de les xarxes*/
     margin-bottom:60px;
@@ -38,21 +249,108 @@ li{
     color: white;
     font-size: 20px;
     margin-right: 10px;
+    margin-bottom: 26px;
     width: 42px;
     height: 41px;
     background-color: var(--colorcorp2);
     line-height: 41px;
+    transition: all 0.3s ease-out;
 }
-
+.rrss:hover{
+    background-color: #002856;
+}
 /*LINKS UNDERGRADUATE, RESOURCES, MORE i COPYRIGHT*/
+
+#footer{
+    width: 100%;
+    border-top: 8px solid var(--colorborder);
+}
+#contenidorfooter{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+}
+#links{
+    padding-right:0px;
+}
 #conjuntllistares{
-    column-count: 3;
+    column-count: 3;  
 }
 #conjuntllistacopy{
-    column-count: 3;
-    column-rule: 3px solid var(--colorcorp2);
+    margin-bottom: 30px;
+    padding-left: 24px;
+}
+.conjuntllistacopy{
+    position: relative;
+    float: left;
+    padding-right:18px;
+}
+.titolcopy{
+    margin-bottom: 30px;
+}
+#copyright{
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 50px;
 }
 #conjuntllistalinks, #conjuntllistares, #resources, #conjuntllistamore{
     padding-left: 0px;
 }
+#conjuntllistalinks li{
+    margin-bottom: 20px;
+}
+.angle{
+    color: #00A881;
+    padding-left: 15px;
+}
+#conjuntllistalinks{
+    margin-bottom: 40px;
+}
+.titolslinks{
+    color: var(--colorcorp3);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.llistaresourcesmore li{
+    margin-bottom:10px;
+    font-size: 16px;
+}
+.llistaresourcesmore{
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 60px;
+}
+#conjuntllistalinks a:hover{
+    text-decoration:none;
+}
+/*RESPONSIU DEL FOOTER*/
+@media screen and (max-width:750px){
+    #linkunderg, #filaresourcesmore, #copyright, #more, #resources{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #conjuntllistares{
+        column-count: 1;  
+    }
+    #resources, #more{
+        margin-bottom: 40px;
+    }
+    .conjuntllistacopy{
+        float: none;
+    }
+    #copyright{
+        float: bottom;
+        display: block;
+    }
+    .titolcopy{
+        margin-bottom: 10px;
+    }
+    #conjuntllistacopy{
+        padding-left: 0px;
+    }
+} 
+
 

@@ -1,0 +1,108 @@
+/*Corregir marges del body*/
+body{
+    margin: 20px;
+    font-family: 'Lucida Sans';
+    color: white;
+}
+h1{
+    font-size:22pt;
+}
+p{
+    font-size: 11pt;
+}
+/*Capçalera*/
+#head{
+    background-color: #4CAF50;
+    border: 1px solid #4CAF50;
+    width: 100%;
+    position: relative;
+    float: top;
+    border-radius: 5px;
+    padding-left: 12px;
+    padding-top: 6px;
+    padding-bottom: 16px;
+}
+.blanc{
+    margin: 0px; /*Treure marge al text de capçcalera, amb line-height només afecta la distancia entre la linia i el div*/
+}
+/*Contenidor central*/
+#contenidor{
+    position: relative;
+    overflow: auto;
+    margin-top:8px;
+    width: 100%;
+}
+/*Menus*/
+#menu{
+    width: 170px;
+    float: left;
+    font-size: 11pt;
+}
+ul{
+    list-style-type: none;
+    padding-left: 0%;
+    margin: 0%;
+}
+li{
+    background-color: #f1f1f1;
+    border: 1px solid #d4d4d4;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    padding: 4px;
+    padding-left:0px;
+}
+#style1{
+    font-weight: bold;
+    background-color: #4CAF50;
+}
+.llista{
+    color: black;
+}
+/*Text*/
+#text{
+    color: black;
+    margin-left: 190px;
+    margin-right: 230px;
+    padding-left: 0px;
+    padding-top: 0%;
+}
+h2{
+    font-size: 16pt;
+}
+a{
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+}
+/*Barra lateral*/
+#sidebar{
+    background-color: #32a4e7;
+    position: absolute;
+    width: 160px;
+    bottom: 0px;
+    top: 0px;
+    right: 0px;
+    line-height: 165%;
+    padding: 10px;
+    border-radius: 4px;
+}
+h3{
+    margin-top:19px;
+    margin-bottom: 18px;
+}
+#pside{
+    font-size: 9.5pt;
+}
+/*Peu de pàgina*/
+#foot{
+    background-color: #f1f1f1;
+    border: 1px solid #d4d4d4;
+    font-size: 70%;
+    text-align: center;
+    line-height: 14px;
+    padding:10px;
+    color:black;
+    border-radius: 4px;
+    margin-top:15px;
+}
