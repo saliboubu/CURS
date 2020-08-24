@@ -20,37 +20,112 @@ li{
     list-style: none;
 }
 
+/*STATS*/
+
+.stats{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #E6F1FC;;
+}
+.stats .row{
+    margin-right: auto;
+    margin-left: auto;
+}
+.knowstats{
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+}
+.caixastats{
+    padding-right:20px;
+    padding-left: 20px;
+    background-color: #E6F1FC;;
+}
+.undergradstats, .gradstats, .ratio{
+    padding: 30px;
+    background-color: white;
+    height: 100%;
+}
+.knowstats{
+    font-family: museolight;
+    color: var(--colorcorp3);
+    font-size: 24px;
+    font-weight: 900;
+}
+.statsh2{
+    color: #7C2855;
+    font-weight: 700;
+    font-size: 78px;
+    line-height: 1;
+    font-family: museolight;
+    margin-bottom: 20px;
+}
+.statsh3{
+    font-family: museo;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.statsp{
+    font-family: museolight;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+@media screen and (max-width:576px){
+    .stats{
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+    .caixastats{
+        margin-bottom: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
 /*NOI EN BIBLIOTECA*/
 
 .biblioteca{
     padding-top: 120px;
 }
 .contenidorbiblio{
+    margin-right: auto;
+    margin-left: auto;
     padding-right: 20px;
     padding-left: 20px;
 }
-.imgbiblio {
+.conjuntbiblio {
     position: relative;
-    margin-bottom: 240px;
+    margin-bottom: 150px;
     min-height: 380px;
 }
-.imgbiblio img {
-    margin: 0;
+.imatgebiblio{
     position: absolute;
-    top: 0;
-    right: 0;
+    z-index: 1;
+    right: 0px;
+    top: 0px;
+}
+.imgatgebiblio img {
+    /*margin: 0;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*right: 0;*/
     max-width: 100%;
     height: auto;
+    vertical-align: middle;
 }
 .textbiblio {
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
     width: calc(100% - 610px);
     position: relative;
-    top: 70px;
     z-index: 2;/*Per sobreposar, com més gran el número quedap per sobre*/
     background-color: white;
-    padding: 55px;
-    
+    top: 50px;
+    /*left: 3px;*/
+    padding-top:60px;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-bottom: 30px;
+    display: block;
 }
 .textbiblio h2 {
     color: black;
