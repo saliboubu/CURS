@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS BOTO MISSAATGE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script language="javascript">
+        function mostrar_data(){
+            var d = new Date(); //la D de Date en MAJUSCULA, sino no surt el resultat
+            var dia = d.getDate();//extreu el dia de la data
+            var mes = d.getMonth();
+            var any = d.getFullYear();
+            var hora = d.getHours();
+            var min = d.getMinutes();
+            var sec = d.getSeconds();
+            //window.alert("Avui estem a dia "+dia); //Aqui el simbol + concatena la frase i el número, per a que quedi espaiat cal afegir espai en el text
+            //window.alert((mes+1)); //Si poses un parentesis et fa la funció suma
+            window.alert("DATA: "+dia+"/"+(mes+1)+"/"+any+" HORA: "+hora+":"+min+":"+sec);
+        }
+    </script>
+</head>
+<body>
+  <input type="button" value="MOSTRA DATA" onclick="mostrar_data()"/>
+</body>
+</html>

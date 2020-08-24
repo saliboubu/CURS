@@ -47,10 +47,10 @@ li{
     width: calc(100% - 610px);
     position: relative;
     top: 70px;
-    z-index: 2;
+    z-index: 2;/*Per sobreposar, com més gran el número quedap per sobre*/
     background-color: white;
     padding: 55px;
-    display: block;
+    
 }
 .textbiblio h2 {
     color: black;
