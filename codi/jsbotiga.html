@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BOTIGA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style type="text/css">
+        .general{
+            width: 100%;
+        }
+        .row{
+            max-width: 1200px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        #imgentrants{
+            width: 30%;
+        }
+    </style>
+
+    <script language="javascript">
+        function entrants(){
+            var entrant = document.getElementById("entrant").value;
+            switch(entrant){
+                case 'amanida':
+                    imgentrants.innerHTML="<img src='../imgcartarest/avocado.jpg'/>";
+                break;
+                case 'hummus':
+                    imgentrants.innerHTML="<img src='../imatges/champu.jpg'/>";
+                break;
+                case 'croquetes':
+                    imgentrants.innerHTML="<img src='../imatges/balsamo.jpg'/>";
+                break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="general">
+        <h2 class="text-center">TASTS DEL MÓN</h2>
+        <div class="row">
+            <div class="col-4">
+                <h3>ENTRANTS</h3>
+                <select id="entrant" onchange="entrants()">
+                    <option></option>
+                    <option value="amanida">Avosalad</option>
+                    <option value="hummus">Hummus</option>
+                    <option value="croquetes">Mr.Corquet</option>
+                </select>
+                <div id="imgentrants"></div>
+            </div>
+            <div class="col-4">
+                <h3>PRIMERS</h3>
+                <select id="primers" onchange="primers()">
+                    <option></option>
+                    <option value="couscous">Delicia magrebí</option>
+                    <option value="channamasala">Masala trip</option>
+                    <option value="sopa">Amour en Paris</option>
+                </select>
+                <div class="imgprimers"></div>
+            </div>
+            <div class="col-4">
+                <h3>POSTRES</h3>
+                <select id="postres" onchange="postres()">
+                    <option></option>
+                    <option value="alfajor">Che</option>
+                    <option value="chebakia">Rosa de sesam</option>
+                    <option value="tresleches">Milk and Milk on Cake</option>
+                </select>
+                <div class="imgpostres"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

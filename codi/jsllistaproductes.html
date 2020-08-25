@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LLISTA PRODUCTES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style type="text/css">
+        body{
+            background-image: url("../imatges/bricks.jpg");
+            background-size: cover;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+        }
+        .general{
+            width: 100%;
+        }
+        .contenidor{
+            background-color: rgba(250, 175, 114, 0.644);
+            border: 2px solid rgba(250, 175, 114, 0.644); 
+            max-width: 1200px;
+            height: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 260px;
+            padding-left: 100px;
+            padding-right: 80px;
+            padding-top: 50px;
+            padding-bottom: 40px;
+        }
+        .contenidorimg{
+            float: left;
+        }
+        img{
+            width: 30%;
+        }
+    </style>
+    <script language="javascript">
+        function seleccio_producte(){
+            var prod = document.getElementById("productes").value;
+            /*switch(prod){
+                case 'res':
+                    mostrar.innerHTML="<img src='../imatges/cold.jpg'/>";
+                break;
+                case 'champu':
+                    mostrar.innerHTML="<img src='../imatges/champu.jpg'/>";
+                break;
+                case 'balsam':
+                    mostrar.innerHTML="<img src='../imatges/balsamo.jpg'/>";
+                break;
+                case 'pilota':
+                    mostrar.innerHTML="<img src='../imatges/children.jpg'/>";
+                break;
+            }*/
+            if (prod == "res"){
+                mostrar.innerHTML="<img src='../imatges/cold.jpg'/>";
+            }
+            else if (prod == "champu"){
+                mostrar.innerHTML="<img src='../imatges/champu.jpg'/>";
+            }
+            else if (prod == "balsam"){
+                mostrar.innerHTML="<img src='../imatges/balsamo.jpg'/>";
+            }
+            else if (prod == "pilota"){
+                mostrar.innerHTML="<img src='../imatges/children.jpg'/>"
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="general">
+    <div class="contenidor">
+        <div class="llista">
+            <h2>PRODUCTES</h2>
+            <select id="productes" onchange="seleccio_producte()">
+                <option value="res"></option>
+                <option value="champu">CHAMPU</option>
+                <option value="balsam">BALSAM</option>
+                <option value="pilota">PILOTA</option>
+            </select>
+        </div>
+       <div class="contenidorimg" id="mostrar"></div>
+    </div> 
+</div>
+</body>
+</html>

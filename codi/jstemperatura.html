@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TEMPERATURA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style type="text/css">
+        body{
+            background-image: url("../imatges/bricks.jpg");
+            background-size: cover;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            }
+        .contenidor{
+            background-color: rgba(250, 175, 114, 0.644);
+            border: 2px solid rgba(250, 175, 114, 0.644); 
+            width: 20%;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 260px;
+            padding-left: 100px;
+            padding-right: 0px;
+            padding-top: 50px;
+            padding-bottom: 40px;
+        }
+        .botoenrere{
+            position: relative;
+            bottom: 0px;
+            padding-left: 630px;
+            padding-top: 60px;
+        }
+        #resultat img{
+            width: 50%;
+            display: block;
+        } 
+    </style>
+
+    <script language="javascript">
+        function comprovar_temperatura(){
+
+            var temp = document.getElementById("temperatura").value;
+            var resultat = document.getElementById("resultat"); //quan es vulgui programar alguna cosa en la capa es fa mitjançant una variable que adopta el valor de l'id de la capa
+
+            if (temp < 15){
+                resultat.innerHTML = "FA FRED"+"<br><br>"+"<img src='../imatges/cold.jpg'/>";
+            }
+            else if (temp >= 15 && temp<25){
+                resultat.innerHTML = "IS BIEN"+"<br><br>"+"<img src='../imatges/warm.jpg'/>";
+            }
+            else{
+                resultat.innerHTML = "EL CALORET"+"<br><br>"+"<img src='../imatges/caloret.jpg'/>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="contenidor">
+        <label>TEMPERATURA</label><br><br>
+        <input type="number" id="temperatura"/><br><br>
+        <input type="button" value="COMPROVAR" onclick="comprovar_temperatura()"/><br><br>
+        <div id="resultat"></div>
+    </div>
+</body>
+</html>

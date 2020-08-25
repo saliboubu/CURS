@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CONDICIONALS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style>
+        body{
+            background-image: url("../imatges/pexelsbg.jpg");
+            background-size: cover;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+        }
+       .contenidor{
+           width: 20%;
+           margin-right: auto;
+           margin-left: auto;
+           margin-top: 260px;
+           padding-left: 80px;
+           padding-right: 10px;
+       } 
+    </style>
+
+    <script language="javascript">
+       function submit(){
+           var clau = document.getElementById("contrasenya").value;
+           if (clau == "123"){
+            window.alert("ACCES OK");
+           }
+           else{
+            window.alert("ERROR");
+           }
+       } 
+    </script>
+</head>
+<body>
+    <div class="contenidor">
+        <label>PASSWORD</label><br><br>
+        <input type="password" id="contrasenya"/><br><br>
+        <input type="button" value="ENTRAR" onclick="submit()"/><br><br>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS REPAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script language="javascript">
+        function saludar(){
+            var nom = document.getElementById("text_nom").value;
+            window.alert("Hola "+nom);
+        }
+    </script>
+</head>
+<body>
+    <label>NOM</label><br>
+    <input type="text" id="text_nom"/><br>
+    <input type="button" value="saludar" onclick="saludar()"/>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CONTROL EDAT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style type="text/css">
+    body{
+            background-image: url("../imatges/coffebg.jpg");
+            background-size: cover;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+        }
+       .contenidor{
+           width: 20%;
+           margin-right: auto;
+           margin-left: auto;
+           margin-top: 260px;
+           padding-left: 80px;
+           padding-right: 10px;
+       } 
+    </style>
+
+    <script language="javascript">
+        function control_edat(){
+            var anys = document.getElementById("edat").value;
+            if (anys<18){
+                window.alert("MENOR D'EDAT: NO ACCES");
+            }
+            else if (anys>=18){
+                window.location.assign('file:///C:/Users/Mat%C3%AD/Documents/GitHub/CURS/codi/jscondicionals.html');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="contenidor">
+        <label>EDAT</label><br><br>
+        <input type="number" id="edat"/><br><br>
+        <input type="button" value="COMPROVAR" onclick="control_edat()"/><br><br> 
+    </div>
+    
+</body>
+</html>
