@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GELATERIA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style type="text/css">
+    
+    </style>
+    <script src="jsgelateria.js"></script>
+</head>
+<body>
+    <div class="general">
+        <div class="header"></div>
+        <div class="row">
+            <div class="col-3">
+                <select id="gust" onchange="triargelat()">
+                    <option value="nogust"></option>
+                    <option value="maduixa">MADUIXA</option>
+                    <option value="coco">COCO</option>
+                    <option value="mango">MANGO</option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select id="tipus" onchange="triargelat()">
+                    <option value="norecipient"></option>
+                    <option value="tarrina">TARRINA</option>
+                    <option value="cucurucho">CUCURUCHO</option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select id="mida">
+                    <option value="nomida"></option>
+                    <option value="petit">UNA BOLA</option>
+                    <option value="mitjà">DOS BOLES</option>
+                    <option value="gran">TRES BOLES</option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select id="toppings">
+                    <option value="notopping"></option>
+                    <option value="xocolataliquida">XOCOLATA LIQUIDA</option>
+                    <option value="avellanes">AVELLANES</option>
+                    <option value="nous">NOUS</option>
+                </select>
+            </div>
+        </div>
+        <div id="imggelat"></div>
+    </div>
+</body>
+</html>

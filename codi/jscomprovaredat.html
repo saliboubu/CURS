@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>COMPROVAR EDAT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script language="javascript">
+        function comprovar(){
+            var edat = document.getElementById("text_edat").value;
+            if ((edat >= 18) && (edat <= 25)){
+                window.alert("EDAT VÀLIDA");
+            }
+            else{
+                window.alert("NO ENTRES EN EL RANG");
+            }
+        }
+    </script>
+</head>
+<body>
+    <label>EDAT</label><br><br>
+    <input type="number" id="text_edat"><br><br>
+    <input type="button" value="COMPROVA" onclick="comprovar()"><br><br>
+</body>
+</html>

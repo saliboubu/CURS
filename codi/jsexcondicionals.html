@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>COMPROVAR ESTACIO DE L'ANY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style type="text/css">
+        img{
+            width: 25%;
+        }
+        #imgestacions{
+            height: 250px;
+        }
+    </style>
+    <script language="javascript">
+        function comprovar(){
+            var d = new Date();
+            var mes = d.getMonth();
+            var dia = d.getDate();
+            var hora = d.getHours();
+            var min = d.getMinutes();
+            if (((mes == 11) && (dia >= 22) && (hora >= 22)) || (mes == 0) || (mes == 1) || ((mes == 2) && (dia <=20))){
+                imgestacions.innerHTML = "<img src='../imatges/cold.jpg'/>"
+            }
+            else if (((mes == 2) && (dia >= 21) && (hora )) || (mes == 3) || (mes == 4) || ((mes == 5) && (dia <= 20) && (hora <=23))){
+                imgestacions.innerHTML = "<img src='../imatges/warm.jpg'/>"
+            }
+            else if (((mes == 5) && (dia >= 21) && (hora >= 24)) || (mes == 6) || (mes == 7) || ((mes == 8) && (dia <= 22) && (hora <= 15))){
+                imgestacions.innerHTML = "<img src='../imatges/caloret.jpg'/>"
+            }
+            else if (((mes == 8) && (dia >= 23) && (hora >= 16)) || (mes == 9) || (mes == 10) || ((mes == 11) && (dia <= 21) && (hora <= 21))){
+                imgestacions.innerHTML = "<img src='../imatges/tardor.jpg'/>"
+            }
+        }
+    </script>
+</head>
+<body>
+    <label>ESTACIONS DE L'ANY</label><br><br>
+    <input type="button" value="COMPROVA ESTACIO" onclick="comprovar()">
+    <div id="imgestacions"></div>
+</body>
+</html>

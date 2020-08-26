@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BOTO COMPROVACIO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script language="javascript">
+        function comprovar(){
+            var data = new Date();
+            var mes = data.getMonth(); //va de 0 a 11 per comptabilitzar els mesos i no de 1 a 12
+            if (mes == 7){ //Doble igual serveix per PREGUNTAR si la variables és tal element, un igual simple ASSIGNA
+                window.alert("JA S'ACABEN LES VACANCES");
+            }
+            else{
+                window.alert("NO ÉS AUGUSTUS")
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="COMPROVA" onclick="comprovar()">
+</body>
+</html>

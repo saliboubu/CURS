@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DIES SETMANA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script language="javascript">
+        var dies = ["Diumenge","Dilluns","Dimarts","Dimecres","Dijous","Divendres","Dissabte"]; /*Format de data americana, la setmana comença el diumenge*/
+        function dirdia(){
+            var d = new Date();
+            var dia = d.getDay(); /*Numero del dia de la setmana de 0 a 6*/
+            switch(dia){ /*Si no poses break s'acumulen els casos, el qeu vol dir que tant per el cas Y i X fes TAL COSA*/
+                case 0:
+                    window.alert(dies[dia]);
+                break;
+                case 1:
+                    window.alert(dies[dia]);
+                break;
+                case 2:
+                    window.alert(dies[dia]);
+                break;
+                case 3:
+                    window.alert(dies[dia]);
+                break;
+                case 4:
+                    window.alert(dies[dia]);
+                break;
+                case 5:
+                    window.alert(dies[dia]);
+                break;
+                case 6:
+                    window.alert(dies[dia]);
+                break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="QUIN DIA ES" onclick="dirdia()"/>
+</body>
+</html>

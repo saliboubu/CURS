@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BOTO MESOS 2 SISTEMES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script language="javascript">
+        function comprovar(){
+            var data = new Date();
+            var mes = data.getMonth();
+            /* PRIMER METODE
+            if (mes == 6){
+                window.alert("FALTA POC");
+            }
+            else{
+                if (mes == 7){
+                    window.alert("VACANCES");
+                }
+                else{
+                    if (mes == 8){
+                        window.alert("ACABA VACANCES");
+                    }
+                    else{
+                        window.alert("ENCARA FALTA");
+                    }
+                }
+            }*/
+            /*METODE 2*/
+            if (mes == 6){
+                window.alert("FALTA POC");
+            }
+            else if (mes == 7){
+                window.alert("VACANCES");
+            }
+            else if(mes == 8){
+                window.alert("S'ACABEN LES VACANCES");
+            }
+            else{
+                window.alert("ENCARA FALTA");
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="COMPROVAR MES" onclick="comprovar()">
+</body>
+</html>
