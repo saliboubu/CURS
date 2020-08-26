@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <style type="text/css">
-    
+        img{
+            width: 25%;
+        }
     </style>
     <script src="jsgelateria.js"></script>
 </head>
@@ -31,15 +33,15 @@
                 </select>
             </div>
             <div class="col-3">
-                <select id="mida">
+                <select id="mida" onchange="triargelat()">
                     <option value="nomida"></option>
                     <option value="petit">UNA BOLA</option>
-                    <option value="mitjà">DOS BOLES</option>
+                    <option value="mitja">DOS BOLES</option>
                     <option value="gran">TRES BOLES</option>
                 </select>
             </div>
             <div class="col-3">
-                <select id="toppings">
+                <select id="toppings" onchange="triargelat()">
                     <option value="notopping"></option>
                     <option value="xocolataliquida">XOCOLATA LIQUIDA</option>
                     <option value="avellanes">AVELLANES</option>
