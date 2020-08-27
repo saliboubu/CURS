@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DATES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script language="javascript">
+        function mostrardata(){
+            var mesos = ["Gener","Febrer","Març","Abril","Maig","Juny","Juliol","Agost","Septemebre","Octubre","Novembre","Desembre"]; //no són variables per això poden anar fora ded l'array
+            var dies = ["Diumenge","Dilluns","Dimarts","Dimecres","Dijous","Divendres","Dissabte"];
+            var vocals = ("aeiouAEIOU");
+            var d = new Date();
+            var mes = d.getMonth(); //constantment s'ha d'actualitzar per tant cal que estigui declarat dintre de la funció
+            var dia = d.getDay();
+            var dianum = d.getDate();
+            var any = d.getFullYear();
+            //window.alert("Avui som "+dies[dia]+" "+dianum+" d' "+mesos[mes]+" del "+any);
+            for(var i=0 ; i<12; i++){
+                vocals.indexOf(mesos[i]);
+                if (return == -1){ //has de declarar una funció per a que el return sigui vàlid
+                    window.alert("Avui som "+dies[dia]+" "+dianum+" de "+mesos[mes]+" del "+any);
+                }
+                else{
+                    window.alert("Avui som "+dies[dia]+" "+dianum+" d' "+mesos[mes]+" del "+any);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="DIGA'M LA DATA" onclick="mostrardata()">
+</body>
+</html>

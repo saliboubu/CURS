@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ARRAY GELAT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    
+    <script language = "javascript">
+        var gelats = ["../gelateria/maduixa.png","../gelateria/coco.png","../gelateria/mango.png"]; //Per afegir les imatges a l'array es possa únicament la ruta de la imatge, el que aniria a src del'etiqueta img
+        function triargelat() {
+            var gelat = document.getElementById("gelat").value;
+            var imggelat = document.getElementById("imggelat");
+            imggelat.innerHTML = "<img src='"+gelats[gelat]+"'>";//en source perque t'agafi el valor de la variable cal posar-ho entre cometes i +
+        }
+    
+    </script>
+</head>
+<body>
+   <select id="gelat" onchange="triargelat()">
+       <option value=""></option>
+       <option value="0">GELAT MADUIXA</option>
+       <option value="1">GELAT COCO</option>
+       <option value="2">GELAT MANGO</option>
+   </select>
+   <div id="imggelat"></div>
+</body>
+</html>

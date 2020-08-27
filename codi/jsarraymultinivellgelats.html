@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ARRAY MULTINIVELL GELATERIA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style type="text/css">
+        img{
+            width: 20%;
+        }
+    </style>
+    <script lenguatge="javascript">
+        function escollirgelat(){
+            var gelats = [/*GELAT MADUIXA*/
+                          [['../gelateria/tarrinamx1.png','../gelateria/conomx1.png','../gelateria/maduixa.png'],
+                          ['../gelateria/tarrinaco1.png','../gelateria/conoco1.png','../gelateria/coco.png'],
+                          ['../gelateria/tarrinamg1.png','../gelateria/conomg1.png','../gelateria/mango.png'],
+                          ['../gelateria/tarrinaxoc1.jpg','../gelateria/conoxoc1.jpg','../gelateria/xocolata.png']],
+                          /*GELAT COCO*/
+                          [['mt2b','mc2b','me2b'],['ct2b','cc2b','ce2b'],['mgt2b','mgc2b','mge2b'],['xct2b','xcc2b','xce2b']],
+                          /*GELAT MANGO*/
+                          [['mt3b','mc3b','me3b'],['ct3b','cc3b','ce3b'],['mgt3b','mgc3b','mge3b'],['xct3b','xcc3b','xce3b']]
+                        ];
+            var gust = document.getElementById("gust").value;
+            var tipus = document.getElementById("tipus").value;
+            var imggelat = document.getElementById("imggelat");
+            if ((gust !== 'nogust') && (tipus !== 'notipus')){
+                imggelat.innerHTML = "<img src='"+gelats[gust][tipus]+"'>"
+            }
+            else if((gust !=='nogust') && (tipus == 'notipus')){
+                alert("Voldras el gelat en tarrina, cucurutxo o en pack especial?")
+            }
+            else if((gust == 'nogust') && (tipus !== 'notipus')){
+                alert("No oblidis escollir de quin gust vols el gelat!;)")
+            }
+            else{
+                alert("Benvingut, pots començant escollint el gust del gelat")
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>GUST</h3><br><br>
+    <select id="gust" onchange="escollirgelat()">
+        <option value="nogust"></option>
+        <option value="0">Maduixa</option>
+        <option value="1">Coco</option>
+        <option value="2">Mango</option>
+        <option value="3">Xocolata</option>
+    </select>
+    <br><br>
+    <h3>TIPUS</h3><br><br>
+    <select id="tipus" onchange="escollirgelat()">
+        <option value="notipus"></option>
+        <option value="0">Tarrina</option>
+        <option value="1">Cucurucho</option>
+        <option value="2">Especial</option>
+    </select>
+    <h3>BOLES</h3>
+    <select id="boles" onchange="escollirgelat()">
+        <option value="noboles"></option>
+        <option value="0">1 Bola</option>
+        <option value="1">2 Boles</option>
+        <option value="2">3 Boles</option>
+    </select>
+    <div id="imggelat"></div>
+</body>
+</html>

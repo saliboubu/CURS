@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RESTAURANT ARRAY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <style type="text/css">
+    body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        h3{
+            text-align: center;
+            color: goldenrod;
+            margin-bottom: 12px;
+            font-family: 'Monoton', cursive;
+        }
+        .imgheader{
+            width: 100%;
+            border-bottom: 10px solid goldenrod;
+        }
+        .imgheader img{
+            width: 100%;
+            z-index: 2;
+        }
+        .imgheader h1{
+            font-family: 'Monoton', cursive;
+            color: goldenrod;
+            z-index: 1;
+            position: absolute;
+            top: 100px;
+            left: 30px;
+            font-size: 48pt;
+            font-weight: 500;
+        }
+        .imgheader p{
+            color: black;
+            z-index: 1;
+            position: absolute;
+            top: 220px;
+            left: 30px;
+        }
+        .general{
+            width: 100%;
+            background-color:rgba(0, 0, 0, 0.925);
+            border-bottom: 10px solid goldenrod;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding-top: 90px;
+        }
+        .general img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto; 
+        }
+        .row{
+            max-width: 1200px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 60px;
+        }
+        .col-sm-12{
+            height: 260px;
+        }
+        .desplegable{
+            display: block;
+            margin: 0 auto;
+            max-width: 30%;
+            margin-bottom: 15px;
+        }
+        .imatges{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .boto{
+            font-family: 'Monoton', cursive;
+            font-size: 18pt;
+            color: goldenrod;
+            background-color: rgba(0, 0, 0, 0.925);
+            border: 2px solid rgba(255, 255, 255, 0.829);
+            margin-bottom:20px;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            width: 20%;
+            padding: 10px 0px;
+        }
+        .boto:hover{
+            background-color: rgba(255, 255, 255, 0.925);
+        }
+        .footer{
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+        @media screen and (max-width:992px){
+            .imgheader h1{
+                top:75px;
+            }
+            .imgheader p{
+                top:175px;
+            }
+        }
+        @media screen and (max-width:768px){
+            .imgheader h1{
+                top:55px;
+                font-size: 36pt;
+            }
+            .imgheader p{
+                top:130px;
+                font-size: 11pt;
+            }
+        }
+        @media screen and (max-width:576px){
+            .imgheader h1{
+                top:35px;
+                font-size: 28pt;
+            }
+            .imgheader p{
+                top:100px;
+                font-size: 8pt;
+            }
+        }
+    </style>
+    <script language="javascript">
+        function entrants(){
+            var entrants = ["../imgcartarest/order.jpeg","../imgcartarest/avocado.jpeg","../imgcartarest/hummus.jpeg","../imgcartarest/arancini.jpeg"];
+            var entrant = document.getElementById("entrant").value;
+            var capae = document.getElementById("imgentrants");
+            capae.innerHTML = "<img src='"+entrants[entrant]+"'>";
+        }
+        function primers(){
+            var primers = ["../imgcartarest/repartir.jpeg","../imgcartarest/couscous.jpeg","../imgcartarest/chanamasala.jpeg","../imgcartarest/sopaceba.jpeg"];
+            var primer = document.getElementById("primers").value;
+            var capap = document.getElementById("imgprimers");
+            capap.innerHTML = "<img src='"+primers[primer]+"'>";
+        }
+        function postres(){
+            var postres = ["../imgcartarest/entrega.jpeg","../imgcartarest/alfajores.jpeg","../imgcartarest/chebakia.jpeg","../imgcartarest/tresleches.jpeg"];
+            var postre = document.getElementById("postres").value;
+            var capapos = document.getElementById("imgpostres");
+            capapos.innerHTML = "<img src='"+postres[postre]+"'>";
+        }
+    </script>
+</head>
+<body>
+    <div class="imgheader">
+            <h1>TASTS DEL MÓN</h1>
+            <img src="../imgcartarest/header.jpg"/>
+            <p>Experimenta els tasts orientals de la nostra carta...<br>Una experiencia on intervenen tots els sentits</p>
+        </div>
+        <div class="general">
+            <div class="row justify-content-center">
+                <div class="col-md-4 col-sm-12">
+                    <h3>ENTRANTS</h3>
+                    <select class="desplegable" id="entrant" onchange="entrants()">
+                        <option value="0"></option>
+                        <option value="1">Avosalad<br></option>
+                        <option value="2">Hummus</option>
+                        <option value="3">Mr.Corquet</option>
+                    </select>
+                    <div class="imatges" id="imgentrants"></div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h3>PRIMERS</h3>
+                    <select class="desplegable " id="primers" onchange="primers()">
+                        <option value="0"></option>
+                        <option value="1">Dunes del Sahara</option>
+                        <option value="2">Masala trip</option>
+                        <option value="3">Amour en Paris</option>
+                    </select>
+                    <div class="imatges" id="imgprimers"></div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h3>POSTRES</h3>
+                    <select class="desplegable" id="postres" onchange="postres()">
+                        <option value="0"></option>
+                        <option value="1">Che</option>
+                        <option value="2">Rosa de sesam</option>
+                        <option value="3">Milk and Milk on Cake</option>
+                    </select>
+                    <div class="imatges" id="imgpostres"></div>
+                </div>
+            </div>
+            <input class="boto" type="button" value="ORDER" onclick="url('https://www.google.com/search?q=thank+you&sxsrf=ALeKk027f2sJQy3oGQdZiEwdyhLy5Q4Afw:1598382112519&source=lnms&tbm=isch&sa=X&ved=2ahUKEwifpKCwhbfrAhUSnhQKHQHiD6EQ_AUoAXoECBEQAw&biw=1517&bih=730')">
+        </div>
+        <div class="footer">
+            <p>© 2020 Tasts del món</p>
+        </div>
+</body>
+</html>
