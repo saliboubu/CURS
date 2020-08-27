@@ -19,15 +19,16 @@
                           ['../gelateria/tarrinamg1.png','../gelateria/conomg1.png','../gelateria/mango.png'],
                           ['../gelateria/tarrinaxoc1.jpg','../gelateria/conoxoc1.jpg','../gelateria/xocolata.png']],
                           /*GELAT COCO*/
-                          [['mt2b','mc2b','me2b'],['ct2b','cc2b','ce2b'],['mgt2b','mgc2b','mge2b'],['xct2b','xcc2b','xce2b']],
+                          [['../gelateria/tarrinamx2.png','../gelateria/conomx2.png','../gelateria/maduixa.png'],['ct2b','cc2b','ce2b'],['mgt2b','mgc2b','mge2b'],['xct2b','xcc2b','xce2b']],
                           /*GELAT MANGO*/
                           [['mt3b','mc3b','me3b'],['ct3b','cc3b','ce3b'],['mgt3b','mgc3b','mge3b'],['xct3b','xcc3b','xce3b']]
                         ];
             var gust = document.getElementById("gust").value;
             var tipus = document.getElementById("tipus").value;
+            var boles = document.getElementById("boles").value;
             var imggelat = document.getElementById("imggelat");
-            if ((gust !== 'nogust') && (tipus !== 'notipus')){
-                imggelat.innerHTML = "<img src='"+gelats[gust][tipus]+"'>"
+            if ((gust !== 'nogust') && (tipus !== 'notipus') && (boles !== 'noboles')){
+                imggelat.innerHTML = "<img src='"+gelats[boles][gust][tipus]+"'>"
             }
             else if((gust !=='nogust') && (tipus == 'notipus')){
                 alert("Voldras el gelat en tarrina, cucurutxo o en pack especial?")
