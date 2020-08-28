@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>QUESTIONARI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style type="text/css">
+    img{
+        width: 25%;
+    }
+    </style>
+    <script language="javascript">
+        function comprovar(){
+            var respostes = ['resposta1','resposta0','resposta2'];
+            var correccio = ['../imatges/correct.png','../imatges/incorrect.png'];
+            var correctes = document.getElementById("correcte");
+            var incorrectes = document.getElementById("incorrecte");
+            var notafinal = document.getElementById("nota");
+            var i = 0;
+            var correcte = 0;
+            var incorrecte = 0; 
+            
+            for(i=0; i<respostes.length; i++){
+                var resposta = document.getElementById("pregunta"+i).value;
+                var mostra = document.getElementById("imatge"+i);
+                if (resposta == respostes[i]){
+                    mostra.innerHTML = "<img src='"+correccio[0]+"'/>"
+                    correcte++;
+                }
+                else if (resposta !== respostes[i]){
+                    mostra.innerHTML = "<img src='"+correccio[1]+"'/>"
+                    incorrecte++;
+                }
+            }
+            
+            correctes.innerHTML = correcte;
+            incorrectes.innerHTML = incorrecte;
+            notafinal.innerHTML = correcte-incorrecte*0.15;   
+        }
+    </script>
+</head>
+<body>
+    <div class="general">
+        <h1>QUESTIONARI</h1>
+    </div>
+    <div class="questionari">
+        <div class="row pregunta0">
+            <div class="col-6">
+                <p>Quants costats té un pentagon?</p>
+                <select id="pregunta0">
+                    <option value="resposta0">8</option>
+                    <option value="resposta1">5</option>
+                    <option value="resposta2">10</option>
+                </select>
+            </div>
+            <div class="col-6" id="imatge0"></div>
+        </div>
+        <div class="row pregunta1">
+            <div class="col-6">
+                <p>Quants costats té un hexagon?</p>
+                <select id="pregunta1">
+                    <option value="resposta0">6</option>
+                    <option value="resposta1">5</option>
+                    <option value="resposta2">10</option>
+                </select>
+            </div>
+            <div class="col-6" id="imatge1"></div>
+        </div>
+        <div class="row pregunta2">
+            <div class="col-6">
+                <p>Quants costats té un enneagon?</p>
+                <select id="pregunta2">
+                    <option value="resposta0">8</option>
+                    <option value="resposta1">5</option>
+                    <option value="resposta2">10</option>
+                </select>
+            </div>
+            <div class="col-6" id="imatge2"></div>
+        </div>
+        <div class="row" id="resultat">
+            <div class="col-4" id="correcte"></div>
+            <div class="col-4" id="incorrecte"></div>
+            <div class="col-4" id="nota"></div>
+        </div>
+        <div class="row">
+            <input type="button" value="COMPROVAR" onclick="comprovar()">
+        </div>
+    </div> 
+    
+</body>
+</html>

@@ -15,11 +15,12 @@ function triargelat(){
          ['../gelateria/tarrinaco3.png','../gelateria/conoco3.png','../gelateria/coco.png'],
          ['../gelateria/tarrinamg3.png','../gelateria/conomg3.png','../gelateria/mango.png']
         ]];
+    var toppings = ['xoco','nous','crocanti']
     var gust = document.getElementById("gust").value;
     var tipus = document.getElementById("tipus").value;
     var boles = document.getElementById("boles").value;
     var topping = document.getElementById("toppings").value;
-    if ((gust !== 'nogust') && (tipus !== 'notipus') && (boles !== 'noboles')){
+    if ((gust !== 'nogust') && (tipus !== 'notipus') && (boles !== 'noboles') && (topping =='notoppings')){
         imggelat.innerHTML = "<img src='"+gelats[boles][gust][tipus]+"'>"
     }
     else if((gust !=='nogust') && (tipus == 'notipus')){
@@ -27,6 +28,15 @@ function triargelat(){
     }
     else if((gust == 'nogust') && (tipus !== 'notipus')){
         alert("No oblidis escollir de quin gust vols el gelat!;)")
+    }
+    else if((gust !=='nogust') && (tipus !== 'notipus') && (boles == 'noboles')){
+        alert("De quantes boles voldras el gelat?")
+    }
+    else if((gust !=='nogust') && (tipus !== 'notipus') && (boles !== 'noboles') && (topping == 'notoppings')){
+        alert("Voldras toppings?")
+    }
+    else if((gust !=='nogust') && (tipus !== 'notipus') && (boles !== 'noboles') && (topping !== 'notoppings')){
+        
     }
     else{
         alert("Benvingut, pots començant escollint el gust del gelat")

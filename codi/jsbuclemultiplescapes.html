@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>UNA FOTO PER CAPA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style>
+        .row{
+            border: 2px solid salmon;
+            height: 300px;
+            margin-top: 30px;
+        }
+        .col-4{
+            border: 1px solid goldenrod;
+            height: 300px;
+        }
+    </style>
+    <script language="javascript">
+        function mostrarimg(){
+            var fotos = ['../imgcartarest/avocado.jpeg','../imgcartarest/hummus.jpeg','../imgcartarest/tresleches.jpeg'];
+            var i = 0;
+            for(i = 0; i<fotos.length; i++){
+                var capa = document.getElementById("capa"+i);
+                capa.innerHTML = "<img src='"+fotos[i]+"'/>"; 
+            }  
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="MOSTRA FOTOS" onclick="mostrarimg()">
+    <div class="row">
+        <div class="col-4" id="capa0"></div>
+        <div class="col-4" id="capa1"></div>
+        <div class="col-4" id="capa2"></div>
+    </div>
+</body>
+</html>

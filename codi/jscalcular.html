@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CACLCULAR TAULA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style type="text/css">
+        #contenidor{
+            border: 3px solid green;
+            height: 500px;
+        }
+        /*resultat.innerHTML +="<table id='resultat' width='600px' border='1'>";
+        for(i=0; i<11; i++){
+            resultat.innerHTML += "<tr><td>"+num+"</td>";
+            resultat.innerHTML += "<td>"+i+"</td>";
+            resultat.innerHTML += "<td>"+(num*i)+"</td></tr>";  
+        }
+    resultat.innerHTML +="</table>";*/
+    </style>       
+</head>
+<body>
+    <label>Número</label>
+    <input type="number" id="numero">
+    <input type="button" value="CALCULAR" onclick="calcular()"><br><br>
+    <div id="contenidor">
+            <script language="javascript">
+                function calcular(){
+                    var num = document.getElementById("numero").value;
+                    var i = 0;
+                    var resultat = document.getElementById("contenidor");
+                    document.write("<table id='resultat' width='600px' border='1'>");
+                        for(i=0; i<11; i++){
+                            document.write("<tr><td>"+num+"</td>");
+                            document.write("<td>"+i+"</td>");
+                            document.write("<td>"+(num*i)+"</td></tr>");  
+                        }
+                    document.write("</table>"); 
+                }   
+            </script>
+    </div>
+</body>
+</html>
