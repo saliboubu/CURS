@@ -20,31 +20,35 @@ h2{
     text-justify: left;
 }
 .general{
+    border-top: 10px solid salmon;
+    border-bottom: 10px solid salmon;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    border: 3px solid green;
-    background-image: url("../gelateria/nonna.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-color: #ffd9003b;
+    background-image: url("../gelateria/safatagelats.jpg");
 }
 .fila_general{
-    border-top: 10px solid salmon;
     margin-right: 0px;
     margin-left: 0px;
-    padding: 50px 0px;
+    padding: 50px 50px;
+    width: 100%;
+    max-height: 400px;
 }
 .llistes{
-    border: 2px solid salmon;
     padding: 50px 0px;
     padding-left: 30px;
     padding-right: 50px;
+    background-color: black;
+    opacity: 0.8;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .imatge{
-    border: 2px solid violet;
     padding: 50px 0px;
+    background-color: black;
+    opacity: 0.8;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .gust_tipus{
     margin-bottom: 45px;
@@ -59,8 +63,117 @@ h3{
     text-align: center;
     color: salmon;
     font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Special Elite', cursive;
 }
-.imatge img{
+.filaboto{
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 100%;
+}
+.boto{
+    background-color: black;
+    opacity: 0.8;
+    font-family: 'Special Elite', cursive;
+    color: salmon;
+    font-weight: bold;
+    font-size: 24pt;
+    width: 10%;
+    height: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    border:1px solid black;
+    transition: all 0.3s;
+}
+.boto:hover{
+    color: black;
+    background-color: salmon;
+    opacity: 0.8;
+}
+#imggelat{
+    float: left;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 40px;
+    height: 70%;
+    width: 50%;
+}
+#imgtopping{
+    float: right;
+    display: block;
+    margin-right: auto;
+    margin-left: auto; 
+    padding-top: 40px;
+    height: 70%;
+    width: 50%;
+}
+#imggelat img{
     width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#imgtopping img{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.prefooter{
+    margin-bottom: 20px;
+}
+.prefooterow{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.nonnaimg img{
+    width: 60%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.nonnatext{
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.nonnatext p{
+    font-family: 'Special Elite', cursive;
+    line-height: 30px;
+}
+.footer{
+    background-color: black;
+}
+.footerrow{
+    margin-left: 0px;
+    margin-right: 0px;
+    color: white;
+    font-family: 'Special Elite', cursive;
+    height: 100%;
+}
+#googleMap{
+    width:100%;
+    height:80px;
+}
+.rrss{
+    float: left;
+    color: black;
+    font-size: 20px;
+    background-color: salmon;
+    border-radius: 50%;
+    width: 42px;
+    height: 41px;
+    text-align: center;
+    line-height: 42px;
+    margin-right: 15px;
+    transition: all 0.5s;
+}
+.xarxes,.copy{
+    padding-top: 20px;
+}
+.rrss:hover{
+    background-color: black;
+    color: salmon;
 }

@@ -20,25 +20,45 @@ function triargelat(){
     var tipus = document.getElementById("tipus").value;
     var boles = document.getElementById("boles").value;
     var topping = document.getElementById("toppings").value;
+    var imggelat = document.getElementById("imggelat");
+    var imgtopping = document.getElementById("imgtopping");
     if ((gust !== 'nogust') && (tipus !== 'notipus') && (boles !== 'noboles') && (topping =='notoppings')){
-        imggelat.innerHTML = "<img src='"+gelats[boles][gust][tipus]+"'>"
+        imggelat.innerHTML = "<img src='"+gelats[boles][gust][tipus]+"'>";
+        alert("Voldras toppings?");
     }
     else if((gust !=='nogust') && (tipus == 'notipus')){
-        alert("Voldras el gelat en tarrina, cucurutxo o en pack especial?")
-    }
-    else if((gust == 'nogust') && (tipus !== 'notipus')){
-        alert("No oblidis escollir de quin gust vols el gelat!;)")
+        alert("Voldras el gelat en tarrina, cucurutxo o en pack especial?");
     }
     else if((gust !=='nogust') && (tipus !== 'notipus') && (boles == 'noboles')){
-        alert("De quantes boles voldras el gelat?")
+        alert("De quantes boles voldras el gelat?");
     }
-    else if((gust !=='nogust') && (tipus !== 'notipus') && (boles !== 'noboles') && (topping == 'notoppings')){
-        alert("Voldras toppings?")
+    else if((gust == 'nogust') && (tipus !== 'notipus')){
+        alert("No oblidis escollir de quin gust vols el gelat!;)");
     }
     else if((gust !=='nogust') && (tipus !== 'notipus') && (boles !== 'noboles') && (topping !== 'notoppings')){
-        
+        imggelat.innerHTML = "<img src='"+gelats[boles][gust][tipus]+"'>";
+        switch(topping){
+            case '0':
+                imgtopping.innerHTML = "<img src='../gelateria/virutaxoco.png'>";
+            break;
+            case '1':
+                imgtopping.innerHTML = "<img src='../gelateria/nous.png'>";
+            break;
+            case '2':
+                imgtopping.innerHTML = "<img src='../gelateria/cookies.png'>";
+            break;
+        }
     }
     else{
         alert("Benvingut, pots començant escollint el gust del gelat")
     }
 }
+/*function mapa(){
+    var maploc = {
+        center:new google.maps.LatLng(40.719388,-73.997593);
+        zoom:5;
+    };
+    var mapa = new google.maps.Map(document.getElementById("googleMap"),mapPro);
+}
+*/
+

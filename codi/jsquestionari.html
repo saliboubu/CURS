@@ -14,7 +14,9 @@
     </style>
     <script language="javascript">
         function comprovar(){
-            var respostes = ['resposta1','resposta0','resposta2'];
+            var preguntes = ['Quants costats té un hexagon?','Quants costats té un hexagon?','Quants costats té un enneagon?']
+            var respostes = []
+            var respostesok = ['resposta1','resposta0','resposta2'];
             var correccio = ['../imatges/correct.png','../imatges/incorrect.png'];
             var correctes = document.getElementById("correcte");
             var incorrectes = document.getElementById("incorrecte");
@@ -26,11 +28,11 @@
             for(i=0; i<respostes.length; i++){
                 var resposta = document.getElementById("pregunta"+i).value;
                 var mostra = document.getElementById("imatge"+i);
-                if (resposta == respostes[i]){
+                if (resposta == respostesok[i]){
                     mostra.innerHTML = "<img src='"+correccio[0]+"'/>"
                     correcte++;
                 }
-                else if (resposta !== respostes[i]){
+                else if (resposta !== respostesok[i]){
                     mostra.innerHTML = "<img src='"+correccio[1]+"'/>"
                     incorrecte++;
                 }
@@ -51,7 +53,7 @@
             <div class="col-6">
                 <p>Quants costats té un pentagon?</p>
                 <select id="pregunta0">
-                    <option value="resposta0">8</option>
+                    <option value="resposta0">8</option> <!--COM MANTINC EL VALUE SI VULL QUE TOT AIXÒ SIGUI DINÀMIC?-->
                     <option value="resposta1">5</option>
                     <option value="resposta2">10</option>
                 </select>

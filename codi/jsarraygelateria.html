@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="gelateria.css" />
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="../fontawesome/css/all.css" rel="stylesheet">
     <script src="gelateria.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZoWyDW57KTvhz_DApQQFpezkVkNKziVk&callback=mapa"></script>
 </head>
 <body>
     <div class="header">
@@ -21,7 +24,7 @@
             <div class="col-6 llistes">
                 <div class="row gust_tipus">
                     <div class="col-6 gust">
-                        <h3>GUST</h3>
+                        <h3>FLAVOUR</h3>
                         <select id="gust" class="desplegable" onchange="triargelat()">
                             <option value="nogust"></option>
                             <option value="0">Maduixa</option>
@@ -30,7 +33,7 @@
                         </select>
                     </div>
                     <div class="col-6 tipus">
-                        <h3>RECIPIENT</h3>
+                        <h3>CUPCONE</h3>
                         <select id="tipus" class="desplegable" onchange="triargelat()">
                             <option value="notipus"></option>
                             <option value="0">Tarrina</option>
@@ -40,7 +43,7 @@
                 </div>
                 <div class="row boles_toppings">
                     <div class="col-6 boles">
-                        <h3>BOLES</h3>
+                        <h3>SCOOPS</h3>
                         <select id="boles" class="desplegable" onchange="triargelat()">
                             <option value="noboles"></option>
                             <option value="0">1 Bola</option>
@@ -54,18 +57,44 @@
                             <option value="notoppings"></option>
                             <option value="0">Xocolata</option>
                             <option value="1">Nous</option>
-                            <option value="2">Crocanti</option>
+                            <option value="2">Cookies</option>
                         </select>   
                     </div>
                 </div>
             </div>
             <div class="col-6 imatge">
-              <div id="imggelat"></div> 
+              <div id="imggelat"></div>
+              <div id="imgtopping"></div>
             </div>
+        </div>
+        <div class="row filaboto">
+            <input type="button" value="BUY" class="boto" onclick="">
+        </div>
+    </div>
+    <div class="prefooter">
+        <div class="row prefooterow">
+            <div class="col-6 nonnaimg"><img src="../gelateria/nonnaprefoot.png"/></div>
+            <div class="col-6 nonnatext"><p class="text-center">Gelato artigianale makes you travel form the heart of New York city to Italy.
+                                            All ice-cream flavours are created following my nonnas recipies 
+                                            offering a wholesome experience by tasting the traditional italian ice-cream in those modern times.
+                                            At Gelato di Nonna you can customize your ice-cream as you would like with the toppings, and the best part is
+                                            that all the ingredients used are vegan and organic...<br>¡Do not hesitate, and order your personalized ice-cream!</p></div>
         </div>
     </div>
     <div class="footer">
-        <p>Copyright Reserved to Gelato di Nonna</p>
+        <div class="row footerrow">
+            <div class="col-4 copy">
+                <p>Copyright Reserved to Gelato di Nonna</p>
+            </div>
+            <div class="col-4" id="googleMap"></div>
+            <div class="col-4 xarxes">
+                <div class="rrss rounded-circle text-center"><i class="fab fa-youtube"></i></div>
+                    <div class="rrss rounded-circle text-center"><i class="fab fa-facebook"></i></div>
+                    <div class="rrss rounded-circle text-center"><i class="fab fa-twitter"></i></div>
+                    <div class="rrss rounded-circle text-center"><i class="fab fa-linkedin"></i></div>
+                    <div class="rrss rounded-circle text-center"><i class="fab fa-instagram"></i></div>
+            </div>
+        </div> 
     </div>
 </body>
 </html>
