@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LIMIT 40.000</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script language = "javascript">
+        function calcularlimit(){
+            var numero = document.getElementById("numero").value;
+            var mostranum = document.getElementById("mostranum");
+            var doble = 1;
+            var i = 0;
+            while((i<=numero)&&(doble<=40000)){
+                doble = doble*2;
+                i++
+            }
+            mostranum.innerHTML = doble;
+        }
+    </script>
+</head>
+<body>
+    <label>NUMERO</label>
+    <input type="number" id="numero">
+    <input type="button" value="CALCULAR" onclick="calcularlimit()">
+    <div id="mostranum"></div>
+</body>
+</html>

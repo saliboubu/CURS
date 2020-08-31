@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ARRAYS ALTRES CONCEPTES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    
+</head>
+<body>
+    <script language="javascript">
+        var dies = ['Dilluns','Dimarts','Dimecres','Dijous','Divendres','Dissabte','Diumenge'];
+        var dies2 = [] //array buida per anar afegint els valors //un altre forma de declarar l'array però que no es standar es: var dies = new array();
+        var i = 0;
+        //dies.push("Dissabte"); //Afegeix el valor indicat en el metode push al final de la llista/array dies
+        //dies.unshift("Dijous");//Afegeix el valor indicat en el metode unshift al principi de la llista, associa aquest valor la posicio 0. No s'utilitza gaire
+        //dies.pop(); //Elimina l'últim element de la matriu/array
+        //dies.shift(); //Elimina el primer element de la matriu/array/llista
+        //dies.splice(2, 0, "Patata"); //Es un supermetode, elimina, afegeix... Té tres parametres: posicio que es vol modificar, quants elements s'han d'eliminar en aquella posicio, quins valors vols afegir en aquella posicio
+        dies.splice(2,3);//Elimina el dimecres de la seva posicio (2,1), amb (2,3) elimina els 3 elements que estan en la posició 2 i després d'aquesta posicio
+        for (i=0; i<dies.length; i++){
+            document.write(dies[i]);
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

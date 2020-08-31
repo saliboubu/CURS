@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DOBLES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script language = "javascript">
+        function calculardobles(){
+            var num = document.getElementById("numero").value;
+            var doble = 1;
+            var i = 0;
+            var mostrarnum = document.getElementById("mostra_numero");
+            while(i<=num){
+                doble = doble*2;
+                i++;
+            }
+            mostrarnum.innerHTML = doble;
+        }
+        
+    </script>
+</head>
+<body>
+    <label>NUMERO</label>
+    <input type="number" id="numero">
+    <input type="button" value="CALCULAR" onclick="calculardobles()">
+    <div id="mostra_numero"></div>
+</body>
+</html>

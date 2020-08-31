@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FACTORIAL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script language="javascript">
+        function calcularfactorial(){
+            var numero = document.getElementById("numero").value;
+            var mostranum = document.getElementById("mostranum");
+            var factorial = 1;
+            var numproducte = 1;
+            while((numero>0) && (factorial<=40000)){
+                factorial = factorial * numero;
+                numero--;
+                mostranum.innerHTML = factorial;
+            }
+        }
+    </script>
+</head>
+<body>
+    <label>NUMERO</label>
+    <input type="number" id="numero">
+    <input type="button" value="FACTORIAL" onclick="calcularfactorial()">
+    <div id="mostranum"></div>
+</body>
+</html>

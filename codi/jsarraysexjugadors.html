@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ARRAYS AFEGIR JUGADORS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script language="javascript">
+        var jugadors =[]; //Si la poses fora el valor es conserva, és a dir et fa automaticament la concatenacio
+        function afegir(){
+            var jugador = document.getElementById("jugador").value;
+            var llista = document.getElementById("llista");
+            var i = 0;    
+            jugadors.push(jugador);
+            llista.innerHTML = ""; //Per a que no se't visualitzi cada llista d'entrada es neteja la capa cada vegada, abans de mostrar la nova llista 
+            for(i=0; i<jugadors.length; i++){
+                llista.innerHTML += jugadors[i]+"<br>";
+            }
+        }        
+    </script>
+</head>
+<body>
+    <label>JUGADOR</label>
+    <input type="text" id="jugador">
+    <input type="button" value="AFEGEIX" onclick="afegir()">
+    <div id="llista"></div>
+</body>
+</html>

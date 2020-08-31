@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MATES EN WEBS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script language="javascript">
+        function calcular(){
+            //var num = Math.round(Math.random()*10);//no fer servir estadisticament ja que dóna a un marge d'error gran
+            //var num = Math.ceil(Math.random()*10);//estadisticament correcte, perqué sempre s'arrodoneix a l'alça. UTILITAT: S'arrodoneix a l'alça el preus, factures
+            var num = Math.floor(Math.random()*5); //estadisticament correcte, perqué sempre s'arrodoneix a la baixa. Mai et sortirà el 10 pq sempre arrodoneix a la baixa
+            alarm(num);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="CALCULAR" onclick="calcular()">
+</body>
+</html>
