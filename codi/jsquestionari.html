@@ -14,9 +14,9 @@
     </style>
     <script language="javascript">
         function comprovar(){
-            var preguntes = ['Quants costats té un hexagon?','Quants costats té un hexagon?','Quants costats té un enneagon?']
-            var respostes = []
-            var respostesok = ['resposta1','resposta0','resposta2'];
+            var preguntes = ['Quants costats té un pentagon?','Quants costats té un hexagon?','Quants costats té un enneagon?']
+            //var respostes = [];
+            var respostes = [5,6,10];
             var correccio = ['../imatges/correct.png','../imatges/incorrect.png'];
             var correctes = document.getElementById("correcte");
             var incorrectes = document.getElementById("incorrecte");
@@ -28,11 +28,11 @@
             for(i=0; i<respostes.length; i++){
                 var resposta = document.getElementById("pregunta"+i).value;
                 var mostra = document.getElementById("imatge"+i);
-                if (resposta == respostesok[i]){
+                if (resposta == respostes[i]){
                     mostra.innerHTML = "<img src='"+correccio[0]+"'/>"
                     correcte++;
                 }
-                else if (resposta !== respostesok[i]){
+                else if (resposta !== respostes[i]){
                     mostra.innerHTML = "<img src='"+correccio[1]+"'/>"
                     incorrecte++;
                 }
@@ -49,39 +49,21 @@
         <h1>QUESTIONARI</h1>
     </div>
     <div class="questionari">
-        <div class="row pregunta0">
-            <div class="col-6">
-                <p>Quants costats té un pentagon?</p>
-                <select id="pregunta0">
-                    <option value="resposta0">8</option> <!--COM MANTINC EL VALUE SI VULL QUE TOT AIXÒ SIGUI DINÀMIC?-->
-                    <option value="resposta1">5</option>
-                    <option value="resposta2">10</option>
-                </select>
-            </div>
-            <div class="col-6" id="imatge0"></div>
-        </div>
-        <div class="row pregunta1">
-            <div class="col-6">
-                <p>Quants costats té un hexagon?</p>
-                <select id="pregunta1">
-                    <option value="resposta0">6</option>
-                    <option value="resposta1">5</option>
-                    <option value="resposta2">10</option>
-                </select>
-            </div>
-            <div class="col-6" id="imatge1"></div>
-        </div>
-        <div class="row pregunta2">
-            <div class="col-6">
-                <p>Quants costats té un enneagon?</p>
-                <select id="pregunta2">
-                    <option value="resposta0">8</option>
-                    <option value="resposta1">5</option>
-                    <option value="resposta2">10</option>
-                </select>
-            </div>
-            <div class="col-6" id="imatge2"></div>
-        </div>
+        <script language="javascript">
+            var preguntes = ['Quants costats té un hexagon?','Quants costats té un hexagon?','Quants costats té un enneagon?']
+            var resposta0 = [8,6,8];
+            var resposta1 = [5,5,5];
+            var resposta2 = [10,10,10];
+            var i = 0;
+            var out = "<div class='row'>";
+            for(i=0; i<preguntes.length; i++){
+                document.write("<div class='row'><div class='col-8'><p>"+preguntes[i]+"</p>");
+                document.write("<select id='pregunta"+i+"'><option>"+resposta0[i]+"</option>");
+                document.write("<option>"+resposta1[i]+"</option>");
+                document.write("<option>"+resposta2[i]+"</option></select>");
+                document.write("<div class='col-4' id='imatge"+i+"'>","</div>");
+            }
+        </script>
         <div class="row" id="resultat">
             <div class="col-4" id="correcte"></div>
             <div class="col-4" id="incorrecte"></div>
