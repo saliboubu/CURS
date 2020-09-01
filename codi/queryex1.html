@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>QUERY EX1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style type="text/css">
+     .capes{
+         width: 150px;
+         height: 150px;
+     }
+     #capaverda{
+         background-color: rgb(4, 90, 4);
+         position: absolute;
+     }
+     #capavermella{
+         background-color: rgb(131, 3, 3);
+         position: absolute;
+         left: 150px;
+     }
+     #capagroga{
+         background-color: goldenrod;
+         position: absolute;
+         left:300px;
+     }
+     #capablava{
+         background-color: rgb(5, 5, 133);
+         position: absolute;
+         left: 450px;
+     }
+     #felicitats{
+         background-color: coral;
+         position: absolute;
+         left: 300px;
+         height: 150px;
+         width:250px;
+     }
+    </style>
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+   
+</head>
+<body>
+    <input type="button" value="CONTROL 1" id="botoamaga">
+    <input type="button" value="CONTROL 2" id="botomostra">
+    <input type="button" value="CONTROL 3" id="botoalterna">
+    <input type="button" value="CONTROL 4" id="botofinal">
+    <br><br>
+    <div id="capaverda" class="capes"></div>
+    <div id="capavermella" class="capes"></div>
+    <div id="capagroga" class="capes"></div>
+    <div id="capablava" class="capes"></div>
+    <div id="felicitats"></div>
+    <script language="javascript">
+        $(document).ready(function(){
+            var capaverda = true;
+            var capavermella = true;
+            var capagroga = true;
+            var capablava = true;
+            $("#botoamaga").click(function(){
+                $("#capaverda").hide();
+                $("#capagroga").hide();
+                capaverda = false;
+                capagroga = false;
+            })
+            $("#botomostra").click(function(){
+                $("#capaverda").show();
+                $("#capavermella").show();
+                capaverda = true;
+                capavermella = true;
+            })
+            $("#botoalterna").click(function(){
+                $(".capes").toggle();
+                capaverda != capaverda;
+                capavermella != capavermella;
+                capagroga != capagroga;
+                capablava != capablava;
+            })
+            $("#botofinal").click(function(){
+                $("#capablava").show();
+                $("#capagroga").show();
+                capablava = true;
+                capagroga = true;
+            })
+            if((capaverda = true) && (capavermella = true) && (capablava = true) && (capagroga = true)){
+                $("#felicitats").show();
+            }
+            else if((!capaverda) || (!capavermella) || (!capablava) || (!capagroga)){
+                $("#felicitats").hide();
+            }
+        })
+    </script>  
+</body>
+</html>

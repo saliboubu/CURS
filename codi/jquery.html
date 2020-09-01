@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JQUERY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style type="text/css">
+        #capa1{
+            background-color: blueviolet;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <label for="text_nom">NOM</label>
+    <input type="text" id="text_nom"><br><br>
+    <div id="capa1"><h1>Hola</h1></div><br><br>
+    <input type="button" value="CLICA" id="boto1">
+
+    <script language="javascript">
+        $(function(){
+           $("#boto1").click(function(){
+                //alert($("#text_nom").val()); //per agafar el valor del quadre de text és amb VAL no VALUE
+                //$("#text_nom").val("Sali"); //afegeixes un valor a a quell objecte, canvies el seu value
+                //alert($("#capa1").html()) //amb .text() es recupera el text que hi ha dintre de la nostra capa/ l'altre opció és .html() que torna el contingut de la capa amb HTML inclós
+                //$("#capa1").html("<h2>Holis</h2>") //sobrescriu el que hi ha a la capa pel contingut que hi ha en .html("contingut")
+            })
+            
+            
+        })
+    </script>
+</body>
+</html>

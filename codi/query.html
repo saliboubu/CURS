@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>JQUERY</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style type="text/css">
+        #capa{
+            background-color: cadetblue;
+            width: 250px;
+            height: 250px; 
+        }
+    </style>
+
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <input type="button" value="AMAGA" id="boto">
+    <input type="button" value="MOSTRA" id="botomostra">
+    <input type="button" value="ALTERNA" id="alternar" <!--Amb Jquery ja no farà falta cridar el parametre onclick, amb un id serà suficient-->
+    <br><br>
+    <div id="capa"></div>
+
+<!--POSAR L'SCRIPT AL FINAL DEL BODY!-->
+    <script language="javascript">
+        $(document).ready(function(){
+            $("#boto").click(function(){//interceptar un objecte per fer un event/esdeveniment
+                $("#capa").slideDown(350) //.hide() .fadeOut(t=ms) .slideDown(t=ms) fa efecte persiana
+            })
+            $("#botomostra").click(function(){
+                $("#capa").slideUp(350) //.show() .fadeIn(t=ms) .slideUp(t=ms)
+            })
+            $("#alternar").click(function(){
+                $("#capa").slideToggle(450)//.toggle() .fadeToggle(t=ms) .slideToggle(t=ms) un mateix boto amaga i mostra l'element
+            })
+        }) //Tot el teu codi de javascript, variables, funcions... s'ha de fer dintre d'aquesta estructura perquè JQUERY funcioni
+        /*$(function(){}) és una abreviatura per escriure l'estructura anterior*/
+    </script>  
+</body>
+</html>

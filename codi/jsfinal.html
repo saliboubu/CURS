@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JAVASCRIPT FINAL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script language="javascript">
+        /*function validardades(){
+            var nom = document.getElementById("text_nom").value;
+            var formulari = document.getElementById("formulari"); //No volem obtenir els elements del formulari, sino el formulari en si per això no utilitzem el value
+            var teerrors = false; //el nom de la variable error/s està reservat, per tant s'ha de posar un nom tipus te_errors, err... ÉS UNA VARIABLE BOOLEANA
+            if(nom == ""){//les dobles cometes representen un string buit no vol dir que sigui un valor null
+                alert("Et falta el NOM");
+                teerrors = true;
+            }
+            if(nom.length < 3){//Volem validar un nom de 2 lletres
+                alert("Nom no vàlid, introdueix un nom de 3 caràcters");
+                teerrors = true;
+            }
+            if(teerrors == false){
+               formulari.submit();//ENVIA FORMULARI 
+            }
+        }*/
+        /*METODE 2.0*/
+        function validardades(){
+            var nom = document.getElementById("text_nom").value;
+            var pass = document.getElementById("contrasenya").value;
+            var formulari = document.getElementById("formulari");
+            var teerrors = false;
+            var correu = document.getElementById("correu").value;
+            if(nom == ""){
+                alert("Et falta el NOM");
+                teerrors = true;
+            }
+            if(nom.length < 3){//Volem validar un nom de 2 lletres
+                alert("Nom no vàlid, introdueix un nom de 3 caràcters");
+                teerrors = true;
+            }
+            if(!teerrors){ //posant la variable teerrors és el mateix que posar teerrors == true; això passa amb variables BOLEANES. 
+            //BOLEÀ flas teerrors !== true es pot expressar !teerrors
+               formulari.submit();//ENVIA FORMULARI 
+            }
+            if(pass.toLowerCase()=="pepito"){//Si es posa alguna majuscula te la converteix a minuscula.
+                //es recomana pass = pass.toLowerCase
+                alert(pass);
+            }
+            if(pass.trim()=="pepito"){ //comprovar si el quadre de contrasenya hi ha un espai en blanc AL FINAL o PRINCIPI! si hi ha un espai entremig donara error
+                //es recomana pass = pass.trim()
+                alert("Contrasenya correcte");
+            }
+            if((correu.indexOf("@") == -1) || (correu.indexOf("@") < 2) || (correu.lastIndexOf(".") < correu.indexOf("@"))){//Amb correu.indexOf torna la posició en la que es troba l'arroba, si no està s'indica amb el -1
+                //amb lastIndexOf et dóna l'última posició en la que es troba el caràcter indicat
+                alert("Correu no valid");
+            }
+            /*EXPRESSION REGULARS = APRENDRE PER LA TEVA BANDA
+            METODES PER A TEXTOS:
+            .split(",") -> divideix un text en trossos i el converteix en una array. Entre parentesis posar el que separa les paraules: , . / - 
+            .substr(2,3) -> substract string, t'extreu un element dintre de l'array (inici/posicio, longitud)
+            .substring(inici,final) -> extreu els elements de l'array compresos entre les posicions indicades en el parentesis. Posicio incial 2 i posicio final 3
+            DEURES: Donat un correu electronic, extreure el nom de la plataforma: GMAIL,HOTMAIL... 
+            */
+
+        }
+    </script>
+</head>
+<body>
+    <form method="GET" action="" id="formulari">
+        <p>Tots els camps són obligatoris</p>
+        <label for="text_nom">NOM:</label>
+        <input type="text" name="NOM" id="text_nom"> <!--s'afegeix un paràmetre required:<input type="text" name="NOM" id="text_nom" required> perquè et mostri un missatge de que el camp no s'ha emplenat. Ara amb javascript crearem aquesta funció-->
+        <br><br>
+        <label for="contrasenya">CONTRASENYA</label>
+        <input type="password" name="contrasenya" id="contrasenya">
+        <br><br>
+        <label for="correu">CORREU</label>
+        <input type="email" name="correu" id="correu">
+        <br><br>
+        <input type="button" value="ENVIAR" onclick="validardades()"> <!--Aquest botó no enviarà directament el formulari, si no que es comprovara previament si totes les dades estan ok i després s'envia per tant canvien TYPE de SUBMIT a BUTTON-->
+    </form>
+</body>
+</html>
