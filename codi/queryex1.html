@@ -32,10 +32,10 @@
      }
      #felicitats{
          background-color: coral;
-         position: absolute;
          left: 300px;
          height: 150px;
          width:250px;
+         display: none;
      }
     </style>
     <!--JQUERY-->
@@ -56,39 +56,61 @@
     <div id="felicitats"></div>
     <script language="javascript">
         $(document).ready(function(){
-            var capaverda = true;
+            /*var capaverda = true;
             var capavermella = true;
             var capagroga = true;
-            var capablava = true;
+            var capablava = true;*/
             $("#botoamaga").click(function(){
                 $("#capaverda").hide();
                 $("#capagroga").hide();
-                capaverda = false;
-                capagroga = false;
+                $("#felicitats").hide();
+                /*capaverda = false;
+                capagroga = false;*/
+                console.log($('#capaverda').is(':visible'));
+                console.log($('#capavermella').is(':visible'));
+                console.log($('#capablava').is(':visible'));
+                console.log($('#capagroga').is(':visible'));
             })
             $("#botomostra").click(function(){
                 $("#capaverda").show();
                 $("#capavermella").show();
-                capaverda = true;
-                capavermella = true;
+                $("#felicitats").hide();
+                /*capaverda = true;
+                capavermella = true;*/
+                console.log($('#capaverda').is(':visible'));
+                console.log($('#capavermella').is(':visible'));
+                console.log($('#capablava').is(':visible'));
+                console.log($('#capagroga').is(':visible'));
             })
             $("#botoalterna").click(function(){
                 $(".capes").toggle();
-                capaverda != capaverda;
+                $("#felicitats").hide();
+                /*capaverda != capaverda;
                 capavermella != capavermella;
                 capagroga != capagroga;
-                capablava != capablava;
+                capablava != capablava;*/
+                console.log($('#capaverda').is(':visible'));
+                console.log($('#capavermella').is(':visible'));
+                console.log($('#capablava').is(':visible'));
+                console.log($('#capagroga').is(':visible'));
             })
             $("#botofinal").click(function(){
                 $("#capablava").show();
                 $("#capagroga").show();
-                capablava = true;
+                $("#felicitats").hide();
+                /*capablava = true;
                 capagroga = true;
+                if((!capaverda) || (!capavermella) || (!capablava) || (!capagroga))*/
+                console.log($('#capaverda').is(':visible'));
+                console.log($('#capavermella').is(':visible'));
+                console.log($('#capablava').is(':visible'));
+                console.log($('#capagroga').is(':visible'));
             })
-            if((capaverda = true) && (capavermella = true) && (capablava = true) && (capagroga = true)){
+            
+            if(($("#capaverda").is(":visible") == true) && ($("#capavermella").is(":visible") == true) && ($("#capablava").is(":visible") == true) && ($("#capagroga").is(":visible") == true)){
                 $("#felicitats").show();
             }
-            else if((!capaverda) || (!capavermella) || (!capablava) || (!capagroga)){
+            else{
                 $("#felicitats").hide();
             }
         })

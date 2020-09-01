@@ -19,7 +19,41 @@
 li{
     list-style: none;
 }
-
+/*POSTHEADER ACADEMICS*/
+.academics{
+    width: 100%;
+}
+.filaacademic{
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.academics h1{
+    font-family: museo;
+    font-size: 28pt;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+.academics p{
+    font-family: museolight;
+    font-size: 16pt;
+    text-align: left;
+    margin-right: 529px;
+    margin-bottom: 50px;
+    line-height: 38px;
+}
+/*COVER IMAGE*/
+.imatgenoia{
+    width: 100%;
+}
+.imatgecover{
+    margin-right: auto;
+    margin-left: auto;
+}
+.imatgecover img{
+    width: 100%;
+}
 /*STATS*/
 
 .stats{
@@ -34,6 +68,10 @@ li{
 .knowstats{
     padding-bottom: 20px;
     margin-bottom: 35px;
+}
+.contecaixastats{
+    margin-right: 50px;
+    margin-left: 50px;
 }
 .caixastats{
     padding-right:20px;
