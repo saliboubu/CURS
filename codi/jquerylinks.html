@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JQ ENLLAÇOS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!--JQUERY-->
+     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+     
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style type="text/css">
+        img{
+            height: 350px; /*Afegir width i height pq les imatges mantinguin un mateix format*/
+            width: 400px;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+    
+</head>
+<body>
+    <img src="../imatges/falafel.jpg" id="imatge">
+    <input type="button" value="ANTERIOR" name="BOTO2" id="boto2">
+    <input type="button" value="SEGUENT" name="BOTO1" id="boto1">
+    
+    <script language="javascript">
+     $(function(){
+         $("#boto1").click(function(){
+             $("#imatge").attr("src", "../imatges/couscous.jpg");
+         })
+         $("#boto2").click(function(){
+             //mostrar una altre foto
+         })
+     })
+    </script>
+</body>
+</html>

@@ -32,6 +32,8 @@
      }
      #felicitats{
          background-color: coral;
+         position: absolute;
+         top: 50px;
          left: 300px;
          height: 150px;
          width:250px;
@@ -70,6 +72,10 @@
                 console.log($('#capavermella').is(':visible'));
                 console.log($('#capablava').is(':visible'));
                 console.log($('#capagroga').is(':visible'));
+                if(($("#capaverda").is(":visible") == true) && ($("#capavermella").is(":visible") == true) && ($("#capablava").is(":visible") == true) && ($("#capagroga").is(":visible") == true)){
+                    $("#felicitats").show();
+                    alert("botoamaga");
+                }
             })
             $("#botomostra").click(function(){
                 $("#capaverda").show();
@@ -81,6 +87,10 @@
                 console.log($('#capavermella').is(':visible'));
                 console.log($('#capablava').is(':visible'));
                 console.log($('#capagroga').is(':visible'));
+                if(($("#capaverda").is(":visible") == true) && ($("#capavermella").is(":visible") == true) && ($("#capablava").is(":visible") == true) && ($("#capagroga").is(":visible") == true)){
+                    $("#felicitats").show();
+                    alert("botomostra");
+                }
             })
             $("#botoalterna").click(function(){
                 $(".capes").toggle();
@@ -93,6 +103,10 @@
                 console.log($('#capavermella').is(':visible'));
                 console.log($('#capablava').is(':visible'));
                 console.log($('#capagroga').is(':visible'));
+                if(($("#capaverda").is(":visible") == true) && ($("#capavermella").is(":visible") == true) && ($("#capablava").is(":visible") == true) && ($("#capagroga").is(":visible") == true)){
+                    $("#felicitats").show();
+                    alert("botoalterna");
+                }
             })
             $("#botofinal").click(function(){
                 $("#capablava").show();
@@ -105,14 +119,11 @@
                 console.log($('#capavermella').is(':visible'));
                 console.log($('#capablava').is(':visible'));
                 console.log($('#capagroga').is(':visible'));
+                if(($("#capaverda").is(":visible") == true) && ($("#capavermella").is(":visible") == true) && ($("#capablava").is(":visible") == true) && ($("#capagroga").is(":visible") == true)){
+                    $("#felicitats").show();
+                    alert("botofinal");
+                }
             })
-            
-            if(($("#capaverda").is(":visible") == true) && ($("#capavermella").is(":visible") == true) && ($("#capablava").is(":visible") == true) && ($("#capagroga").is(":visible") == true)){
-                $("#felicitats").show();
-            }
-            else{
-                $("#felicitats").hide();
-            }
         })
     </script>  
 </body>

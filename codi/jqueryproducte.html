@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JQ PRODUCTE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    
+    <!-- FONTS GOOGLE -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <style type="text/css">
+        .general{
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .conte_capes{
+            background-color: black;
+            width: 50%;
+            margin-right: auto;
+            margin-left: auto;
+            padding-top: 20px;
+            border-radius: 15px;
+        }
+        h1{
+            text-align: center;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .imatge img{
+            width: 50%;
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+        }
+        .row{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .descripcio{
+            padding: 20px 60px;
+        }
+        .preu{
+            padding-left: 400px;
+        }
+        .boto_estacio{
+            width: 150px;
+        }
+        .col-3{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="general">
+        <!-- BOTONS QUE JA NO FAN FALTA PQ S'ACTUALITZA PER DATA
+        <div class="row header">
+            <div class="col-3">
+                <input type="button" name="hivern" value="HIVERN" id="boto_hivern" class="boto_estacio">
+            </div>
+            <div class="col-3">
+                <input type="button" name="primavera" value="PRIMAVERA" id="boto_primavera" class="boto_estacio">
+            </div>
+            <div class="col-3">
+                <input type="button" name="estiu" value="ESTIU" id="boto_estiu" class="boto_estacio">
+            </div>
+            <div class="col-3">
+                <input type="button" name="tardor" value="TARDOR" id="boto_tardor" class="boto_estacio">
+            </div>
+        </div>-->
+        <div class="conte_capes">
+            <div class="row titol">
+                <h1 id="titol_producte">Benvingut al nostre cataleg online</h1>
+            </div>
+            <div class="row imatge">
+                <img src="../imatges/champu.jpg" id="img_producte"/>
+            </div>
+            <div class="row descripcio">
+                <p id="descripcio_producte">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis fermentum risus, non viverra diam accumsan quis. 
+                    Morbi vestibulum tincidunt commodo. Morbi luctus tortor non ante condimentum condimentum. In iaculis dapibus augue, ac laoreet 
+                    ligula elementum vel. Ut maximus felis sit amet tortor facilisis pretium. Quisque in placerat justo. Mauris ac lacus et nisi 
+                    porttitor ornare. Vestibulum eget nibh sed dolor bibendum varius. Fusce a porttitor odio, sit amet porttitor nibh. Nullam semper consequat erat, pretium malesuada arcu ultrices at. Donec vel diam diam. Morbi id dignissim augue, eu elementum odio. Etiam vitae risus sed enim consectetur efficitur. Proin suscipit sagittis mauris aliquet consectetur. Cras sed magna eros. 
+                    Curabitur vitae arcu sed turpis consequat porta sed nec urna.</p>
+            </div>
+            <div class="row preu">
+                <p id="preu_producte"></p>
+            </div>
+        </div>
+    </div>
+    <script language="javascript">
+        $(function(){
+            var d = new Date();
+            var dia = d.getDate();
+            var mes = d.getMonth();
+
+            //HIVERN
+            if((mes == 11) && (dia >= 22) || (mes == 0) || (mes == 1) || ((mes == 2) && (dia <=20))){    
+                $(".general").css("font-family","'Dancing Script', cursive");
+                $(".general").css("font-weight","bold");
+                $(".general").css("background-color","#72A0C1");
+                $(".general").css("background-image","url('../imatges/winterbg.jpg')");
+                $(".general").css("background-size","100%");
+                $(".general").css("background-repeat","no-repeat");
+                $("#img_producte").attr("src","../imatges/cold.jpg");
+                $("#img_producte").css("width","15%");
+                $(".titol").html("<h1>Bufanda</h1>");
+                $(".preu").html("<p>12,95€</p>");
+            }
+
+            //PRIMAVERA
+            if(((mes == 2) && (dia >= 21)) || (mes == 3) || (mes == 4) || ((mes == 5) && (dia <= 20))){
+                $(".general").css("font-family","'Source Code Pro', monospace");
+                $(".general").css("font-weight","bold");
+                $(".general").css("background-color","#17B169");
+                $(".general").css("background-image","url('../imatges/springbg.jpg')");
+                $(".general").css("background-size","100%");
+                $(".general").css("background-repeat","no-repeat");
+                $("#img_producte").attr("src","../imatges/champu.jpg");
+                $(".titol").html("<h1>Champu</h1>");
+                $(".preu").html("<p>9,99€</p>");
+            }
+
+            //ESTIU
+            if(((mes == 5) && (dia >= 21)) || (mes == 6) || (mes == 7) || ((mes == 8) && (dia <= 22))){
+                $(".general").css("font-family","'Architects Daughter', cursive");
+                $(".general").css("font-weight","200");
+                $(".general").css("color","#F0E68C");
+                $(".general").css("background-image","url('../imatges/summerbg.jpg')");
+                $(".general").css("background-size","100%");
+                $(".general").css("background-repeat","no-repeat")
+                $("#img_producte").attr("src","../imatges/joies.jpg");
+                $("#img_producte").css("width","50%");
+                $(".titol").html("<h1>Arrecades estiuenques</h1>");
+                $(".preu").html("<p>A partir de 5,95€</p>");
+            }
+
+            //TARDOR
+            if(((mes == 8) && (dia >= 23)) || (mes == 9) || (mes == 10) || ((mes == 11) && (dia <= 21))){
+                $(".general").css("font-family"," 'Balsamiq Sans', cursive");
+                $(".general").css("font-weight","bold");
+                $(".general").css("background-color","#FF7F50");
+                $(".general").css("background-image","url('../imatges/fallbg.jpg')");
+                $(".general").css("background-size","100%");
+                $(".general").css("background-repeat","no-repeat");
+                $("#img_producte").attr("src","../imatges/tardor.jpg")
+                $("#img_producte").css("width","20%");
+                $(".titol").html("<h1>Castanyer</h1>");
+                $(".preu").html("<p>Paperina petita 3,99€</p>");
+            }
+        })
+    </script> 
+</body>
+</html>

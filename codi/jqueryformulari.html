@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FORMULARI JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <style type="text/css">
+        #text_comentaris{
+            height: 150px;
+            width: 300px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form>
+        <label>NOM</label>
+        <input type="text" name="nom" id="text_nom" class="quadre">
+        <br><br>
+        <label>CORREU</label>
+        <input type="email" name="correu" id="text_correu" class="quadre">
+        <br><br>
+        <label>TELEFON</label>
+        <input type="tel" name="telefon" id="text_telefon" class="quadre">
+        <br><br>
+        <label>COMENTARIS</label>
+        <br>
+        <input type="text" name="comentaris" id="text_comentaris">
+        <br><br>
+        <input type="button" value="ENVIAR" id="boto_enviar">
+    </form>
+
+    <script language="javascript">
+        $(function(){
+            $("#boto_enviar").click(function(){
+                if($("#text_nom").val() == ""){
+                    alert("El nom és obligatori");
+                    $("#text_nom").css('background-color','red');
+                }
+                if($("#text_correu").val() == ""){
+                    $("#text_correu").css('background-color','red');
+                }
+                if($("#text_telefon").val() == ""){
+                    $("#text_telefon").css('background-color','red');
+                }
+            });
+            $(".quadre").focus(function(){
+                $(this).css('background-color', 'white');//$(this) => serveix per indicar ell mateix, el quadre sobre el que t'has posat, únicament aquell quadre cambiarà d'aspecte
+            });
+        });
+    </script>  
+</body>
+</html>

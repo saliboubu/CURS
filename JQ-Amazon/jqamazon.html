@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JQ AMAZON</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    
+    <!--CSS-->
+    <style type="text/css">
+        .row{
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+        img{
+            width: 100%;
+        }
+        .img_gran{
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="general">
+        <div class="row">
+            <div class="col-6" id="img_producte">
+                <div class="row img_gran" >
+                    <img src="frontal.jpg" id="img_zoom">
+                </div>
+                <div class="row" id="img_mini">
+                    <script language="javascript">
+                        var imatges = ['frontal.jpg','dreta.jpg','esquerra.jpg','dalt.jpg'];
+                        var i = 0;
+                        
+                        for(i=0; i<imatges.length; i++){
+                            document.write("<div class = col-3 id='imatge"+i+"'>"+"<img src='"+imatges[i]+"'>"+"</div>")
+                        }   
+                    </script>
+                </div>
+            </div>
+            <div class="col-6" id="text_producte">
+
+            </div>
+        </div>
+    </div>
+    <script language="javascript">
+        $(function(){
+            $("#imatge1").css("padding-top","5px");
+            $("#imatge2").css("padding-top","5px");
+            $("#imatge3").css("padding-top","20px");
+            $("#imatge2").click(function(){
+                $("#imatge2").css("border","1px solid black");
+                $("#img_zoom").attr("src","esquerra.jpg");
+            })
+            /*var c=0;
+            for(c=0; c<imatges.length; c++){
+              $("#imatge"+c+"").click(function(){
+                $("#imatge"+c+"").css("border","1px solid black");
+                $("#img_zoom").attr("src",""+imatges[c]+"")
+            })  
+            }*/
+        })
+    </script>
+</body>
+</html>
