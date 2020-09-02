@@ -23,8 +23,11 @@
             width: 100%;
         }
         .img_gran{
+            width: 100%;
+            height: 700px;
             margin-bottom: 30px;
         }
+        
     </style>
 </head>
 <body>
@@ -32,7 +35,7 @@
         <div class="row">
             <div class="col-6" id="img_producte">
                 <div class="row img_gran" >
-                    <img src="frontal.jpg" id="img_zoom">
+                    <img id="img_zoom" src="frontal.jpg"/>
                 </div>
                 <div class="row" id="img_mini">
                     <script language="javascript">
@@ -40,13 +43,13 @@
                         var i = 0;
                         
                         for(i=0; i<imatges.length; i++){
-                            document.write("<div class = col-3 id='imatge"+i+"'>"+"<img src='"+imatges[i]+"'>"+"</div>")
+                            document.write("<div class='col-3 mini_img' id='imatge"+i+"'>"+"<img src='"+imatges[i]+"' class='mini_img"+i+"'/>"+"</div>")
                         }   
                     </script>
                 </div>
             </div>
             <div class="col-6" id="text_producte">
-
+                    ZAPATO PLATAFORMA ALTA TALLAS
             </div>
         </div>
     </div>
@@ -55,17 +58,11 @@
             $("#imatge1").css("padding-top","5px");
             $("#imatge2").css("padding-top","5px");
             $("#imatge3").css("padding-top","20px");
-            $("#imatge2").click(function(){
-                $("#imatge2").css("border","1px solid black");
-                $("#img_zoom").attr("src","esquerra.jpg");
-            })
-            /*var c=0;
-            for(c=0; c<imatges.length; c++){
-              $("#imatge"+c+"").click(function(){
-                $("#imatge"+c+"").css("border","1px solid black");
-                $("#img_zoom").attr("src",""+imatges[c]+"")
-            })  
-            }*/
+            $(".mini_img").hover(function(){ //canviar per click()
+                $("#img_zoom").attr("src", $('img', this).attr("src"));
+                $(this).css("border","1px solid black");
+                $(this).siblings().css("border","none");
+            });
         })
     </script>
 </body>
