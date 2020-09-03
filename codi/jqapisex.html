@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>API EXERCICI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <!--CSS-->
+    <style type="text/css">
+        .titol{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            color: red;
+        }
+        .text{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+    <!--Plana amb 3 botons, cada un ha de carregar una noticia diferent, en una única capa
+    Versio 2.0 amb un sol click carregar cada vegada una noticia diferent
+    Versio 3.0 amb un desplegable-->
+    <input type="button" value="NOTICIA 1" id="boto_noticia1">
+    <input type="button" value="NOTICIA 2" id="boto_noticia2">
+    <input type="button" value="NOTICIA 3" id="boto_noticia3">
+    <div id="capa_noticia">
+        <h1></h1>
+        <p></p>
+    </div>
+    <script language="javascript">
+        $(function(){
+            $("#boto_noticia1").click(function(){
+                $.get("https://jsonplaceholder.typicode.com/posts/1", function(data,status){
+                    $("h1").addClass("titol").text(data.title);
+                    $("p").addClass("text").text(data.body);
+                })
+            })
+        })
+    </script>
+</body>
+</html>

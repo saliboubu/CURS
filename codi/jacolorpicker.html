@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>COLOR PICKER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    
+    <!--JQUERY ESTILS CSS-->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <!--CSS-->
+    <style type="text/css">
+        .row{
+            margin-right: 0px;
+            margin-left: 0px;
+            margin-top: 10px;
+        }
+        #color_final{
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="row general">
+        <div class="col-6">
+            <div class="row">
+                <div class="col-6">
+                    <div id="barra_vermell"></div>
+                </div>
+                <div class="col-6"> 
+                    <input type="text" id="resultat_vermell">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-6">
+                    <div id="barra_verd"></div>
+                </div>
+                <div class="col-6">
+                    <input type="text" id="resultat_verd">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-6">
+                    <div id="barra_blau"></div>
+                </div>
+                <div class="col-6">
+                    <input type="text" id="resultat_blau"> 
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div id="color_final"></div>
+        </div>
+    </div>
+    
+    <script language="javascript">
+        $(function(){
+            $("#barra_vermell").slider({
+                range: 'min',
+                min: 0,
+                max: 255,
+                value: 0,
+                slide: function(event,ui){
+                    $("#resultat_vermell").val(ui.value);
+                    var vermell = $("#resultat_vermell").val();
+                    $("#color_final").css('background-color', 'rgb('+vermell+','+$("#resultat_verd").val()+','+$("#resultat_blau").val()+')');
+                }
+            });
+            $("#barra_verd").slider({
+                range: 'min',
+                min: 0,
+                max: 255,
+                value: 0,
+                slide: function(event,ui){
+                    $("#resultat_verd").val(ui.value);
+                    var verd = $("#resultat_verd").val();
+                    $("#color_final").css('background-color', 'rgb('+$("#resultat_vermell").val()+','+verd+','+$("#resultat_blau").val()+')');
+                }
+            });
+            $("#barra_blau").slider({
+                range: 'min',
+                min: 0,
+                max: 255,
+                value: 0,
+                slide: function(event,ui){
+                    $("#resultat_blau").val(ui.value);
+                    var blau = $("#resultat_blau").val();
+                    $("#color_final").css('background-color', 'rgb('+$("#resultat_vermell").val()+','+$("#resultat_verd").val()+','+blau+')');   
+                }
+            });
+            
+            $("#resultat_vermell").val($("#barra_vermell").slider("value"));
+            $("#resultat_verd").val($("#barra_verd").slider("value"));
+            $("#resultat_blau").val($("#barra_blau").slider("value"));
+            
+        })
+    </script>
+</body>
+</html>

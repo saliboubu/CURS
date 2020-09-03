@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JQ LECTURA CONTINGUT EXTERN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    
+    <!--CSS-->
+    <style type="text/css">
+        .titol{
+            color: red;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>JQUERY</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ante magna. Nulla ultricies porta posuere. Sed egestas mi vel blandit
+           porttitor. Etiam et laoreet eros, pretium tincidunt arcu. Morbi malesuada ipsum id placerat bibendum. Sed ac hendrerit sem. Sed sed feugiat 
+           mauris. Sed dignissim diam a est ultrices tempor. Nulla condimentum sed leo sed pulvinar. Vivamus convallis pellentesque interdum. Quisque eget
+           purus vel ex ullamcorper bibendum. Nulla libero purus, molestie eu mollis non, mattis eu nisi. Proin faucibus eu ante sed euismod. Praesent elementum 
+           molestie interdum. Ut bibendum posuere dui, ac feugiat neque auctor sit amet.
+        </p>
+    </div>
+    <input type="button" name="botocolor" value="COLOR" id="boto_color">
+    <input type="button" name="botonocolor" value="NO COLOR" id="boto_nocolor">
+    <input type="button" name="togglecolor" value="TOGGLE" id="toggle_color">
+    <script language="javascript">
+        $(function(){
+            $("#boto_color").click(function(){
+                //$("h1").css("color","red") Perno haver d'escriure aqui totes les propietats, es crea una classe en el css i ara s'afegeix al titol
+                $("h1").addClass("titol");//Aquesta estiqueta només s'associa quan es clicka el boto. Això serveix per tenir disenys dinamics, com l'exemple l'exercici de canvi d'estacio i prorducte
+            })
+            $("#boto_nocolor").click(function(){
+                $("h1").removeClass("titol");
+            })
+            $("#toggle_color").click(function(){
+                $("h1").toggleClass("titol");
+            })
+        })
+    </script> 
+</body>
+</html>
