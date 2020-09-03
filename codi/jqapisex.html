@@ -31,21 +31,47 @@
     <!--Plana amb 3 botons, cada un ha de carregar una noticia diferent, en una única capa
     Versio 2.0 amb un sol click carregar cada vegada una noticia diferent
     Versio 3.0 amb un desplegable-->
-    <input type="button" value="NOTICIA 1" id="boto_noticia1">
-    <input type="button" value="NOTICIA 2" id="boto_noticia2">
-    <input type="button" value="NOTICIA 3" id="boto_noticia3">
+    <input type="button" value="VEURE NOTICIA" id="boto_noticia">
+    <!--<input type="button" value="NOTICIA 2" id="boto_noticia2">
+    <input type="button" value="NOTICIA 3" id="boto_noticia3">-->
     <div id="capa_noticia">
         <h1></h1>
         <p></p>
     </div>
     <script language="javascript">
         $(function(){
-            $("#boto_noticia1").click(function(){
-                $.get("https://jsonplaceholder.typicode.com/posts/1", function(data,status){
-                    $("h1").addClass("titol").text(data.title);
-                    $("p").addClass("text").text(data.body);
-                })
+            var noticies = ["https://jsonplaceholder.typicode.com/posts/1","https://jsonplaceholder.typicode.com/posts/2","https://jsonplaceholder.typicode.com/posts/3"];
+            var i = 0;
+            $("#boto_noticia").click(function(){
+                if(i<noticies.length){
+                    $.get(noticies[i], function(data,status){
+                        $("h1").addClass("titol").text(data.title);
+                        $("p").addClass("text").text(data.body);
+                    })  
+                }
+                if(i == 3){
+                    i = 0;
+                }
+                else{
+                    i++
+                }
             })
+            /*$("#boto_noticia2").click(function(){
+                $.get("https://jsonplaceholder.typicode.com/posts/2", function(data,status){
+                    $("h1").text(data.title);
+                    $("p").text(data.body);
+                    console.log(data.id);
+                })
+                console.log($.get("https://jsonplaceholder.typicode.com/posts/2", function(data,status){}));
+            })
+            $("#boto_noticia3").click(function(){
+                $.get("https://jsonplaceholder.typicode.com/posts/3", function(data,status){
+                    $("h1").text(data.title);
+                    $("p").text(data.body);
+                    console.log(data.id);
+                })
+                console.log($.get("https://jsonplaceholder.typicode.com/posts/3", function(data,status){}));
+            })*/
         })
     </script>
 </body>
