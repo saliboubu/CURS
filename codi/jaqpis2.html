@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>APIs 2ºPART</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <!--CSS-->
+    <style type="text/css">
+        .titol{
+            color: blue;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .capa{
+            height: 300px;
+            width: 300px;
+        }
+        img{
+            width: 50%;
+        }
+    </style>
+
+</head>
+<body>
+    <!--Per poder-nos connectar a l'API necesitem coneixer 4 paràmetres: a)La seva adreça b)Quin metode s'utilitza per connectar-se: $.Get/Put/Post(No es pot suposar que són $.GET)
+    c)Tenir en compte si s'han de passar paràmetres d)Quina estructura té la resposta-->
+
+    <input type="button" value="SHOW" id="boto_mostra">
+    <h1></h1>
+    <div id="mostra_noms"></div>
+    <script language="javascript">
+        $(function(){
+            $("#boto_mostra").click(function(){
+                /*$.get("https://jsonplaceholder.typicode.com/photos/3", function(data,status){
+                    $("h1").addClass("titol").text(data.title)
+                    //$("div").addClass("capa").html("<img src="+data.url+">") //si no existeix l'etiqeta img 
+                    $("#foto").attr('src', data.url) //directament atacar la foto
+                })*/
+                var i = 0;
+                $.get("https://jsonplaceholder.typicode.com/users", function(data,status){
+                    for(i = 0; i<data.length; i++){
+                       $("#mostra_noms").append(data[i].name+"<br>"); //accedir directament des de l'array a les dades 
+                    }
+                }) 
+            })  
+        })
+    </script>
+</body>
+</html>
