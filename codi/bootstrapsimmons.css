@@ -19,6 +19,10 @@
 li{
     list-style: none;
 }
+ul{
+    list-style: none;
+}
+
 /*POSTHEADER ACADEMICS*/
 .academics{
     width: 100%;
@@ -43,6 +47,7 @@ li{
     margin-bottom: 50px;
     line-height: 38px;
 }
+
 /*COVER IMAGE*/
 .imatgenoia{
     width: 100%;
@@ -50,12 +55,345 @@ li{
 .imatgecover{
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 60px;
 }
 .imatgecover img{
     width: 100%;
 }
-/*STATS*/
 
+/*THE JOURNEY*/
+.thejourney{
+    width: 100%;
+    margin-bottom: 100px;
+}
+.filathejourney{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.filathejourney h1{
+    font-family: museo;
+    margin-bottom: 20px;
+}
+.filathejourney p{
+    font-family: museolight;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-size: 20px;
+}
+.columnathejourney{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+/*CARTES*/
+/*NOIES I PC*/
+.cartes{
+    width: 100%;
+}
+.noiespc{
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 100%;
+}
+.conjuntnoiespc{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 200px;
+}
+.imgnoiespc{
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    top: 0px;
+}
+.textnoiespc{
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+    width: calc(100% - 672px);
+    position: relative;
+    z-index: 2;/*Per sobreposar, com més gran el número quedap per sobre*/
+    background-color: white;
+    top: 50px;
+    /*left: 3px;*/
+    padding-top:60px;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-bottom: 30px;
+    height: 405px;
+    margin-left: 50px;
+}
+.textnoiespc h1{
+    font-size: 28px;
+    font-family: museo;
+    margin-bottom: 20px;
+}
+.textnoiespc p{
+    font-family: museolight;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.boto_majors{
+    font-family: museolight;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 30px;
+    padding: 14px 36px;
+    color: white;
+    background: #7C2855;
+    border: 2px solid #7C2855;
+    display: inline-block;
+    transition: all 0.5s ease-out;
+}
+.boto_majors:hover{
+    color:black;
+    background:white;
+}
+
+/*NOI ASIATIC*/
+.noiasiatic{
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 100%;
+}
+.conjuntnoiasiatic{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 150px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.imgnoi{
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+}
+.textnoi{
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+    width: calc(100% - 560px);
+    margin-left: 610px;
+    margin-top: 50px;
+    background: white;
+    padding-top:60px;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-bottom: 30px;
+}
+.textnoi h1{
+    font-family: museo;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.textnoi p{
+    font-family: museolight;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.boto_certificates{
+    font-family: museolight;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 14px 36px;
+    color: white;
+    background: #7C2855;
+    border: 2px solid #7C2855;
+    display: inline-block;
+    transition: all 0.5s ease-out;
+    height: 100%;
+}
+.boto_certificates:hover{
+    color:black;
+    background:white;
+}
+/*EXECUTIVE*/
+.executive{
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 100%;
+}
+.conjuntexecutive{
+    margin-bottom: 150px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.imgexecutive{
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    top: 0px;
+}
+.textexecutive{
+    z-index: 2;
+    background: white;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: calc(100% - 700px);
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    margin-left: 90px;
+    margin-top: 80px;
+}
+.textexecutive h1{
+    font-family: museo;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.textexecutive p{
+    font-family: museolight;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.boto_executive{
+    font-family: museolight;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 14px 36px;
+    color: white;
+    background: #7C2855;
+    border: 2px solid #7C2855;
+    display: inline-block;
+    transition: all 0.5s ease-out;
+    height: 100%;
+}
+.boto_executive:hover{
+    color:black;
+    background:white;
+}
+
+/*INVESTIGACIO*/
+.investigacio{
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 100%;
+}
+.conjuntinvestigacio{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 150px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.imginvestigacio{
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+}
+.textinvestigacio{
+    position: relative;
+    width: calc(100% - 560px);
+    z-index: 2;
+    background: white;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+    padding-top:60px;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-bottom: 30px;
+    margin-left: 610px;
+    margin-top: 50px;
+}  
+.textinvestigacio h1{
+    font-family: museo;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.textinvestigacio p{
+    font-family: museolight;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.textinvestigacio ul{
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+.textinvestigacio li{
+    font-size: 26px;
+}
+.textinvestigacio li::before{
+    content: "\2022";
+    color: #7C2855;
+    display: inline-block;
+    font-size: 40px;
+    width: 40px;
+}
+/*UNIVERSITY*/
+.universitat{
+    margin-right: 0px;
+    margin-left: 0px;
+    height: 100%;
+    width: 100%;
+}
+.conjuntuniversitat{
+    margin-bottom: 150px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.imguniversitat{
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    top: 0px;
+}
+.textuniversitat{
+    z-index: 2;
+    background: white;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: calc(100% - 700px);
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    margin-left: 90px;
+    margin-top: 80px;
+}
+.textuniversitat h1{
+    font-family: museo;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.textuniversitat p{
+    font-family: museolight;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.boto_universitat{
+    font-family: museolight;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 14px 36px;
+    color: white;
+    background: #7C2855;
+    border: 2px solid #7C2855;
+    display: inline-block;
+    transition: all 0.5s ease-out;
+    height: 100%;
+}
+.boto_executive:hover{
+    color:black;
+    background:white;
+}
+
+/*STATS*/
 .stats{
     padding-top: 100px;
     padding-bottom: 100px;

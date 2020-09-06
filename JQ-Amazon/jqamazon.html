@@ -19,19 +19,54 @@
             margin-right: 0px;
             margin-left: 0px;
         }
+        .navbar{
+            width: 100%;
+            background: gray;
+        }
+        .logo{
+            max-width: 150px;
+        }
+        .buscador{
+            width: 35%;
+            position: absolute;
+            left: 200px;
+            margin-right: 20px;
+        }
+        .boto_buscar{
+            position: absolute;
+            left: 760px;
+        }
         img{
             width: 100%;
         }
         .img_gran{
-            width: 100%;
-            height: 700px;
-            margin-bottom: 30px;
+            width: 70%;
+            height: 400px;
+            margin-bottom: 20px;
+            margin-right: auto;
+            margin-left: auto;
         }
-        
+        .img_mini{
+            width: 70%;
+        }
+        .mini_img3{
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="general">
+        <div class="row">
+            <nav class="navbar">
+                <a href="file:///C:/Users/salih/OneDrive/Documentos/GitHub/CURS/JQ-Amazon/jqamazon.html">
+                    <img src="logo.png" class="d-inline-block align-top logo"/>
+                </a>
+                <form class="form-inline">
+                    <input type="form-control" type="search" placeholder="Search" class="buscador">
+                    <button class="btn btn-outline-success my-2 my-sm-0 boto_buscar" type="submit">Search</button>
+                </form>
+            </nav>
+        </div>
         <div class="row">
             <div class="col-6" id="img_producte">
                 <div class="row img_gran" >
@@ -41,7 +76,6 @@
                     <script language="javascript">
                         var imatges = ['frontal.jpg','dreta.jpg','esquerra.jpg','dalt.jpg'];
                         var i = 0;
-                        
                         for(i=0; i<imatges.length; i++){
                             document.write("<div class='col-3 mini_img' id='imatge"+i+"'>"+"<img src='"+imatges[i]+"' class='mini_img"+i+"'/>"+"</div>")
                         }   
@@ -62,7 +96,8 @@
                 $("#img_zoom").attr("src", $('img', this).attr("src"));
                 $(this).css("border","1px solid black");
                 $(this).siblings().css("border","none");
-            });
+            })
+            
         })
     </script>
 </body>
