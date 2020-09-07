@@ -39,9 +39,11 @@
         img{
             width: 100%;
         }
+        .conte_imggran{
+            height: 400px;
+        }
         .img_gran{
             width: 70%;
-            height: 400px;
             margin-bottom: 20px;
             margin-right: auto;
             margin-left: auto;
@@ -69,8 +71,10 @@
         </div>
         <div class="row">
             <div class="col-6" id="img_producte">
-                <div class="row img_gran" >
-                    <img id="img_zoom" src="frontal.jpg"/>
+                <div class="row conte_imggran">
+                    <div class="img_gran align-self-center"> <!-- Alinear les imatges al centre de la capa -->
+                        <img id="img_zoom" src="frontal.jpg"/>
+                    </div>
                 </div>
                 <div class="row" id="img_mini">
                     <script language="javascript">
