@@ -58,7 +58,7 @@
                                                 "<p> Estat: "+bici_estat+"</p>"+
                                                 "</div>");
 
-                        if(disponibilitat <= 30){
+                        if(((bicis_disponibles == 0) && (llocs_disponibles == 0)) || (disponibilitat <= 30)){
                             $(".card"+i).css("background","red"); 
                         }
                         else if((disponibilitat>30) && (disponibilitat<=60)){
