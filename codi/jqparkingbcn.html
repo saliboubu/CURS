@@ -58,41 +58,36 @@
                         //SERVEIS
                         var serveis = ""
                         var icones_serveis = [vigilancia, info, handicaped, carregador, lavabo, ascensor, consigna]
-                        var icones = ["<i class='fas fa-user-shield icona'></i>","<i class='fas fa-info icona'></i>","<i class='fas fa-wheelchair icona'></i>", "<i class='fas fa-charging-station icona'></i>","<i class='fas fa-restroom icona'></i>", "<i class='fas fa-caret-square-down icona'></i>", "<i class='fas fa-suitcase icona'></i>"]
+                        var icones = ["<i class='fas fa-user-shield icona0'></i>","<i class='fas fa-info icona1'></i>","<i class='fas fa-wheelchair icona2'></i>", "<i class='fas fa-charging-station icona3'></i>","<i class='fas fa-restroom icona4'></i>", "<i class='fas fa-caret-square-down icona5'></i>", "<i class='fas fa-suitcase icona6'></i>"]
                         var s = 0    
                         for(s= 0; s<icones_serveis.length; s++){
                             if(icones_serveis[s] >= 1){
+                                serveis += icones[s]+" "
                                 $(icones[s]).css("color","green")
-                                serveis += "<p>"+icones[s]+"</p>" 
                             }
                             else if(icones_serveis[s]<1){
-                                $(icones[s]).css("color","red")
-                                serveis += "<p>"+icones[s]+"</p>"
+                                serveis += icones[s]+" " 
+                                $(".icona"+s).css("color","red")    
                             }
+                            //console.log(icones[s])
                         }
-                        /*if(vigilancia<1 && info<1 && handicaped<1 && carregador<1 && lavabo<1 && consigna<1){
-                            serveis = 
-                        }
-                        else if(vigilancia>=1){
-                            serveis = "<p><i class='fas fa-user-shield'></i></p>"
-                        }*/
                         //PREUS
                         var preus = ""
                         
                         if($.isArray(preu) !== true){
-                            preus += "<p>"+preu.VehicleType+": "+preu.Amount+" €/min</p>"
+                            preus += preu.VehicleType+": "+preu.Amount+" €/min</p>"
                         }
                         else if($.isArray(preu) == true){
                             var p = 0
                             for(p = 0; p<preu.length; p++){
                                 if(preu[p].VehicleType == "Bus"){
-                                    preus += "<p><i class='fas fa-bus'></i> "+preu[p].VehicleType+": "+preu[p].Amount+" €/min</p>"
+                                    preus += "<i class='fas fa-bus'></i> "+preu[p].VehicleType+": "+preu[p].Amount+" €/min<br>"
                                 }
                                 else if(preu[p].VehicleType == "Moto"){
-                                    preus += "<p><i class='fas fa-motorcycle'></i> "+preu[p].VehicleType+": "+preu[p].Amount+" €/min</p>"
+                                    preus += "<i class='fas fa-motorcycle'></i> "+preu[p].VehicleType+": "+preu[p].Amount+" €/min<br>"
                                 }
                                 else if(preu[p].VehicleType == "Turisme"){
-                                    preus += "<p><i class='fas fa-car'></i> "+preu[p].VehicleType+": "+preu[p].Amount+" €/min</p>"
+                                    preus += "<i class='fas fa-car'></i> "+preu[p].VehicleType+": "+preu[p].Amount+" €/min<br>"
                                 }
                             }
                         }
@@ -104,6 +99,7 @@
                                                 "<p><label>Preus</label><br>"+preus+"</p>"+
                                                 "<p><label>Serveis</label><br>"+serveis+"</p>"
                                                 )
+                        
                     }
                 })
             })
