@@ -57,20 +57,33 @@
                         }
                         //SERVEIS
                         var serveis = ""
+                        var serveis_nodisponibles = ""
+                        var n = 0
+                        var icones = ["fas fa-user-shield","fas fa-info","fas fa-wheelchair","fas fa-charging-station","fas fa-restroom","fas fa-caret-square-down","fas fa-suitcase"]
                         var icones_serveis = [vigilancia, info, handicaped, carregador, lavabo, ascensor, consigna]
-                        var icones = ["<i class='fas fa-user-shield icona0'></i>","<i class='fas fa-info icona1'></i>","<i class='fas fa-wheelchair icona2'></i>", "<i class='fas fa-charging-station icona3'></i>","<i class='fas fa-restroom icona4'></i>", "<i class='fas fa-caret-square-down icona5'></i>", "<i class='fas fa-suitcase icona6'></i>"]
-                        var s = 0    
-                        for(s= 0; s<icones_serveis.length; s++){
-                            if(icones_serveis[s] >= 1){
-                                serveis += icones[s]+" "
-                                $(icones[s]).css("color","green")
+                        for(n = 0; n<icones.length; n++){
+                            if(icones_serveis[n] == 1){
+                                serveis += "<i class='"+icones[n]+" icona"+n+"'></i> "
+                                $(".icona"+n).css("color","green")
                             }
-                            else if(icones_serveis[s]<1){
-                                serveis += icones[s]+" " 
+                            else if(icones_serveis[n] == 0){
+                                //serveis_nodisponibles += "<i class='"+icones[n]+" icona"+n+"'></i> "
+                                //$(".icona"+n).css("color","red")
+                            }
+                        }
+                        
+                        /*var s = 0    
+                        for(s= 0; s<icones_serveis.length; s++){
+                            if(icones_serveis[s] == 1){
+                                //serveis += icones[s]+" "
+                                $(".icona"+s).css("color","green")
+                            }
+                            else if(icones_serveis[s] == 0){
+                                //serveis += icones[s]+" " 
                                 $(".icona"+s).css("color","red")    
                             }
-                            //console.log(icones[s])
-                        }
+                            console.log(icones_serveis[s])
+                        }*/
                         //PREUS
                         var preus = ""
                         
@@ -97,7 +110,7 @@
                                                 "<p><label>Vigilancia: </label>"+vigilancia+"</p>"+
                                                 "<p><label>Accessos: </label>"+accessos+"</p>"+
                                                 "<p><label>Preus</label><br>"+preus+"</p>"+
-                                                "<p><label>Serveis</label><br>"+serveis+"</p>"
+                                                "<p>"+serveis+""+serveis_nodisponibles+"</p>"
                                                 )
                         
                     }
