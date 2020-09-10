@@ -55,7 +55,7 @@
                                 accessos += "<a href='https://www.google.com/maps/place/"+acces[c].Latitude+","+acces[c].Longitude+"/"+acces[c].Latitude+","+acces[c].Longitude+"/'>Localitza Parking "+(c+1)+"</a><br>"
                             }
                         }
-                        //SERVEIS
+                        //SERVEIS HAIG DE POSAR ICONES AMB ID PQ SIGUI DIFERENT I DEPENGUI DE DUES VARIABLES LA i I LA n; ELS $("#ICONAin").CSS(..), HAURA D'ANAR DESPRÉS DE L'APPEND
                         var serveis = ""
                         var serveis_nodisponibles = ""
                         var n = 0
@@ -67,8 +67,8 @@
                                 $(".icona"+n).css("color","green")
                             }
                             else if(icones_serveis[n] == 0){
-                                //serveis_nodisponibles += "<i class='"+icones[n]+" icona"+n+"'></i> "
-                                //$(".icona"+n).css("color","red")
+                                serveis_nodisponibles += "<i class='"+icones[n]+" icona"+n+"'></i> "
+                                $(".icona"+n).css("color","red")
                             }
                         }
                         

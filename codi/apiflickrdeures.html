@@ -7,35 +7,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     
+    
     <!--JQUERY-->
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
     
     <!--BOOTSTRAP-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     
     <!--CSS-->
     <style type="text/css">
-    
+        .barra_buscar{
+            margin-right:0px;
+            margin-left: 0px;
+            margin-bottom: 20px;
+            margin-top: 15px;
+        }
+        #pagines{
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        #capa_img{
+            margin-right: auto;
+            margin-left: auto;
+            width: 100%;
+            height: 100%;
+        }
+        .columnes{
+            margin-bottom: 25px;
+        }
+        .img{
+            width: 100%;
+            height: 100%; 
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        #text_buscar{
+            width: 60%;
+            margin-right: 15px;
+        }
+        #mostra_fotos{
+            margin-right: 15px;
+        }
+        option{
+            text-align: center;
+        }
+        #boto_buscar{
+            background-color: rgba(137, 43, 226, 0.397);
+            font-weight: bold;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 20px;
+            border: none;
+            transition: all 0.5ms ease-out; 
+        }
+        #boto_buscar:hover{
+            background-color: white;
+            color: rgba(137, 43, 226, 0.877);
+            font-weight: bold;
+            border: 1px solid rgba(137, 43, 226, 0.877);
+        }
+        p{
+            padding-right: 15px;
+        }
     </style>
 
 </head>
 <body>
-    <input type="text" placeholder="search for a picture" id="text_buscar">
-    <input type="button" value="SEARCH" id="boto_buscar">
-    <div id="capa_img"></div>
+    <div class="row barra_buscar d-flex justify-content-center">
+        <input type="text" placeholder="search for a picture" id="text_buscar">
+        <select id="mostra_fotos">
+            <option></option>
+            <option value="10">10</option>    
+            <option value="40">40</option>
+            <option value="100">100</option>
+        </select>   
+        <input type="button" value="SEARCH" id="boto_buscar">        
+    </div>
+    <div id="capa_img" class="row"></div>
+    <div class="row" id="pagines"></div>
     <script language="javascript">
         $(function(){
             $("#boto_buscar").click(function(){
-                $.get("https://cors-anywhere.herokuapp.com/https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=292ea9b22812ab4f7f2aefffe97e6e91&format=json&nojsoncallback=1",function(data,status){
+                var text_buscar = $("#text_buscar").val()
+                var num_mostrar = $("#mostra_fotos").val()
+                $.get("https://cors-anywhere.herokuapp.com/https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0558dda4ed8ce29a002c7f6cc7e3a51e&text="+text_buscar+"&per_page="+num_mostrar+"&format=json&nojsoncallback=1",function(data,status){
                     var i = 0
+                    //photos.perpage //fotos que es motren en la pàgina segons selecciona l'usuari
+                    //photos.total // totes les fotos que existeixen per el nom que busques
+                    //photos.pages // numero de pagines necessaries per mostrar x fotos per pagina
                     for(i=0; i<data.photos.photo.length; i++){
+                        var fotos = data.photos
                         var dades = data.photos.photo[i]
-                        if($("#text_buscar").val() == dades.title){
-                            $("#capa_img").append(dades.title+"<hr>")
-                            //$("#capa_img").append("<img src='https://farm"+dades.farm+".staticflickr.com/"+dades.server+"/"+dades.id+"_"+dades.secret+"'>")
-                        }
+                        //$("#capa_img").append(dades.title+"<hr>")
+                        $("#capa_img").append("<div class='columnes col-lg-3'>"+
+                                                "<div class='img'>"+
+                                                    "<img src='https://farm"+dades.farm+".staticflickr.com/"+dades.server+"/"+dades.id+"_"+dades.secret+".jpg'>"+
+                                                "</div>"+
+                                              "</div>")
                     }
+                    var p = 0
+                    while(p<fotos.perpage){
+                        p++
+                        $("#pagines").append("<a id='pagina"+p+"'>"+p+"</a>")
+                        $("#pagina"+p).click(function(){
+                            $.get("https://cors-anywhere.herokuapp.com/https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0558dda4ed8ce29a002c7f6cc7e3a51e&text="+text_buscar+"&per_page="+num_mostrar+"&page="+p+"&format=json&nojsoncallback=1",function(data,status){
+                                for(i=0; i<data.photos.photo.length; i++){
+                                    var foto_pagina = data.photos
+                                    var dades_pagina = data.photos.photo[i]
+                                    $("#capa_img").append("<div class='columnes col-lg-3'>"+
+                                                    "<div class='img'>"+
+                                                        "<img src='https://farm"+dades_pagina.farm+".staticflickr.com/"+dades_pagina.server+"/"+dades_pagina.id+"_"+dades_pagina.secret+".jpg'>"+
+                                                    "</div>"+
+                                                "</div>")
+                                }
+                            })    
+                        })
+                    }*/
                 })
             })
         })
