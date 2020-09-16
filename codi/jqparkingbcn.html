@@ -17,13 +17,23 @@
 
     <!--CSS-->
     <style type="text/css">
-    
+        #capa_parking{
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .targeta{
+            border: 2px solid black;
+            padding: 15px;
+        }
+        .nom_parking{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
     </style>
 
 </head>
 <body>
     <input type="button" id="boto_parking" value="COMPROVA DISPONIBILITAT PARKING">
-    <div id="capa_parking"></div>
+    <div id="capa_parking" class="row"></div>
     <script language="javascript">
         $(function(){
             $("#boto_parking").click(function(){
@@ -55,35 +65,14 @@
                                 accessos += "<a href='https://www.google.com/maps/place/"+acces[c].Latitude+","+acces[c].Longitude+"/"+acces[c].Latitude+","+acces[c].Longitude+"/'>Localitza Parking "+(c+1)+"</a><br>"
                             }
                         }
-                        //SERVEIS HAIG DE POSAR ICONES AMB ID PQ SIGUI DIFERENT I DEPENGUI DE DUES VARIABLES LA i I LA n; ELS $("#ICONAin").CSS(..), HAURA D'ANAR DESPRÉS DE L'APPEND
+                        //SERVEIS 
                         var serveis = ""
-                        var serveis_nodisponibles = ""
                         var n = 0
                         var icones = ["fas fa-user-shield","fas fa-info","fas fa-wheelchair","fas fa-charging-station","fas fa-restroom","fas fa-caret-square-down","fas fa-suitcase"]
                         var icones_serveis = [vigilancia, info, handicaped, carregador, lavabo, ascensor, consigna]
-                        for(n = 0; n<icones.length; n++){
-                            if(icones_serveis[n] == 1){
-                                serveis += "<i class='"+icones[n]+" icona"+n+"'></i> "
-                                $(".icona"+n).css("color","green")
-                            }
-                            else if(icones_serveis[n] == 0){
-                                serveis_nodisponibles += "<i class='"+icones[n]+" icona"+n+"'></i> "
-                                $(".icona"+n).css("color","red")
-                            }
-                        }
-                        
-                        /*var s = 0    
-                        for(s= 0; s<icones_serveis.length; s++){
-                            if(icones_serveis[s] == 1){
-                                //serveis += icones[s]+" "
-                                $(".icona"+s).css("color","green")
-                            }
-                            else if(icones_serveis[s] == 0){
-                                //serveis += icones[s]+" " 
-                                $(".icona"+s).css("color","red")    
-                            }
-                            console.log(icones_serveis[s])
-                        }*/
+                        for(n = 0; n<icones_serveis.length; n++){
+                            serveis += "<i class='"+icones[n]+"' id='icona"+i+"_"+n+"'></i>"+" "                          
+                        }  
                         //PREUS
                         var preus = ""
                         
@@ -105,14 +94,22 @@
                             }
                         }
                         //TARGETA INFORMATIVA
-                        $("#capa_parking").append("<div class='card'><p><label>Parking: </label>"+nom+"</p>"+
-                                                "<p><label>Adreça: </label>"+adreça+"</p>"+
-                                                "<p><label>Vigilancia: </label>"+vigilancia+"</p>"+
-                                                "<p><label>Accessos: </label>"+accessos+"</p>"+
-                                                "<p><label>Preus</label><br>"+preus+"</p>"+
-                                                "<p>"+serveis+""+serveis_nodisponibles+"</p>"
+                        $("#capa_parking").append("<div class='col-lg-3 targeta'><p class='nom_parking'>"+nom+"</p>"+
+                                                "<p class='adreça_parking'>"+adreça+"</p>"+
+                                                "<p class='acces_parking'>"+accessos+"</p>"+
+                                                "<p class='preus_parking'><label>Preus</label><br>"+preus+"</p>"+
+                                                "<p class='serveis_parking'>"+serveis+"</p></div>"
                                                 )
-                        
+                        //CANVI COLOR SERVEIS
+                        for(n = 0; n<icones_serveis.length; n++){
+                            if(icones_serveis[n] >= 1){
+                                $("#icona"+i+"_"+n).css("color","green")
+                            }
+                            else if(icones_serveis[n] == 0){
+                                $("#icona"+i+"_"+n).css("color","red")
+                            }                          
+                        }  
+                                               
                     }
                 })
             })
