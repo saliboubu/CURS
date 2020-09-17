@@ -90,13 +90,18 @@
         <input type="button" value="SEARCH" id="boto_buscar">        
     </div>
     <div id="capa_img" class="row"></div>
-    <div class="row" id="pagines"></div>
+    <div class="row" id="pagines">
+        <a href="#" class="previous round">&#8249;</a>
+        <div id="numero_pagina"></div>
+        <a href="#" class="next round">&#8250;</a>   
+    </div>
+    
     <script language="javascript">
         $(function(){
             $("#boto_buscar").click(function(){
                 var text_buscar = $("#text_buscar").val()
                 var num_mostrar = $("#mostra_fotos").val()
-                $.get("https://cors-anywhere.herokuapp.com/https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0558dda4ed8ce29a002c7f6cc7e3a51e&text="+text_buscar+"&per_page="+num_mostrar+"&format=json&nojsoncallback=1",function(data,status){
+                $.get("https://cors-anywhere.herokuapp.com/https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ee50c2ffa6d926fb14ea7624f12712f1&text="+text_buscar+"&per_page="+num_mostrar+"&format=json&nojsoncallback=1",function(data,status){
                     var i = 0
                     //photos.perpage //fotos que es motren en la pàgina segons selecciona l'usuari
                     //photos.total // totes les fotos que existeixen per el nom que busques
@@ -104,31 +109,35 @@
                     for(i=0; i<data.photos.photo.length; i++){
                         var fotos = data.photos
                         var dades = data.photos.photo[i]
-                        //$("#capa_img").append(dades.title+"<hr>")
                         $("#capa_img").append("<div class='columnes col-lg-3'>"+
                                                 "<div class='img'>"+
                                                     "<img src='https://farm"+dades.farm+".staticflickr.com/"+dades.server+"/"+dades.id+"_"+dades.secret+".jpg'>"+
                                                 "</div>"+
                                               "</div>")
                     }
-                    var p = 0
-                    while(p<fotos.perpage){
-                        p++
-                        $("#pagines").append("<a id='pagina"+p+"'>"+p+"</a>")
-                        $("#pagina"+p).click(function(){
-                            $.get("https://cors-anywhere.herokuapp.com/https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0558dda4ed8ce29a002c7f6cc7e3a51e&text="+text_buscar+"&per_page="+num_mostrar+"&page="+p+"&format=json&nojsoncallback=1",function(data,status){
+                    var n = 0
+                    var num_pagines = []
+                    while(n<fotos.total){
+                        num_pagines.push(n);
+                        n++
+                    }
+                    var pagina = 0
+                    $('.next').click(function(){
+                        $("#capa_img").empty()
+                        pagina++
+                        $("#numero_pagina").html(num_pagines[pagina])
+                        $.get("https://cors-anywhere.herokuapp.com/https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ee50c2ffa6d926fb14ea7624f12712f1&text="+text_buscar+"&per_page="+num_mostrar+"&page="+pagina+"&format=json&nojsoncallback=1",function(data,status){
                                 for(i=0; i<data.photos.photo.length; i++){
                                     var foto_pagina = data.photos
                                     var dades_pagina = data.photos.photo[i]
                                     $("#capa_img").append("<div class='columnes col-lg-3'>"+
-                                                    "<div class='img'>"+
-                                                        "<img src='https://farm"+dades_pagina.farm+".staticflickr.com/"+dades_pagina.server+"/"+dades_pagina.id+"_"+dades_pagina.secret+".jpg'>"+
-                                                    "</div>"+
-                                                "</div>")
+                                                                "<div class='img'>"+
+                                                                    "<img src='https://farm"+dades_pagina.farm+".staticflickr.com/"+dades_pagina.server+"/"+dades_pagina.id+"_"+dades_pagina.secret+".jpg'>"+
+                                                                "</div>"+
+                                                           "</div>")
                                 }
-                            })    
                         })
-                    }*/
+                    })
                 })
             })
         })
