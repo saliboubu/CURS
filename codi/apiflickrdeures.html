@@ -75,6 +75,14 @@
         p{
             padding-right: 15px;
         }
+        #capa_zoom{
+            background-color: hotpink;
+            height: 100%;
+            width: 45%;
+            position: absolute;
+            right: 10px;
+            display: none;
+        }
     </style>
 
 </head>
@@ -89,23 +97,25 @@
         </select>   
         <input type="button" value="SEARCH" id="boto_buscar">        
     </div>
-    <div id="capa_img" class="row"></div>
+    <div id="capa_img" class="row">
+        <div id="capa_zoom"></div>
+    </div>
     <div class="row" id="pagines">
         <a href="#" class="previous round">&#8249;</a>
         <div id="numero_pagina"></div>
         <a href="#" class="next round">&#8250;</a>   
     </div>
-    
     <script language="javascript">
         $(function(){
             $("#boto_buscar").click(function(){
                 var text_buscar = $("#text_buscar").val()
                 var num_mostrar = $("#mostra_fotos").val()
-                $.get("https://cors-anywhere.herokuapp.com/https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ee50c2ffa6d926fb14ea7624f12712f1&text="+text_buscar+"&per_page="+num_mostrar+"&format=json&nojsoncallback=1",function(data,status){
+                $.get("https://cors-anywhere.herokuapp.com/https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=a00dbd793a58a2ff7a819f0a65db36c5&text="+text_buscar+"&per_page="+num_mostrar+"&format=json&nojsoncallback=1",function(data,status){
                     var i = 0
                     //photos.perpage //fotos que es motren en la pàgina segons selecciona l'usuari
                     //photos.total // totes les fotos que existeixen per el nom que busques
                     //photos.pages // numero de pagines necessaries per mostrar x fotos per pagina
+                    //$.fn.carregar_fotos = function(){
                     for(i=0; i<data.photos.photo.length; i++){
                         var fotos = data.photos
                         var dades = data.photos.photo[i]
@@ -113,8 +123,11 @@
                                                 "<div class='img'>"+
                                                     "<img src='https://farm"+dades.farm+".staticflickr.com/"+dades.server+"/"+dades.id+"_"+dades.secret+".jpg'>"+
                                                 "</div>"+
-                                              "</div>")
+                                            "</div>")
                     }
+                    //}
+                //AVANÇAR i/o RETROCEDIR EN LES PÀGINES
+                    //$.fn.carregar_fotos()
                     var n = 0
                     var num_pagines = []
                     while(n<fotos.total){
@@ -123,20 +136,35 @@
                     }
                     var pagina = 0
                     $('.next').click(function(){
-                        $("#capa_img").empty()
                         pagina++
+                        $.fn.canvi_pagina = function(){
+                        $("#capa_img").empty()
                         $("#numero_pagina").html(num_pagines[pagina])
-                        $.get("https://cors-anywhere.herokuapp.com/https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ee50c2ffa6d926fb14ea7624f12712f1&text="+text_buscar+"&per_page="+num_mostrar+"&page="+pagina+"&format=json&nojsoncallback=1",function(data,status){
-                                for(i=0; i<data.photos.photo.length; i++){
-                                    var foto_pagina = data.photos
-                                    var dades_pagina = data.photos.photo[i]
-                                    $("#capa_img").append("<div class='columnes col-lg-3'>"+
-                                                                "<div class='img'>"+
-                                                                    "<img src='https://farm"+dades_pagina.farm+".staticflickr.com/"+dades_pagina.server+"/"+dades_pagina.id+"_"+dades_pagina.secret+".jpg'>"+
-                                                                "</div>"+
-                                                           "</div>")
-                                }
+                        $.get("https://cors-anywhere.herokuapp.com/https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=a00dbd793a58a2ff7a819f0a65db36c5&text="+text_buscar+"&per_page="+num_mostrar+"&page="+pagina+"&format=json&nojsoncallback=1",function(data,status){
+                            //$.fn.carregar_fotos()
+                            for(i=0; i<data.photos.photo.length; i++){
+                                var foto_pagina = data.photos
+                                var dades_pagina = data.photos.photo[i]
+                                $("#capa_img").append("<div class='columnes col-lg-3'>"+
+                                                            "<div class='img'>"+
+                                                                "<img src='https://farm"+dades_pagina.farm+".staticflickr.com/"+dades_pagina.server+"/"+dades_pagina.id+"_"+dades_pagina.secret+".jpg'>"+
+                                                            "</div>"+
+                                                    "</div>")
+                            }
                         })
+                        }
+                        $.fn.canvi_pagina()
+                    })
+                    $('.previous').click(function(){
+                        pagina--
+                        $.fn.canvi_pagina()
+                    })
+                //FER ZOOM SI ES CLICKA IMATGE
+                    $("img").click(function(){
+                        var img_zoom = $(this).attr("src")
+                        $("#capa_zoom").show()
+                        $("#capa_zoom").append("<img src='"+img_zoom+"'>")
+                        $("#capa_img").css({"width":"50%", "margin-left":"10px", "margin-right":"10px"})
                     })
                 })
             })
