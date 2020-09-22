@@ -13,28 +13,123 @@
     
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    
+    <link href="../fontawesome/css/all.css" rel="stylesheet">
+
     <!--CSS-->
     <style type="text/css">
-    
+        #capa_clients{
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        #contenidor_formulari{
+            width: 100%;
+        }
+        #capa_contacte{
+            background-color: pink;
+            width: 65%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            display: none;
+        }
+        #capa_localitzacio{
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 100px;
+        }
+        #capa_formulari{
+            margin-top:20px;
+            margin-bottom: 25px;
+        }
+        form{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+        }
+        .form-group{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .boto_submit{
+            margin-left: 285px;
+        }
     </style>
 
 </head>
 <body>
     <input type="button" value="CLICK" id="boto_mostrar">
-    <div id="capa_empleats"></div>
+    <div id="capa_clients" class="row"></div>
+    <div id="contenidor_formulari">
+        <div class='row align-items-center' id="capa_contacte">
+            <div class='col-lg-4' id="capa_localitzacio"></div>
+            <div class='col-lg-8' id="capa_formulari">
+                <p class="text-center">CONTACT FORM</p>
+                <form>
+                    <div class="form-group">
+                        <label for="nom">Name</label>
+                        <input type="text" class="form-control" id="text_nom" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="cognom">Surname</label>
+                        <input type="text" class="form-control" id="text_cognom" placeholder="Enter your surname">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">e-mail</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Enquire:</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary boto_submit">SUBMIT</button>
+                </form>
+            </div>
+        </div>   
+    </div>
+    
     <script language="javascript">
         $(function(){
             $("#boto_mostrar").click(function(){
-                $.get("http://localhost:3000/employees",function(data,status){
+                $.get("http://localhost:3000/customers",function(data,status){
+                    //MOSTRAR CLIENTS
                     var i = 0
                     for(i = 0; i<data.length; i++){
-                        var empleats = data[i]
-                        var nom = empleats.FirstName
-                        var cognom = empleats.LastName
-                        var identificador = empleats.EmployeeID
-                        $("#capa_empleats").append("<div>"+identificador+"</div>")
+                        var clients = data[i];
+                        var identificador = clients.CustomerID; var empresa = clients.CompanyName;
+                        var empleat = clients.ContactName; var carrec = clients.ContactTitle;
+                        var adreça = clients.Address; var ciutat = clients.City;
+                        var CP = clients.PostalCode; var pais = clients.Country;
+                        var telefon = clients.Phone; var fax = clients.Fax;
+                        var num_fax = ""
+
+                        //COMPROVAR QUE TOTS TENEN FAX
+                        if (fax == null){
+                            num_fax=" "
+                        }
+                        else{
+                            num_fax="<i class='fas fa-fax'></i>"+fax
+                        }
+                        //MOSTRAR EN LA CAPA
+                        $("#capa_clients").append("<div id='client"+i+"' class='col-lg-3'><div class='row'><i class='fas fa-building'></i>"+empresa+" "+"("+identificador+")"+"</div>"+
+                                                    "<div class='row' id='empleat'><i class='fas fa-user-tie'></i>"+empleat+"</div>"+
+                                                    "<div class='row'><i class='fas fa-briefcase'></i>"+carrec+"</div>"+
+                                                    "<div class='row'><i class='fas fa-map-pin'></i>"+adreça+"</div>"+
+                                                    "<div class='row'>"+CP+" "+"-"+" "+ciutat+" "+"("+pais+")"+"</div>"+
+                                                    "<div class='row'><i class='fas fa-phone'></i>"+telefon+"</div>"+
+                                                    "<div class='row'>"+num_fax+"</div>"+
+                                                    "</div>")
                     }
+                    //FORMULARI
+                    $("#empleat").click(function(){
+                            $("#capa_contacte").show()
+                            $("#capa_clients").empty()
+                            $("#capa_localitzacio").append("<div class='row'><i class='fas fa-map-pin'></i>"+adreça+"</div>"+
+                                                    "<div class='row'>"+CP+" "+"-"+" "+ciutat+" "+"("+pais+")"+"</div>"+
+                                                    "<div class='row'><i class='fas fa-phone'></i>"+telefon+"</div>"+
+                                                    "<div class='row'>"+num_fax+"</div>")
+                    })
                 })
             })
         })
