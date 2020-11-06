@@ -9,21 +9,25 @@
     
     <script language = "javascript">
         var gelats = ["../gelateria/maduixa.png","../gelateria/coco.png","../gelateria/mango.png"]; //Per afegir les imatges a l'array es possa únicament la ruta de la imatge, el que aniria a src del'etiqueta img
-        function triargelat() {
+        /*function triargelat() {
             var gelat = document.getElementById("gelat").value;
             var imggelat = document.getElementById("imggelat");
             imggelat.innerHTML = "<img src='"+gelats[gelat]+"'>";//en source perque t'agafi el valor de la variable cal posar-ho entre cometes i +
+        }*/
+        function mostrar(){
+            var imggelat = document.getElementById("imggelat");
+            imggelat.innerHTML =  "<img src='"+gelats[0]+"'>";
         }
-    
     </script>
 </head>
 <body>
-   <select id="gelat" onchange="triargelat()">
+    <input type="button" value="mostrar" onclick="mostrar()">
+   <!--<select id="gelat" onchange="triargelat()">
        <option value=""></option>
        <option value="0">GELAT MADUIXA</option>
        <option value="1">GELAT COCO</option>
        <option value="2">GELAT MANGO</option>
-   </select>
+   </select>-->
    <div id="imggelat"></div>
 </body>
 </html>

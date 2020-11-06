@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
     <style type="text/css">
-        div{
+        .hero{
             position: absolute;
             border: 1px solid black;
             width: 400px;
@@ -18,9 +18,18 @@
             background-image: url("../imatges/joies.jpg");
             background-size: cover;/*Valors no numerics: COVER, CONTAIN(aquest normalment s'ha de combinar amb un NO-REPEAT)*/
         }
+        /*.hero::before {       
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-color: rgba(255, 255, 255, 0.25);
+        }*/
     </style>
 </head>
 <body>
-    <div>Morbi aliquam molestie risus, quis volutpat nibh interdum eu. In laoreet pulvinar lorem, quis aliquet nunc finibus ut. Nulla venenatis venenatis nisi nec ultrices. Nunc augue lorem, sagittis in urna eu, hendrerit ullamcorper neque. Mauris iaculis massa in ante rutrum eleifend. Sed ac magna et arcu sollicitudin maximus vel id elit. Integer dignissim laoreet nisl a cursus. Etiam ligula lectus, egestas id venenatis auctor, pellentesque ut erat. Duis vitae facilisis lorem. Curabitur sed augue dapibus, tempor diam vitae, aliquam mi. Proin volutpat molestie aliquet. Nunc efficitur, metus non dapibus rhoncus, sem justo varius magna, id semper elit odio in magna.</div>
+    <div class="hero">Morbi aliquam molestie risus, quis volutpat nibh interdum eu. In laoreet pulvinar lorem, quis aliquet nunc finibus ut. Nulla venenatis venenatis nisi nec ultrices. Nunc augue lorem, sagittis in urna eu, hendrerit ullamcorper neque. Mauris iaculis massa in ante rutrum eleifend. Sed ac magna et arcu sollicitudin maximus vel id elit. Integer dignissim laoreet nisl a cursus. Etiam ligula lectus, egestas id venenatis auctor, pellentesque ut erat. Duis vitae facilisis lorem. Curabitur sed augue dapibus, tempor diam vitae, aliquam mi. Proin volutpat molestie aliquet. Nunc efficitur, metus non dapibus rhoncus, sem justo varius magna, id semper elit odio in magna.</div>
 </body>
 </html>

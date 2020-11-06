@@ -18,14 +18,28 @@
             resultat.innerHTML += "<td>"+(num*i)+"</td></tr>";  
         }
     resultat.innerHTML +="</table>";*/
-    </style>       
+    </style>    
+    <script language="javascript">
+        function calcular(){
+            var num = document.getElementById("numero").value;
+            var i = 0;
+            var resultat = document.getElementById("contenidor");
+            resultat.innerHTML += "<table id='resultat' width='600px' border='1'>";
+                for(i=0; i<11; i++){
+                    resultat.innerHTML +="<tr><td>"+num+"</td>";
+                    resultat.innerHTML += "<td>"+i+"</td>";
+                    resultat.innerHTML += "<td>"+(num*i)+"</td></tr>";  
+                }
+            resultat.innerHTML += "</table>" ; 
+        }   
+    </script>
 </head>
 <body>
     <label>Número</label>
     <input type="number" id="numero">
     <input type="button" value="CALCULAR" onclick="calcular()"><br><br>
     <div id="contenidor">
-            <script language="javascript">
+            <!--<script language="javascript">
                 function calcular(){
                     var num = document.getElementById("numero").value;
                     var i = 0;
@@ -38,7 +52,7 @@
                         }
                     document.write("</table>"); 
                 }   
-            </script>
+            </script>-->
     </div>
 </body>
 </html>
